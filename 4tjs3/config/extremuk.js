@@ -6,6 +6,9 @@
             GA_UA: "UA-24940802-2",
             platform: "4Tell3d.js",
             addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
+            addCartImage: "",
+            spacerImage: "/web/assets/images/spacer.gif",
+            emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
             pricePrefix: "",
             salePricePrefix: "",
             includeBase: false,
@@ -22,7 +25,7 @@
                 caption: "Customers also bought",
                 productStyle: "product4T product4TPD1",
                 divSelect: "#rTabs",
-                divPosition: "below",
+                divPosition: "above",
                 carousel: {
                     items: 3,
                     scrollPerPage: true,
@@ -101,11 +104,7 @@
                 maxImageHeight: 100,
                 showRatings: false,
                 wrapper: "<div class='VC4T'></div>",
-                rawJS: {
-                    preDisplay: function () {
-                        $(".productBlockContainer, #recalculate ~ .header").hide();
-                    }
-                },
+                rawJS: {},
                 inCart: true
             }],
             QuickCart: [{
@@ -130,7 +129,7 @@
                 inCart: true
             }],
             QuickView: [{
-                enable: false,
+                enable: true,
                 resultType: 0,
                 numItems: 12,
                 caption: "You may also like",
