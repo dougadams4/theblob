@@ -5,23 +5,21 @@
             alias: "karatesu",
             GA_UA: "UA-227793-1",
             platform: "4Tell3d.js",
-            custom: true,
-            addCartBtnAtts: "input type='button' value='View Details' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
+            addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
             addCartImage: "",
             spacerImage: "/web/assets/images/spacer.gif",
             emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
-            pricePrefix: "",
-            salePricePrefix: "",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
         PageSettings: {
             Home: [{
-                enable: false,
-                resultType: 1,
+                enable: true,
+                resultType: 0,
                 numItems: 12,
                 caption: "Personal Recommendations",
-                //showCaption: false,
                 productStyle: "product4T product4THome",
                 divSelect: ".productBlockContainer ",
                 divPosition: "replace",
@@ -35,11 +33,10 @@
                 showRatings: true,
                 imageSize: "&maxx=180&maxy=180",
                 maxImageHeight: 150,
-                wrapper: "<div class='HOME4T'></div>",
+                wrapper: "<div class='PD14T'></div>",
                 rawJS: {
                     preDisplay: function (tout) {
                         jQuery(tout.divSelect).hide();
-                        jQuery(".header-specials").hide();
                     }
                 },
                 inCart: false
