@@ -62,7 +62,7 @@
     }
 
     .product4T .productTitle {
-        height: 3.4em;
+        height: 3.8em;
         width: 100%;
         overflow: hidden;
         font-weight: bold;
@@ -89,6 +89,7 @@
     }
 
     .product4T .productBuy {
+        padding-top: 5px;
         margin: 0 0 10px;
         text-decoration: none;
     }
