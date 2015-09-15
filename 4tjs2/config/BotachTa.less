@@ -7,10 +7,7 @@
     display: block;
     margin: 0;
     padding: 0;
-    .clearfix
-}
 
-.clearfix() {
     &:after {
         content: ".";
         display: block;
@@ -20,9 +17,9 @@
     }
 }
 
-/*#SideCategoryTopSellers, #SideProductRelated {
+#SideCategoryTopSellers, #SideProductRelated {
     display: none;
-}*/
+}
 
 .toutWrapper4T {
     border: 1px solid @grey;
@@ -37,9 +34,9 @@
 
 .expandOnHover(@height) {
     height: @height;
-    min-height: @height;
 
     &:hover {
+        min-height: @height;
         height: auto;
     }
 }
@@ -49,9 +46,13 @@
     padding: 5px;
     margin: 0 auto;
     background: transparent;
-    border: 1px solid #ddd;
+    border: none;
     text-align: center;
     vertical-align: middle;
+
+    & + & {
+        border-top: 1px solid@grey;
+    }
 
     .productImage {
         padding: 10px 0;
@@ -76,57 +77,57 @@
         }
     }
 
-    .productTitle {
-        color: #124269;
-        height: auto;
+    a.home {
+        text-decoration: none;
+
+        .productTitle {
+            text-align: left;
+            color: #00f;
+            height: auto;
+        }
     }
 
 
     .productPrice {
-        width: 90%;
-        float: left;
         font-family: Arial, Helvetica, sans-serif;
-        color: #124269;
+        color: #f33;
+        float: left;
+        text-align: left;
         height: 1.2em;
-        font-size: 15px;
-        font-weight: 600;
-        padding: 0 4px;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 4px 4px 4px 0;
     }
 
     .strikePrice {
-        padding-right: 5%;
-        width: 45%;
-        text-align: right;
         text-decoration: line-through;
-        color: #666;
+        color: #B9B9B9;
     }
 
     .productSalePrice {
         font-family: Arial, Helvetica, sans-serif;
-        color: #124269;
+        color: #f33;
         float: left;
-        font-weight: 600;
+        text-align: left;
         height: 1.2em;
-        font-size: 15px;
+        font-size: 11px;
     }
 
     .productBuy {
         clear: both;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 0 auto;
+        width: 130px;
+        height: 20px;
+        text-align: center;
+        padding-top: 4px;
+        font-size: 12px;
+        background-color: #006633;
 
-        input {
-            cursor: pointer;
+        a {
             text-decoration: none;
-            text-align: center;
-            max-width: 80%;
-            margin: 5px auto 10px;
-            padding: 5px;
-            font-size: 12px;
-            background: #124269;
             color: #fff;
-
-            &:hover {
-                background: #444;
-            }
         }
     }
 }
@@ -181,21 +182,21 @@ a.disabled {
 }
 
 .PD14T {
-    float: left;
     border-bottom: 1px solid #e6e6e6;
+    background: #fff url("//www.botach.com/templates/Magnificent/images/blue/bg_sideblock.gif") no-repeat 0 0;
     width: 100%;
     margin-bottom: 5px;
     padding-bottom: 10px;
 }
 
 .product4TPD1 {
-    width: 100%;
+    width: 160px;
     margin: 0 auto;
     background: transparent;
-    border: 1px solid @grey;
 
     & + & {
-        margin-top: 5px;
+        border-top: 1px dotted @grey;
+        border-left: none;
     }
 
     .productImage {
@@ -207,11 +208,10 @@ a.disabled {
         text-decoration: none;
 
         .productTitle {
-            max-width: 80%;
-            margin: 0 auto;
-            color: #124269;
+            text-align: left;
+            color: #00f;
             height: auto;
-            min-height: 0;
+            min-height: 0 !important;
         }
     }
 
@@ -227,7 +227,6 @@ a.disabled {
     }
 
     .productBuy {
-        /*text-align: left;*/
         clear: both;
     }
 }
@@ -236,20 +235,13 @@ a.disabled {
 }
 
 .product4TPD2 {
-    margin: 5px 10px;
-    padding: 0;
-    width: 220px;
-    float: left;
 
     .productImage {
-        height: 200px;
-
         .productImageImg {
         }
     }
 
     .productTitle {
-        height: 65px;
     }
 
     .ratingImage {
