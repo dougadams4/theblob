@@ -13,9 +13,10 @@
   clear: both;
   visibility: hidden;
 }
-/*#SideCategoryTopSellers, #SideProductRelated {
-    display: none;
-}*/
+#SideCategoryTopSellers,
+#SideProductRelated {
+  display: none;
+}
 .toutWrapper4T {
   border: 1px solid #e7e7e7;
   background: none;
@@ -30,9 +31,12 @@
   padding: 5px;
   margin: 0 auto;
   background: transparent;
-  border: 1px solid #ddd;
+  border: none;
   text-align: center;
   vertical-align: middle;
+}
+.product4T + .product4T {
+  border-top: 1px solid #e7e7e7;
 }
 .product4T .productImage {
   padding: 10px 0;
@@ -52,51 +56,51 @@
   display: inline;
   padding: 2px;
 }
-.product4T .productTitle {
-  color: #124269;
+.product4T a.home {
+  text-decoration: none;
+}
+.product4T a.home .productTitle {
+  text-align: left;
+  color: #00f;
   height: auto;
 }
 .product4T .productPrice {
-  width: 90%;
-  float: left;
   font-family: Arial, Helvetica, sans-serif;
-  color: #124269;
+  color: #f33;
+  float: left;
+  text-align: left;
   height: 1.2em;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 0 4px;
+  font-size: 11px;
+  font-weight: normal;
+  padding: 4px 4px 4px 0;
 }
 .product4T .strikePrice {
-  padding-right: 5%;
-  width: 45%;
-  text-align: right;
   text-decoration: line-through;
-  color: #666;
+  color: #B9B9B9;
 }
 .product4T .productSalePrice {
   font-family: Arial, Helvetica, sans-serif;
-  color: #124269;
+  color: #f33;
   float: left;
-  font-weight: 600;
+  text-align: left;
   height: 1.2em;
-  font-size: 15px;
+  font-size: 11px;
 }
 .product4T .productBuy {
   clear: both;
-}
-.product4T .productBuy input {
   cursor: pointer;
   text-decoration: none;
+  margin: 0 auto;
+  width: 130px;
+  height: 20px;
   text-align: center;
-  max-width: 80%;
-  margin: 5px auto 10px;
-  padding: 5px;
+  padding-top: 4px;
   font-size: 12px;
-  background: #124269;
-  color: #fff;
+  background-color: #006633;
 }
-.product4T .productBuy input:hover {
-  background: #444;
+.product4T .productBuy a {
+  text-decoration: none;
+  color: #fff;
 }
 /* For scrollables. */
 .scrollable {
@@ -142,48 +146,34 @@ a.disabled {
 * custom CSS. */
 /* Tout1 on PD page. */
 .PD14T {
-  float: left;
   border-bottom: 1px solid #e6e6e6;
+  background: #ffffff url("//www.botach.com/templates/Magnificent/images/blue/bg_sideblock.gif") no-repeat 0 0;
   width: 100%;
   margin-bottom: 5px;
   padding-bottom: 10px;
 }
 .product4TPD1 {
-  width: 100%;
+  width: 160px;
   margin: 0 auto;
   background: transparent;
-  border: 1px solid #e7e7e7;
 }
 .product4TPD1 + .product4TPD1 {
-  margin-top: 5px;
+  border-top: 1px dotted #e7e7e7;
+  border-left: none;
 }
 .product4TPD1 a.home {
   text-decoration: none;
 }
 .product4TPD1 a.home .productTitle {
-  max-width: 80%;
-  margin: 0 auto;
-  color: #124269;
+  text-align: left;
+  color: #00f;
   height: auto;
-  min-height: 0;
+  min-height: 0 !important;
 }
 .product4TPD1 .productBuy {
-  /*text-align: left;*/
   clear: both;
 }
 /* Tout2 on PD page */
-.product4TPD2 {
-  margin: 5px 10px;
-  padding: 0;
-  width: 220px;
-  float: left;
-}
-.product4TPD2 .productImage {
-  height: 200px;
-}
-.product4TPD2 .productTitle {
-  height: 65px;
-}
 /* Tout3 on PD page */
 .product4TPD3 {
   width: 30%;
