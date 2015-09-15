@@ -1,0 +1,53 @@
+
+================
+ Handling Enums   TESTING
+================
+
+/// this really doesn't belong here - just here for testing a regular text file ///
+
+Dan:
+
+Uwe and I were walking through a bunch of Enum getters and setters, and worked through a method to parse the Enums and use their string values for dropdown boxes.  Instead of hard-coding the strings (bad), you need to query the Enum for the strings like this:
+
+
+First, query the static Platform class for the Enum you want
+                Platform.CredentialsStatusType credentialsStatus = Platform.CredentialsStatusType.Valid;
+
+If you want the list of strings to populate a drop-down, you get a list of strings this way (without .ToList() you'd get an array of Strings)
+
+                List<String> typeNames = Enum.GetNames(typeof(Platform.CredentialsStatusType)).ToList();
+
+If you want to set the Enum based on the results of a drop-down picker, you have to use the Static Enum.Parse method like this, with the resulting String that was picked.  Note the explicit cast.
+
+                Platform.CredentialsStatusType secondEnum = (Platform.CredentialsStatusType)Enum.Parse(typeof(Platform.CredentialsStatusType), typeNames[1]);
+
+Then you can set the original Enum variable above to your selected variable.
+                credentialsStatus = secondEnum ;
+
+Now get the int value for the Enum
+                Platform.CredentialsStatusType thirdEnum = (Platform.CredentialsStatusType)Enum.Parse(typeof(Platform.CredentialsStatusType), typeNames[1]);
+		var enumVal = (int)thirdEnum;
+
+
+This seems cumbersome, but it avoids hard-coding of Strings in your code, but also allows us to use Enums to set values to avoid typos or case problems in the future.  Also allows us to modify the back-end code without affecting the front-end code.
+
+
+This adds spaces to Strings (say, that list of Strings in typeNames) for display purposes:
+
+        /// <summary>
+        /// Nice.  Add spaces before any capital letters, but it preserves Acronyms!
+        /// From here: http://stackoverflow.com/questions/272633/add-spaces-before-capital-letters
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="preserveAcronyms"></param>
+        /// <returns></returns>
+        public static string AddSpacesToSentence(string text, bool preserveAcronyms)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                return string.Empty;
+            StringBuilder newText = new StringBuilder(text.Length * 2);
+            newText.Append(text[0]);
+            for (int i = 1; i < text.Length; i  )
+            {
+                if (char.IsUpper(text[i]))
+                    if ((text[i - 1] != ' ' 
