@@ -34,6 +34,7 @@
                     maxImageHeight: 160,
                     imageSize: "&maxx=120&maxy=120",
                     wrapper: "<tr><td><div class='HOME4T'></div></td></tr>",
+                    rawJS: { perProduct: function (itemdata) { itemdata.imageLink = itemdata.imageLink.replace("www.discountnewagebooks.com", "") } },
                     inCart: false
                 }
             },
@@ -54,6 +55,7 @@
                     maxImageHeight: 150,
                     imageSize: "&maxx=120&maxy=120",
                     wrapper: "<tr><td colspan='2'><div class='PD14T'></div></td></tr>",
+                    rawJS: { perProduct: function (itemdata) { itemdata.imageLink = itemdata.imageLink.replace("www.discountnewagebooks.com", "") } },
                     inCart: false
                 },
                 tout2: {
@@ -72,6 +74,7 @@
                     maxImageHeight: 120,
                     showRatings: false,
                     wrapper: "<div class='PD14T'></div>",
+                    rawJS: { perProduct: function (itemdata) { itemdata.imageLink = itemdata.imageLink.replace("www.discountnewagebooks.com", "") } },
                     inCart: false
                 }
             },
@@ -97,7 +100,14 @@
                     maxImageHeight: 150,
                     imageSize: "&maxx=120&maxy=120",
                     wrapper: "<tr><td colspan='2'><div class='PD14T'></div></td></tr>",
-                    rawJS: { preInit: function (tout) { tout.enable = tout.enable && $("table.alternative").length > 15; } },
+                    rawJS: {
+                        preInit: function (tout) {
+                            tout.enable = tout.enable && $("table.alternative").length > 15;
+                        },
+                        perProduct: function (itemdata) {
+                            itemdata.imageLink = itemdata.imageLink.replace("www.discountnewagebooks.com", "")
+                        }
+                    },
                     inCart: false
                 }
             },
@@ -122,6 +132,9 @@
                     rawJS: {
                         preDisplay: function (tout) {
                             $("td.checkout-headers").attr("class", "product4TCaption").text(tout.caption);
+                        },
+                        perProduct: function (itemdata) {
+                            itemdata.imageLink = itemdata.imageLink.replace("www.discountnewagebooks.com", "")
                         }
                     },
                     inCart: true
