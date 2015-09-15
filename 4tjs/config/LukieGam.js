@@ -10,7 +10,7 @@
             spacerImage: "/web/assets/images/spacer.gif",
             emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
             priceClass: "price2",
-            pricePrefix: "Our Price: ",
+            pricePrefix: "<span style='color:#0072BC'>Buy it for Just:</span> ",
             salePricePrefix: "On Sale: ",
             ratings: [
                 "assets/templates/lukiegames/images/star0.png",
@@ -26,17 +26,17 @@
         PageSettings: {
             Auto: [{
                 enable: true,
-                resultType: 1,
-                numItems: 15,
-                caption: "Recommended for you...",
+                resultType: 2,
+                numItems: 4,
+                caption: "Featured Products",
                 captionStyle: "titles product4TCaption",
                 productStyle: "product4T product4THome",
                 divSelect: ".productBlockContainer",
                 divPosition: "replace",
-                carousel: {
-                    numVis: 5,
-                    circular: true
-                },
+                //carousel: {
+                //    numVis: 5,
+                //    circular: true
+                //},
                 showBuyButton: false,
                 showRatings: true,
                 imageSize: "&maxx=130&maxy=150",
@@ -44,49 +44,21 @@
                 rotateRecs: true,
                 inCart: true,
                 wrapper: "<div id='PD14T'></div>",
-                rawJS: {
-                    perProduct: function (itemdata) {
-                        //if (itemdata.salePrice) {
-                        //    itemdata.price = itemdata.salePrice;
-                        //    itemdata.salePrice = "";
-                        //}
-                    }
-                },
                 responsive: {
                     1: {
-                        carousel: {
-                            numVis: 5,
-                            circular: true
-                        },
-                        numItems: 15
+
+                        numItems: 4
                     },
                     2: {
-                        numItems: 12,
-                        carousel: {
-                            numVis: 4,
-                            circular: true
-                        }
+
+                        numItems: 4
                     },
                     3: {
-                        carousel: {
-                            numVis: 3,
-                            circular: true
-                        },
-                        numItems: 12
+
+                        numItems: 4
                     },
                     4: {
-                        carousel: {
-                            numVis: 2,
-                            circular: true
-                        },
-                        numItems: 12
-                    },
-                    5: {
-                        carousel: {
-                            numVis: 2,
-                            circular: true
-                        },
-                        numItems: 12
+                        numItems: 3
                     }
                 }
             }],
@@ -105,10 +77,10 @@
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {
                     perProduct: function (itemdata) {
-                        //if (itemdata.salePrice) {
-                        //    itemdata.price = itemdata.salePrice;
-                        //    itemdata.salePrice = "";
-                        //}
+                        if (itemdata.salePrice) {
+                            itemdata.price = itemdata.salePrice;
+                            itemdata.salePrice = "";
+                        }
                     }
                 },
                 responsive: {
@@ -127,11 +99,7 @@
                     },
                     4: {
                         caption: "Gamers also buy...",
-                        numItems: 2
-                    },
-                    5: {
-                        caption: "Gamers also buy...",
-                        numItems: 2
+                        numItems: 3
                     }
                 },
                 inCart: false
@@ -183,7 +151,7 @@
                 captionStyle: "titles product4TCaption",
                 productStyle: "product4T product4TAdmin",
                 divSelect: "#ACC4T",
-                divPosition: "replace",
+                divPosition: "above",
                 carousel: {
                     numVis: 5,
                     circular: true
@@ -192,49 +160,11 @@
                 showRatings: true,
                 imageSize: "&maxx=150&maxy=150",
                 maxImageHeight: 170,
-                wrapper: "<div class='borders'></div>",
+                wrapper: "<tr><td colspan='2' class='borders'></td></tr>",
                 rawJS: {
                     preInit: function () {
                         for (foo in _4TellBoost.UserData.data.wishlist)
                             _4TellBoost.addProductID(_4TellBoost.UserData.data.wishlist[foo]);
-                    }
-                },
-                responsive: {
-                    1: {
-                        carousel: {
-                            numVis: 5,
-                            circular: true
-                        },
-                        numItems: 15
-                    },
-                    2: {
-
-                        numItems: 12,
-                        carousel: {
-                            numVis: 4,
-                            circular: true
-                        }
-                    },
-                    3: {
-                        carousel: {
-                            numVis: 4,
-                            circular: true
-                        },
-                        numItems: 12
-                    },
-                    4: {
-                        carousel: {
-                            numVis: 3,
-                            circular: true
-                        },
-                        numItems: 12
-                    },
-                    5: {
-                        carousel: {
-                            numVis: 2,
-                            circular: true
-                        },
-                        numItems: 12
                     }
                 },
                 inCart: true
@@ -259,53 +189,13 @@
                 wrapper: "<div style='margin: 10px 0; width:95%; float:left;' class='borders'></div>",
                 rawJS: {
                     preInit: function () {
-                        _4TellBoost.UserData.data.wishlist =[];
-                        $(".product-name-options a").each(function () {
-                            _4TellBoost.UserData.data.wishlist.push(
-                            $(this).attr("href").replace(".html", "").match(/\d+$/)[0]
-                            );
-                        });
-                        _4TellBoost.UserData.save();
-
                         for (item in _4TellBoost.UserData.data.wishlist)
                             _4TellBoost.addProductID(_4TellBoost.UserData.data.wishlist[item]);
                     }
                 },
-                responsive: {
-                    1: {
-                        carousel: {
-                            numVis: 5,
-                            circular: true
-                        },
-                        numItems: 15
-                    },
-                    2: {
-
-                        numItems: 12,
-                        carousel: {
-                            numVis: 4,
-                            circular: true
-                        }
-                    },
-                    3: {
-                        carousel: {
-                            numVis: 4,
-                            circular: true
-                        },
-                        numItems: 12
-                    },
-                    4: {
-                        carousel: false,
-                        numItems: 3
-                    },
-                    5: {
-                        carousel: false,
-                        numItems: 2
-                    }
-
-                },
                 inCart: false
-            }]
+            }
+            ]
         }
     }
 }(window._4TellBoost = window._4TellBoost || {}, jQuery));
