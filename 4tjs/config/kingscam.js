@@ -19,7 +19,7 @@
                 enable: true,
                 resultType: 1,
                 numItems: 12,
-                caption: "Recommended for You",
+                caption: "Recommondations for You",
                 productStyle: "product4T product4THome",
                 divSelect: "#homeCarousel",
                 divPosition: "below",
@@ -31,23 +31,16 @@
                 maxImageHeight: 100,
                 showRatings: true,
                 wrapper: "<div class='HOME4T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.outerWidth < 1000) {
-                            tout.numItems = tout.carousel.numVis;
-                            tout.carousel = false;
-                        }
-                    },
-                },
+                rawJS: {},
                 inCart: false
             }],
             ProductDetail: [{
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "Customers also bought",
+                caption: "Customers Also Bought",
                 productStyle: "product4T product4TPD1",
-                divSelect: ".secondary",
+                divSelect: ".alpha-col",
                 divPosition: "below",
                 carousel: {
                     numVis: 3,
@@ -58,12 +51,6 @@
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {
-                    preInit: function (tout) {
-                        if (window.outerWidth < 1000) {
-                            tout.numItems = tout.carousel.numVis;
-                            tout.carousel = false;
-                        }
-                    },
                     preDisplay: function () {
                         $(".beta-col").insertAfter("#mediaContainer");
                     }
@@ -73,7 +60,7 @@
                 enable: true,
                 resultType: 3,
                 numItems: 12,
-                caption: "Customers also viewed",
+                caption: "Customers Also Viewed",
                 productStyle: "product4T product4TPD2",
                 divSelect: ".relatedBlock",
                 divPosition: "replace",
@@ -85,17 +72,7 @@
                 maxImageHeight: 120,
                 showRatings: true,
                 wrapper: "<div class='PD24T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.outerWidth < 1000) {
-                            tout.numItems = tout.carousel.numVis;
-                            tout.carousel = false;
-                        }
-                    },
-                    preDisplay: function () {
-                        $(".accessoriesBlock").hide();
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }],
             Search: [{
@@ -105,7 +82,7 @@
                 enable: false,
                 resultType: 5,
                 numItems: 4,
-                caption: "More ideas",
+                caption: "More ideas...",
                 productStyle: "product4T product4TCat",
                 divSelect: "#main4TellContainer",
                 divPosition: "append",
@@ -122,11 +99,11 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "You may also like",
+                caption: "You may also like...",
                 showCaption: false,
                 productStyle: "product4T product4TVC",
-                divSelect: "#recalculate",
-                divPosition: "below",
+                divSelect: ".productBlockContainer",
+                divPosition: "replace",
                 carousel: {
                     numVis: 4,
                     circular: true
@@ -136,18 +113,6 @@
                 showRatings: true,
                 wrapper: "<div class='VC4T'></div>",
                 rawJS: {
-                    preInit: function () {
-                        //detectCartPage isn't scraping the right items, so we do it here.
-                        $(".row").each(function () {
-                            var id = $(this).find(".product-image a").attr("href").replace(".html", "");
-                            id = id && id.match(/\d+$/);
-                            var quantity = $(this).find("input[name*=qty]").val() || 1;
-                            if (id && id[0]) {
-                                _4TellBoost.addCartItem(id[0], quantity)
-                            }
-
-                        })
-                    },
                     preDisplay: function (tout) {
                         $(tout.divSelect).prev("div.header").find("h3").text(tout.caption);
                     }
