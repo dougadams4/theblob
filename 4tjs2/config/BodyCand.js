@@ -133,7 +133,7 @@
                             _4TellBoost.UserData.data.Viewed.unshift($("input[name=item]").val());
                             _4TellBoost.UserData.save();
                             _4TellBoost.addProductID(_4TellBoost.getCartItems().join(","))
-                            if ($("p.productsku").length < 12) {
+                            if ($("p.productsku").length < 15 && $("a.navbtn").length === 0) {
                                 tout.caption = "<h2>Recommended for you</h2>";
                                 tout.resultType = 1;
                             }
