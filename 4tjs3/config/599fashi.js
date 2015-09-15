@@ -251,19 +251,7 @@
                 showRatings: false,
                 wrapper: "<div class='VC4T'></div>",
                 rawJS: {
-                    preInit: function () {
-                        _4TellBoost.setCatId("94");
-                        //TODO Usual method doesn't work for scraping items. :(
-                        _4TellBoost.UserData.clearCart();
-                        jQuery("td.item a").each(function () {
-                            var id = jQuery(this).attr("href").replace(".html", "");
-                            id = id && id.match(/\d+$/);
-                            var quantity = jQuery(this).find(".item-qty input[type=text]").val() || 1;
-                            if (id && id[0]) {
-                                _4TellBoost.addCartItem(id[0], quantity)
-                            }
-                        });
-                    },
+                    preInit: function () { _4TellBoost.setCatId("94"); },
                     perProduct: function (itemdata) {
                         if (itemdata.salePrice) {
                             itemdata.price = itemdata.salePrice;
@@ -303,7 +291,7 @@
                 inCart: true
             }],
             Auto: [{
-                enable: false,
+                enable: true,
                 resultType: 5,
                 numItems: 15,
                 rotateRecs: true,
