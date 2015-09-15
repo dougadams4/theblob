@@ -6,9 +6,9 @@
             GA_UA: "UA-23812003-1",
             platform: "4TellVs.js",
             addCartBtnAtts: "img class='vCSS_input_addtocart' alt='Add to Cart'",
-            addCartImage: "/v/vspfiles/templates/VTX Hipster/images/buttons/btn_addtocart.gif",
-            spacerImage: "/v/vspfiles/templates/VTX Hipster/images/clear1x1.gif",
-            emptyImage: "/v/vspfiles/templates/VTX Hipster/images/nophoto.gif",
+            addCartImage: "/v/vspfiles/templates/VTX Tech 01/images/buttons/btn_addtocart.gif",
+            spacerImage: "/v/vspfiles/templates/VTX Tech 01/images/clear1x1.gif",
+            emptyImage: "/v/vspfiles/templates/VTX Tech 01/images/nophoto.gif",
             pricePrefix: "Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
@@ -27,20 +27,13 @@
                 divSelect: ".colors_pricebox",
                 divPosition: "below",
                 carousel: {
-                    items: 3,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 3,
+                    circular: true
                 },
                 showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preDisplay: function (tout) {
-                        $(tout.divSelect).parents("table").css("table-layout", "fixed");
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }, {
                 enable: true,
@@ -51,11 +44,8 @@
                 divSelect: "#v65-product-parent + table",
                 divPosition: "below",
                 carousel: {
-                    items: 4,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
                 maxImageHeight: 150,
                 showRatings: true,
@@ -78,20 +68,13 @@
                 divSelect: "#v65-cart-checkout-parent td:first",
                 divPosition: "replace",
                 carousel: {
-                    items: 2,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 2,
+                    circular: true
                 },
                 maxImageHeight: 150,
                 showRatings: true,
                 wrapper: "<td valign='top'><div class='PD14T'></div></td>",
-                rawJS: {
-                    preDisplay: function (tout) {
-                        $(tout.divSelect).parents("table").css("table-layout", "fixed");
-                    }
-                },
+                rawJS: {},
                 inCart: true
             }]
         }
