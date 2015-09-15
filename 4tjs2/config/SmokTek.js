@@ -9,72 +9,79 @@
             addCartImage: "",
             spacerImage: "/web/assets/images/spacer.gif",
             emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
-            priceClass: "price2",
             pricePrefix: "Our Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
         PageSettings: {
-            Home: {
-                tout1: {
-                    enable: true,
-                    resultType: 4,
-                    numItems: 4,
-                    caption: "Top Sellers",
-                    captionStyle: "menu-headers product4TCaption",
-                    productStyle: "product4T product4THome",
-                    divSelect: "#Top_Sellers_Block",
-                    divPosition: "replace",
-                    imageSize: "&maxx=120&maxy=120",
-                    inCart: false
-                }
-            },
-            ProductDetail: {
-                tout1: {
-                    enable: true,
-                    resultType: 0,
-                    numItems: 6,
-                    caption: "Customers also bought...",
-                    captionStyle: "menu-headers product4TCaption",
-                    productStyle: "product4T product4TPD1",
-                    divSelect: "tr:has(td.options-titles):last",
-                    divPosition: "below",
-                    carousel: {
-                        numVis: 2,
-                        circular: true
-                    },
-                    showRatings: true,
-                    maxImageHeight: 150,
-                    imageSize: "&maxx=120&maxy=120",
-                    wrapper: "<tr><td colspan='2'></td></tr>",
-                    inCart: false
+            Home: [{
+                enable: true,
+                resultType: 4,
+                numItems: 4,
+                caption: "Top Sellers",
+                captionStyle: "menu-headers product4TCaption",
+                productStyle: "product4T product4THome",
+                divSelect: "#Top_Sellers_Block",
+                divPosition: "replace",
+                imageSize: "&maxx=120&maxy=120",
+                inCart: false
+            }
+            ],
+            ProductDetail: [{
+                enable: true,
+                resultType: 0,
+                numItems: 6,
+                caption: "Customers also bought...",
+                captionStyle: "menu-headers product4TCaption",
+                productStyle: "product4T product4TPD1",
+                divSelect: "tr:has(td.options-titles):last",
+                divPosition: "below",
+                carousel: {
+                    numVis: 2,
+                    circular: true
                 },
-                tout2: {
-                    enable: true,
-                    resultType: 3,
-                    numItems: 12,
-                    caption: "Customers also viewed...",
-                    captionStyle: "titles product4TCaption",
-                    productStyle: "product4T product4TPD2",
-                    divSelect: "#REV4T",
-                    divPosition: "above",
-                    carousel: {
-                        numVis: 4,
-                        circular: true
-                    },
-                    imageSize: "&maxx=120&maxy=120",
-                    maxImageHeight: 120,
-                    showRatings: true,
-                    wrapper: "<tr><td colspan='2'></td></tr>",
-                    rawJS: {
-                        preDisplay: function () {
-                            $('#REL4T').hide();
-                        }
-                    },
-                    inCart: false
-                }
+                showRatings: true,
+                maxImageHeight: 150,
+                imageSize: "&maxx=120&maxy=120",
+                wrapper: "<tr><td colspan='2'></td></tr>",
+                inCart: false
+            }, {
+                enable: true,
+                resultType: 3,
+                numItems: 12,
+                caption: "Customers also viewed...",
+                captionStyle: "titles product4TCaption",
+                productStyle: "product4T product4TPD2",
+                divSelect: "#REV4T, tr:has(div[itemprop=review])",
+                divPosition: "above",
+                carousel: {
+                    numVis: 4,
+                    circular: true
+                },
+                imageSize: "&maxx=120&maxy=120",
+                maxImageHeight: 120,
+                showRatings: true,
+                wrapper: "<tr><td colspan='2'></td></tr>",
+                rawJS: {
+                    preDisplay: function () {
+                        $("#REL4T, table:has(table table.alternative):last").hide();
+                    }
+                },
+                inCart: false
             },
+            {
+                enable: true,
+                resultType: 1,
+                numItems: 4,
+                caption: "Top Sellers",
+                captionStyle: "menu-headers product4TCaption",
+                productStyle: "product4T product4THome",
+                divSelect: "#Top_Sellers_Block",
+                divPosition: "replace",
+                imageSize: "&maxx=120&maxy=120",
+                inCart: false
+            }],
             Search: {
                 tout1: {
                     enable: false
