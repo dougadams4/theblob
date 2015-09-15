@@ -60,13 +60,19 @@
   display: inline;
   padding: 2px;
 }
-.product4T .productTitle {
+.product4T a.home {
+  color: #333;
+}
+.product4T a.home:hover {
+  color: #FF5C46;
+}
+.product4T a.home .productTitle {
   width: 100%;
   overflow: hidden;
   font-weight: bold;
   height: 3em;
 }
-.product4T .productTitle:hover {
+.product4T a.home .productTitle:hover {
   min-height: 3em;
   height: auto;
 }
@@ -74,7 +80,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: normal;
-  color: #941A1D;
+  color: #719334;
   display: inline;
   padding: 2px;
 }
@@ -83,7 +89,7 @@
 }
 .product4T .productSalePrice {
   font-family: Arial, Helvetica, sans-serif;
-  color: #941A1D;
+  color: #FF5C46;
   font-size: 18px;
   font-weight: normal;
   display: inline;
@@ -146,6 +152,10 @@ a.disabled {
 /* Here follows custom classes, so as to permit each page to have its own
 * custom CSS. */
 /* Tout1 on PD page. */
+.PD14T {
+  display: block;
+  margin-top: 10px;
+}
 /* Tout2 on PD page */
 .product4TPD2 {
   width: 200px;
