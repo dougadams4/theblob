@@ -11,8 +11,8 @@
             spacerImage: "/web/assets/images/spacer.gif",
             emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
             priceClass: "price2",
-            pricePrefix: "",
-            salePricePrefix: "",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
@@ -21,17 +21,17 @@
                 enable: true,
                 resultType: 4,
                 numItems: 12,
-                caption: "Recommended for you",
+                caption: "NEW Featured Products",
                 productStyle: "product4T product4THome",
                 divSelect: "#homeHeader > table:first",
                 divPosition: "below",
                 carousel: {
-                    items: 4,
+                    items: 3,
                     navigation: true,
                     navigationText: false,
                     pagination: false
                 },
-                imageSize: "&maxx=0&maxy=0",
+                imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 150,
                 showRatings: false,
                 wrapper: "<div class='HOME4T'></div>",
@@ -56,7 +56,7 @@
                     navigationText: false,
                     pagination: false
                 },
-                imageSize: "&maxx=0&maxy=0",
+                imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 150,
                 showRatings: false,
                 wrapper: "<table width='100%' class='home'><tr><td></td></tr></table>",
@@ -66,7 +66,7 @@
                 enable: true,
                 resultType: 6,
                 numItems: 9,
-                caption: "Customers also bought...",
+                caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
                 divSelect: "#rTabs",
                 divPosition: "above",
@@ -76,33 +76,33 @@
                     navigationText: false,
                     pagination: false
                 },
-                imageSize: "&maxx=0&maxy=0",
+                imageSize: "&maxx=110&maxy=110",
                 showRatings: false,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
                 inCart: false
             },
                 {
-                    enable: true,
+                    enable: false,
                     resultType: 3,
                     numItems: 10,
                     caption: "Customers also viewed...",
                     productStyle: "product4T product4TPD2",
-                    divSelect: ".accessoriesBlock, .relatedBlock",
-                    divPosition: "below",
+                    divSelect: "#REL4T",
+                    divPosition: "replace",
                     carousel: {
                         items: 3,
                         navigation: true,
                         navigationText: false,
                         pagination: false
                     },
-                    imageSize: "&maxx=0&maxy=0",
+                    imageSize: "&maxx=120&maxy=120",
                     maxImageHeight: 120,
                     showRatings: false,
-                    wrapper: "<div class='PD24T'></div>",
+                    wrapper: "<tr><td colspan='2'></td></tr>",
                     rawJS: {
-                        preDisplay: function (tout) {
-                            $(tout.divSelect).hide();
+                        preDisplay: function () {
+                            $("#ACC4T").hide();
                         }
                     },
                     inCart: false
@@ -121,7 +121,7 @@
                     navigationText: false,
                     pagination: false
                 },
-                imageSize: "&maxx=0&maxy=0",
+                imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: false,
                 rawJS: {
@@ -146,7 +146,7 @@
                     navigationText: false,
                     pagination: false
                 },
-                imageSize: "&maxx=0&maxy=0",
+                imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: false,
                 rawJS: {
@@ -163,7 +163,7 @@
                 caption: "You may also like...",
                 productStyle: "product4T product4TVC",
                 orientation: "horizontal",
-                divSelect: ".third-party-payment",
+                divSelect: "tr:has(#Table5)",
                 divPosition: "below",
                 carousel: {
                     items: 5,
@@ -171,10 +171,10 @@
                     navigationText: false,
                     pagination: false
                 },
-                imageSize: "&maxx=0&maxy=0",
+                imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: false,
-                wrapper: "<div class='VC4T'></div>",
+                wrapper: "<tr><td colspan='5'></td></tr>",
                 rawJS: {
                     preDisplay: function () {
                         $("tr:has(table.alternative):last").hide();
