@@ -43,10 +43,10 @@
                 enable: true,
                 resultType: 3,
                 numItems: 12,
-                caption: "Our customers also viewed...",
+                caption: "Similar Items",
                 productStyle: "product4T product4TPD2",
-                divSelect: "#rTabs",
-                divPosition: "below",
+                divSelect: ".accessoriesBlock, .relatedBlock",
+                divPosition: "replace",
                 carousel: {
                     items: 4,
                     scrollPerPage: true,
@@ -60,7 +60,7 @@
                 wrapper: "<div class='PD24T'></div>",
                 rawJS: {
                     preDisplay: function (tout) {
-                        jQuery(".accessoriesBlock, .relatedBlock").hide();
+                        $(tout.divSelect).hide();
                     }
                 },
                 inCart: false
