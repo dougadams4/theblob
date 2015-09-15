@@ -3,7 +3,7 @@
         SiteInfo: {
             baseURL: "www.sassysecret.com",
             alias: "sassysec",
-            GA_UA: "UA-6517893-2",
+            GA_UA: "",
             platform: "4TellVs.js",
             addCartBtnAtts: "img class='vCSS_input_addtocart' alt='Add to Cart'",
             addCartImage: "/v/vspfiles/templates/SS10-9-14/images/buttons/btn_addtocart_small.gif",
@@ -17,16 +17,19 @@
         PageSettings: {
             Home: [{
                 enable: true,
-                resultType: 1,
+                resultType: 0,
                 numItems: 12,
                 caption: "Our customers also bought...",
-                showCaption: false,
                 productStyle: "product4T product4THome",
-                divSelect: ".v65-productDisplay",
-                divPosition: "replace",
+                divSelect: ".cat-wrap",
+                divPosition: "below",
                 carousel: {
-                    numVis: 4,
-                    circular: true
+                    items: 5,
+                    itemsCustom: [[0,1],[480,2],[768,3],[992,4],[1200,5],[1400,6]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 showRatings: true,
                 maxImageHeight: 150,
@@ -40,28 +43,36 @@
                 numItems: 6,
                 caption: "Customers also bought...",
                 productStyle: "product4T product4TPD1",
-                divSelect: ".colors_pricebox",
+                divSelect: "tr:has(input#v65-product-wishlist-button):last",
                 divPosition: "below",
                 carousel: {
-                    numVis: 3,
-                    circular: true
+                    items: 5,
+                    itemsCustom: [[0,1],[480,2],[768,3],[992,4],[1200,5],[1400,6]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 showRatings: true,
                 maxImageHeight: 150,
-                wrapper: "<div class='PD14T'></div>",
+                wrapper: "<tr><td><div class='PD14T'></div></td></tr>",
                 rawJS: {},
                 inCart: false
             }, {
                 enable: true,
                 resultType: 3,
-                numItems: 12,
+                numItems: 4,
                 caption: "Customers also bought...",
                 productStyle: "product4T product4TPD2",
-                divSelect: ".colors_lines_light",
+                divSelect: "#v65-product-related",
                 divPosition: "replace",
                 carousel: {
-                    numVis: 4,
-                    circular: true
+                   items: 5,
+                    itemsCustom: [[0,1],[480,2],[768,3],[992,4],[1200,5],[1400,6]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 maxImageHeight: 120,
                 showRatings: true,
@@ -77,43 +88,28 @@
                 enable: false
             }],
             Category: [{
-                enable: false,
-                resultType: 5,
-                numItems: 4,
-                caption: "More ideas...",
-                productStyle: "product4T product4TCat",
-                divSelect: "#main4TellContainer",
-                divPosition: "append",
-                setHeight: false,
-                setWidth: false,
-                imageSize: "&maxx=100&maxy=100",
-                maxImageHeight: 100,
-                showRatings: true,
-                wrapper: "<div class='CAT4T'></div>",
-                rawJS: {},
-                inCart: false
+                enable: false
             }],
             AddToCart: [{
                 enable: true,
                 resultType: 0,
-                numItems: 6,
+                numItems: 12,
                 caption: "You may also like...",
-                captionStyle: "product4TCaption product4TCaptionVC",
                 productStyle: "product4T product4TVC",
-                divSelect: "table#v65-cart-checkout-parent td:first",
-                divPosition: "replace",
+                divSelect: ".col-md-3 hidden-xs hidden-sm",
+                divPosition: "below",
                 carousel: {
-                    numVis: 2,
-                    circular: true
+                    items: 5,
+                    itemsCustom: [[0,1],[480,2],[768,3],[992,4],[1200,5],[1400,6]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 maxImageHeight: 100,
                 showRatings: true,
-                wrapper: "<td valign='top'><div class='VC4T'></div></td>",
-                rawJS: {
-                    preDisplay: function () {
-                        $("table:has(.v65-productDisplay):last").hide();
-                    }
-                },
+                wrapper: "<div class='VC4T'></div>",
+                rawJS: {},
                 inCart: true
             }]
         }
