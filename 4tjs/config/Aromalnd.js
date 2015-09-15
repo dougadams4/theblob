@@ -9,6 +9,7 @@
             addCartImage: "/v/vspfiles/templates/splash2/images/buttons/btn_addtocart.gif",
             spacerImage: "/v/vspfiles/templates/splash2/images/clear1x1.gif",
             emptyImage: "/v/vspfiles/templates/splash2/images/nophoto.gif",
+            priceClass: "price2",
             pricePrefix: "<b>Price:</b> ",
             salePricePrefix: "Everyday Low Price: ",
             hideIfNoImage: true,
@@ -51,11 +52,7 @@
                     showRatings: true,
                     maxImageHeight: 160,
                     wrapper: "<table width='450px' align='right' style='border-spacing: 5px'><tr><td style='border: 1px solid #DFE0E0;'></td></tr></table>",
-                    rawJS: {
-                        preDisplay: function () {
-                            $('table.colors_lines_light').remove();
-                        }
-                    },
+                    rawJS: "$('table.colors_lines_light').remove();",//Remove legacy touts.
                     inCart: false
                 },
                 tout2: {
@@ -111,8 +108,10 @@
                             var results = $('form.search_results_section');
                             if (tout.enable && (results && results.length)) {
                                 var resultCell = results.parent(); resultCell.css('vertical-align', 'top');
-                                var newCell = $("<td width='130px' valign='top' style='border: 1px solid #DFE0E0;'><div id='main4TellContainer'></div></td>");
+                                var newCell = $("<td width='130px' valign='top' style='border: 1px solid #DFE0E0;'><div id='" + tout.newDivID + "'></div></td>");
                                 newCell.insertAfter(resultCell);
+                                tout.divSelect = '#' + tout.newDivID;
+                                tout.divPosition = 'append';
                             }
                         }
                     },
@@ -136,6 +135,7 @@
                     maxImageHeight: 100,
                     showRatings: true,
                     wrapper: "<td style='border: 1px solid #DDD;'></td>",
+
                     inCart: true
                 }
             }
