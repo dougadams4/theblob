@@ -7,9 +7,11 @@
             platform: "4TellBc.js",
             custom: true,
             addCartBtnAtts: "a>View Details</a",
+            //addCartBtnAtts: "input type='image' alt='Add to Cart' value='Add To Cart'",
             addCartImage: "//www.swingsetmall.com/template/template_images/addtocart.png",
             emptyImage: "/templates/__custom/images/ProductDefault.gif",
-            pricePrefix: "",
+            priceClass: "price2",
+            pricePrefix: "Our Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
@@ -19,161 +21,119 @@
                 enable: true,
                 resultType: 1,
                 numItems: 12,
-                fillMode:"all",
-                caption: "Recommended for You...",
+                caption: "Recommended for you...",
                 productStyle: "product4T product4THome",
-                divSelect: ".shopByWrap",
-                divPosition: "below",
+                divSelect: "#HomeFeaturedProducts",
+                divPosition: "replace",
                 carousel: {
-                    items: 4,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
-                showRatings: false,
+                showRatings: true,
                 maxImageHeight: 180,
-                wrapper: "<div class='PD14T row'></div>",
-                rawJS: {
-                    preDisplay: function (tout) {
-                        //$(tout.divSelect).before("<br class='Clear' />");
-                    }
-                },
-                inCart: false,
-                testGroup: {
-                    0: {},
-                    1: {
-                        enable: false,
-                        rawJS: {}
-
-                    }
-                }
+                wrapper: "<div class='HOME4T'></div>",
+                rawJS: {},
+                inCart: false
             }],
             ProductDetail: [{
+                enable: true,
+                resultType: 0,
+                numItems: 3,
+                caption: "Customers Also Bought",
+                captionStyle: "product4TCaption product4TCaptionPD1",
+                productStyle: "product4T product4TPD1",
+                divSelect: "#SideProductRelated",
+                divPosition: "replace",
+                showRatings: true,
+                maxImageHeight: 150,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {},
+                inCart: false
+            }, {
                 enable: true,
                 resultType: 3,
                 numItems: 12,
                 caption: "Customers Also Viewed",
                 productStyle: "product4T product4TPD2",
-                divSelect: ".alsoViewed4T",
-                divPosition: "append",
-                carousel: {
-                    items: 4,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
-                maxImageHeight: 120,
-                showRatings: false,
-                wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-
-                    },
-                    preDisplay: function (tout) {
-
-                    }
-                },
-                inCart: false,
-            }],
-            Search: [{
-                enable: false
-            }],
-            Category: [{
-                enable: true,
-                resultType: 5,
-                //fillMode: "crowd",
-                numItems: 12,
-                caption: "Related Top Sellers",
-                productStyle: "product4T product4TCat",
-                divSelect: "#CategoryPagingBottom",
+                divSelect: ".ProductDescriptionContainer",
                 divPosition: "below",
                 carousel: {
-                    items: 4,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
-                maxImageHeight: 190,
-                showRatings: false,
-                wrapper: "<div class='CAT4T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-
-                    },
-                    preDisplay: function () {
-                    }
-                },
-                inCart: false,
+                maxImageHeight: 120,
+                showRatings: true,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {},
+                inCart: false
+            }],
+            Search: {
+                tout1: {
+                    enable: false
+                }
             },
-           {
-               enable: true,
-               resultType: 5,
-               //fillMode: "crowd",
-               numItems: 4,
-               caption: "Related Top Sellers",
-               productStyle: "product4T product4TCat",
-               divSelect: ".SideBrands",
-               divPosition: "below",
-               maxImageHeight: 190,
-               showRatings: false,
-               wrapper: "<div class='CAT4T'></div>",
-               rawJS: {
-                   preInit: function (tout) {
-
-                   },
-                   preDisplay: function () {
-                   }
-               },
-               inCart: false,
-           }],
+            Category: {
+                tout1: {
+                    enable: true,
+                    resultType: 5,
+                    numItems: 12,
+                    caption: "More ideas...",
+                    productStyle: "product4T product4TCat",
+                    divSelect: "#CategoryPagingTop",
+                    divPosition: "above",
+                    carousel: {
+                        numVis: 4,
+                        circular: true
+                    },
+                    maxImageHeight: 190,
+                    showRatings: true,
+                    wrapper: "<div class='CAT4T'></div>",
+                    rawJS: {
+                        preInit: function (tout) {
+                            tout.enable = tout.enable && $("#CategoryContent .ProductDetails").length > 15;
+                        },
+                        preDisplay: function () {
+                            $("#SideCategoryTopSellers").hide();
+                        }
+                    },
+                    inCart: false
+                }
+            },
             AddToCart: [{
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "You May Also Like...",
+                caption: "You may also like...",
+                captionStyle: "product4TCaption product4TCaptionPD2",
                 productStyle: "product4T product4TVC",
-                divSelect: "#SuggestiveCartContent",
-                divPosition: "replace",
+                divSelect: ".KeepShopping",
+                divPosition: "above",
                 carousel: {
-                    items: 4,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 3,
+                    circular: true
                 },
                 maxImageHeight: 180,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='VC4T'></div>",
-                rawJS: {
-                    preDisplay: function () {
-                        $("#SuggestiveCartContent").hide();
-                    }
-                },
-                inCart: true,
+                rawJS: { preDisplay: function () { $("#SuggestiveCartContent").hide(); } },
+                inCart: true
             }],
             QuickCart: [{
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "You May Also Like...",
+                fillMode: "genomic",
                 showCaption: false,
-                productStyle: "product4T product4TVC",
+                productStyle: "product4T product4TQC",
+                carousel: {
+                    numVis: 4,
+                    circular: false
+                },
                 divSelect: "#fastCartSuggestive",
                 divPosition: "replace",
-                carousel: {
-                    items: 4,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
-                maxImageHeight: 180,
-                showRatings: false,
-                wrapper: "<div class='QC4T'></div>",
-                rawJS: {
-                    preDisplay: function () {
-                        $("#SuggestiveCartContent").hide();
-                    }
-                },
-                inCart: true,
+                maxImageHeight: 140,
+                showBuyButton: true,
+                inCart: true
             }]
         }
     }
