@@ -21,74 +21,79 @@
                     enable: false
                 }
             },
-            ProductDetail: [{
-                enable: true,
-                resultType: 3,
-                numItems: 6,
-                caption: "Our customers also viewed...",
-                productStyle: "product4T product4TPD2",
-                divSelect: ".colors_pricebox",
-                divPosition: "below",
-                carousel: {
-                    numVis: 3,
-                    circular: true
+            ProductDetail: {
+                tout1: {
+                    enable: true,
+                    resultType: 6,
+                    fillMode: "none",
+                    numItems: 12,
+                    caption: "Recommended Items",
+                    productStyle: "product4T product4TPD1",
+                    divSelect: "#ProductDetail_ProductDetails_div2",
+                    divPosition: "below",
+                    carousel: {
+                        numVis: 4,
+                        circular: true
+                    },
+                    showRatings: true,
+                    maxImageHeight: 150,
+                    wrapper: "<table width='100%' class='PD14T'><tr><td></td></tr></table>",
+                    rawJS: { preDisplay: function () { $(".colors_lines_light").hide(); } },
+                    inCart: false
                 },
-                maxImageHeight: 120,
-                showRatings: true,
-                wrapper: "<table width='470' class='PD14T'><tr><td></td></tr></table>",
-                inCart: false
-            }, {
-                enable: true,
-                resultType: 6,
-                fillMode: "none",
-                numItems: 12,
-                caption: "Recommended Items",
-                productStyle: "product4T product4TPD1",
-                divSelect: "#ProductDetail_ProductDetails_div2",
-                divPosition: "below",
-                carousel: {
-                    numVis: 4,
-                    circular: true
-                },
-                showRatings: true,
-                maxImageHeight: 150,
-                wrapper: "<table width='100%' class='PD14T'><tr><td></td></tr></table>",
-                rawJS: {
-                    preDisplay: function () {
-                        $(".colors_lines_light").hide();
-                    }
-                },
-                inCart: false
-            }],
-            Search: [{
-                enable: false
-            }],
-            Category: [{
-                enable: false
-            }],
-            AddToCart: [{
-                enable: true,
-                resultType: 6,
-                numItems: 12,
-                fillMode: "none",
-                caption: "You may also like...",
-                productStyle: "product4T product4TVC",
-                divSelect: "#v65-cart-checkout-parent td:first",
-                divPosition: "replace",
-                carousel: {
-                    numVis: 2,
-                    circular: true
-                },
-                maxImageHeight: 100,
-                showRatings: true,
-                wrapper: "<td></td>",
-                rawJS: {
-                    preDisplay: function () {
-                        $("table:has(table.v65-productDisplay):last").hide();
-                    }
-                },
-                inCart: true
-            }]
+                tout2: {
+                    enable: true,
+                    resultType: 3,
+                    numItems: 6,
+                    caption: "Our customers also viewed...",
+                    productStyle: "product4T product4TPD2",
+                    divSelect: ".colors_pricebox",
+                    divPosition: "below",
+                    carousel: {
+                        numVis: 3,
+                        circular: true
+                    },
+                    maxImageHeight: 120,
+                    showRatings: true,
+                    wrapper: "<table width='470' class='PD14T'><tr><td></td></tr></table>",
+                    inCart: false
+                }
+            },
+            Search: {
+                tout1: {
+                    enable: false
+                }
+            },
+            Category: {
+                tout1: {
+                    enable: false
+                }
+            },
+            AddToCart: {
+                tout1: {
+                    enable: true,
+                    resultType: 6,
+                    numItems: 12,
+                    fillMode: "none",
+                    caption: "You may also like...",
+                    productStyle: "product4T product4TVC",
+                    divSelect: "#v65-cart-checkout-parent td:first",
+                    divPosition: "replace",
+                    carousel: {
+                        numVis: 2,
+                        circular: true
+                    },
+                    maxImageHeight: 100,
+                    showRatings: true,
+                    wrapper: "<td></td>",
+                    rawJS: {
+                        preDisplay: function () {
+                            $("table:has(table.v65-productDisplay):last").hide();
+                        }
+                    },
+                    inCart: true
+                }
+            }
         }
     }
 }(window._4TellBoost = window._4TellBoost || {}, jQuery));
