@@ -13,7 +13,6 @@
     background: none;
     display: block;
 }
-
 .FourTellContainer {
     display: block;
     margin: 0px;
@@ -86,7 +85,6 @@
     }
 
     .product4T .productPrice {
-        display: none;
         padding-top: 5px;
         color: #666666;
         font-family: Arial, Helvetica, sans-serif;
@@ -95,7 +93,6 @@
     }
 
     .product4T .productSalePrice {
-        display: none;
         font-family: Arial, Helvetica, sans-serif;
         color: red;
         height: 1.2em;
