@@ -1,14 +1,13 @@
 /*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
+@grey: #DDD;
+
 .FourTellContainer {
     display: block;
     margin: 0;
     padding: 0;
-    .clearfix;
-}
 
-.clearfix() {
     &:after {
         content: ".";
         display: block;
@@ -18,17 +17,8 @@
     }
 }
 
-.expandOnHover(@height) {
-    height: @height;
-    min-height: @height;
-
-    &:hover {
-        height: auto;
-    }
-}
-
 .toutWrapper4T {
-    border: 1px solid gray;
+    border: 1px solid @grey;
     background: none;
 }
 
@@ -40,9 +30,9 @@
 
 .product4T {
     background-color: transparent;
-    padding: 5px;
+    padding: 5px 0;
     margin: 0 auto;
-    width: 120px;
+    width: 180px;
     border: none;
     text-align: center;
     vertical-align: middle;
@@ -52,15 +42,23 @@
     }
 
     .productImage {
-        padding: 10px 0;
         width: 100%;
-        height: 130px;
+        height: 180px;
+        padding: 0px;
+        position: relative;
 
         .productImageImg {
+            position:absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             max-width: 100%;
             max-height: 100%;
+            margin: auto;
+            width: auto;
+            height: auto;
             border: none;
-            vertical-align: middle;
             display: inline;
         }
     }
@@ -75,9 +73,10 @@
     }
 
     .productTitle {
-        .expandOnHover(4.4em);
         width: 100%;
+        height: 2.5em;
         overflow: hidden;
+        font-size: 10pt;
         font-weight: bold;
     }
 
@@ -98,7 +97,7 @@
 
     .strikePrice {
         text-decoration: line-through;
-        color: grey;
+        color: @grey;
     }
 
     .productBuy {
@@ -195,7 +194,6 @@
         float: left;
 
         .product4T {
-            width: 80%;
             margin: 0 auto;
         }
     }
@@ -240,10 +238,6 @@
 }
 
 .product4TPD1 {
-    margin: 0 auto;
-
-
-
 
     .productImage {
     }
@@ -252,7 +246,6 @@
     }
 
     .productTitle {
-        height: auto;
     }
 
     .ratingImage {
@@ -349,7 +342,6 @@
     }
 }
 
-
 .product4THome .productBuy {
 }
 /* Category pages */
@@ -380,9 +372,9 @@
     }
 }
 
-
 .product4TCat .productBuy {
 }
+
 /* Search */
 .product4TCaptionSearch {
 }
@@ -415,6 +407,10 @@
 .product4TSearch .productBuy {
 }
 /* View Cart */
+.VC4T {
+    float: left;
+}
+
 .product4TCaptionVC {
 }
 
@@ -536,4 +532,3 @@
     .productBuy {
     }
 }
-
