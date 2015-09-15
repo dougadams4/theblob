@@ -16,98 +16,108 @@
             siteEnable: true
         },
         PageSettings: {
-            Home: [{
-                enable: true,
-                resultType: 4,
-                numItems: 20,
-                caption: "Top Sellers",
-                showCaption: false,
-                productStyle: "product4T product4THome",
-                //Matches the featured products table. Apparently :last-of-type isn't supported by IE8.
-                divSelect: "table[cellspacing=10]",
-                divPosition: "replace",
-                carousel: {
-                    numVis: 4,
-                    circular: true
-                },
-                wrapper: "<table width='100%'><tr><td></td></tr></table>",
-                inCart: false
-            }],
-            ProductDetail: [{
-                enable: true,
-                resultType: 0,
-                numItems: 12,
-                caption: "Customers also bought...",
-                productStyle: "product4T product4TPD1",
-                divSelect: ".colors_pricebox",
-                divPosition: "below",
-                carousel: {
-                    numVis: 3,
-                    circular: true
-                },
-                showRatings: true,
-                maxImageHeight: 130,
-                wrapper: "<table width='100%' class='toutWrapper4T'><tr><td><table width='395' align='center'><tr><td></td></tr></table></td></tr></table>",
-                inCart: false
+            Home: {
+                tout1: {
+                    enable: true,
+                    resultType: 4,
+                    numItems: 20,
+                    caption: "Top Sellers",
+                    showCaption: false,
+                    productStyle: "product4T product4THome",
+                    //Matches the featured products table. Apparently :last-of-type isn't supported by IE8.
+                    divSelect: "table[cellspacing=10]",
+                    divPosition: "replace",
+                    carousel: {
+                        numVis: 4,
+                        circular: true
+                    },
+                    wrapper: "<table width='100%'><tr><td></td></tr></table>",
+                    inCart: false
+                }
             },
-                 {
-                     enable: true,
-                     resultType: 3,
-                     numItems: 8,
-                     caption: "Customers also viewed...",
-                     productStyle: "product4T product4TPD2",
-                     divSelect: ".colors_lines_light",
-                     divPosition: "replace",
-                     carousel: {
-                         numVis: 4,
-                         circular: true
-                     },
-                     maxImageHeight: 120,
-                     showRatings: true,
-                     wrapper: "<table width='100%' class='toutWrapper4T'><tr><td></td></tr></table>",
-                     inCart: false
-                 }],
-            Category: [{
-                enable: true,
-                resultType: 5,
-                numItems: 20,
-                caption: "Top Sellers in this Department",
-                productStyle: "product4T product4TCat",
-                divSelect: "#MainForm",
-                divPosition: "above",
-                carousel: {
-                    numVis: 4,
-                    circular: true
+            ProductDetail: {
+                tout1: {
+                    enable: true,
+                    resultType: 0,
+                    numItems: 12,
+                    caption: "Customers also bought...",
+                    productStyle: "product4T product4TPD1",
+                    divSelect: ".colors_pricebox",
+                    divPosition: "below",
+                    carousel: {
+                        numVis: 3,
+                        circular: true
+                    },
+                    showRatings: true,
+                    maxImageHeight: 130,
+                    wrapper: "<table width='100%' class='toutWrapper4T'><tr><td><table width='395' align='center'><tr><td></td></tr></table></td></tr></table>",
+                    inCart: false
                 },
-                maxImageHeight: 120,
-                wrapper: "<table width='100%' class='toutWrapper4T'><tr><td></td></tr></table>",
-                rawJS: {
-                    preInit: function (tout) {
-                        tout.enable = tout.enable && _4TellBoost.Service.catId != 13;
-                    }
-                },
-                inCart: false
-            }],
-            Search: [{
-                enable: false
-            }],
-            AddToCart: [{
-                enable: true,
-                resultType: 0,
-                numItems: 20,
-                caption: "You may also like...",
-                productStyle: "product4T product4TVC",
-                divSelect: "#v65-cart-checkout-parent",
-                divPosition: "below",
-                carousel: {
-                    numVis: 4,
-                    circular: true
-                },
-                maxImageHeight: 100,
-                showRatings: true,
-                wrapper: "<table width='100%' class='toutWrapper4T'><tr><td></td></tr></table>",
-                inCart: true
-            }]
+                tout2: {
+                    enable: true,
+                    resultType: 3,
+                    numItems: 8,
+                    caption: "Customers also viewed...",
+                    productStyle: "product4T product4TPD2",
+                    divSelect: ".colors_lines_light",
+                    divPosition: "replace",
+                    carousel: {
+                        numVis: 4,
+                        circular: true
+                    },
+                    maxImageHeight: 120,
+                    showRatings: true,
+                    wrapper: "<table width='100%' class='toutWrapper4T'><tr><td></td></tr></table>",
+                    inCart: false
+                }
+            },
+            Category: {
+                tout1: {
+                    enable: true,
+                    resultType: 5,
+                    numItems: 20,
+                    caption: "Top Sellers in this Department",
+                    productStyle: "product4T product4TCat",
+                    divSelect: "#MainForm",
+                    divPosition: "above",
+                    carousel: {
+                        numVis: 4,
+                        circular: true
+                    },
+                    maxImageHeight: 120,
+                    wrapper: "<table width='100%' class='toutWrapper4T'><tr><td></td></tr></table>",
+                    rawJS: {
+                        preInit: function (tout) {
+                            tout.enable = tout.enable && _4TellBoost.Service.catId != 13;
+                        }
+                    },
+                    inCart: false
+                }
+            },
+            Search: {
+                tout1: {
+                    enable: false
+                }
+            },
+            AddToCart: {
+                tout1: {
+                    enable: true,
+                    resultType: 0,
+                    numItems: 20,
+                    caption: "You may also like...",
+                    productStyle: "product4T product4TVC",
+                    divSelect: "form[name=form]",
+                    divPosition: "below",
+                    carousel: {
+                        numVis: 4,
+                        circular: true
+                    },
+                    maxImageHeight: 100,
+                    showRatings: true,
+                    wrapper: "<table width='100%' class='toutWrapper4T'><tr><td></td></tr></table>",
+                    inCart: true
+                }
+            }
         }
     }
 }(window._4TellBoost = window._4TellBoost || {}, jQuery));
