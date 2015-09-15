@@ -15,56 +15,60 @@
             siteEnable: true
         },
         PageSettings: {
-            ProductDetail: [{
-                enable: true,
-                resultType: 1,
-                numItems: 9,
-                caption: "Customers also bought...",
-                captionStyle: "product4TCaption product4TCaptionPD1",
-                productStyle: "product4T product4TPD1",
-                divSelect: "#content_left",
-                divPosition: "replace",
-                showRatings: false,
-                maxImageHeight: 130,
-                wrapper: "<div class='PD14T'></div>",
-                inCart: false
-            },
-                {
+            ProductDetail: {
+                tout1: {
+                    enable: true,
+                    resultType: 1,
+                    numItems: 9,
+                    caption: "Customers also bought...",
+                    captionStyle: "product4TCaption product4TCaptionPD1",
+                    productStyle: "product4T product4TPD1",
+                    divSelect: "#content_left",
+                    divPosition: "replace",
+                    showRatings: false,
+                    maxImageHeight: 130,
+                    wrapper: "<div class='PD14T'></div>",
+                    inCart: false
+                },
+                tout2: {
                     enable: true,
                     resultType: 3,
-                    numItems: 12,
+                    numItems: 10,
                     caption: "Customers also viewed...",
                     productStyle: "product4T product4TPD2",
-                    divSelect: ".colors_pricebox",
+                    divSelect: "#ProductDetail_ProductDetails_div2",
                     divPosition: "below",
                     carousel: {
                         circular: true,
-                        numVis: 3
+                        numVis: 5
                     },
                     maxImageHeight: 100,
                     showRatings: false,
-                    wrapper: "<table width='100%' align='center' style='border:1px solid #0f73ae'><tr><td></td></tr></table>",
+                    wrapper: "<table width='100%' align='center'><tr><td></td></tr></table>",
                     rawJS: {
                         preDisplay: function () {
                             $('.colors_lines_light').remove();
                         }
                     },
                     inCart: false
-                }],
-            Category: [{
-                enable: true,
-                resultType: 5,
-                numItems: 9,
-                caption: "Related Top Sellers",
-                captionStyle: "product4TCaption product4TCaptionCat",
-                productStyle: "product4T product4TCat",
-                divSelect: "#content_area",
-                divPosition: "below",
-                showRatings: false,
-                maxImageHeight: 130,
-                wrapper: "<div class='PD14T'></div>",
-                inCart: false
-            }],
+                }
+            },
+            Category: {
+                tout1: {
+                    enable: true,
+                    resultType: 5,
+                    numItems: 9,
+                    caption: "Related Top Sellers",
+                    captionStyle: "product4TCaption product4TCaptionCat",
+                    productStyle: "product4T product4TCat",
+                    divSelect: "#content_area",
+                    divPosition: "below",
+                    showRatings: false,
+                    maxImageHeight: 130,
+                    wrapper: "<div class='PD14T'></div>",
+                    inCart: false
+                }
+            },
             AddToCart: [{
                 enable: true,
                 resultType: 0,
