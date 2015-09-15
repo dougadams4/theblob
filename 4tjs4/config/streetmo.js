@@ -10,11 +10,11 @@
             pricePrefix: "",
             salePricePrefix: "",
             includeBase: false,
-            siteEnable: false
+            siteEnable: true
         },
         PageSettings: {
             Home: [{
-                enable: true,
+                enable: false,
                 resultType: 1,
                 numItems: 12,
                 caption: "Recommended for You",
