@@ -39,8 +39,8 @@
                 numItems: 12,
                 caption: "<img src='//4tcdn.blob.core.windows.net/4tjs/images/customers-also-viewed.gif'/>",
                 productStyle: "product4T product4TPD2",
-                divSelect: ".text_2, #related-items, .guantity",
-                divPosition: "below",
+                divSelect: "#related-items",
+                divPosition: "replace",
                 carousel: {
                     numVis: 4,
                     circular: true
@@ -55,9 +55,6 @@
                             tout.numItems = tout.carousel.numVis;
                             tout.carousel = false;
                         }
-                    },
-                    preDisplay: function () {
-                        $("#related-items").hide();
                     }
 
                 },
