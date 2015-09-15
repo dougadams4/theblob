@@ -1,6 +1,6 @@
 (function (_4TellBoost, $, undefined) {
     _4TellBoost.Service.customLoaded = true;
-    //_4TellBoost.Service.address = "stage.4-Tell.net/Boost2.0/";
+    _4TellBoost.Service.address = "stage.4-Tell.net/Boost2.0/";
     _4TellBoost.getBuyBtn = function (tout, itemdata) {
         var buyWrapper = $("<div class='productBuy' />");
         var buyBtn = $(_4TellBoost.SiteInfo.addCartBtnAtts);
@@ -10,7 +10,7 @@
 
         //can't wrap with a-href in IE so add new address to the onclick handler
         buyBtn.click(function () {
-            _4TellBoost.TrackGA(0, _4TellBoost.Service.pageType, itemdata.resultType, itemdata.productID, null, newAddress);
+            _4TellBoost.TrackClick(tout.toutType, itemdata.productID, newAddress);
         });
         return buyWrapper;
     };
