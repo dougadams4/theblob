@@ -46,12 +46,16 @@
 
 .product4T {
     background-color: transparent;
-    padding: 5px;
+    padding: 0;
     margin: 0 auto;
-    width: 90%;
-    border: 1px dotted@grey;
+    width: 100%;
+    border: none;
     text-align: center;
     vertical-align: middle;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
 
     .productImage {
         padding: 10px 0;
@@ -84,8 +88,9 @@
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 13px;
         font-weight: bold;
-        height: 6.6em;
-        color: #000;
+        height: 6em;
+        color: #000000;
+
     }
 
     .productPrice {
@@ -94,6 +99,7 @@
         font-size: 14px;
         font-weight: bold;
         color: #2a4597;
+
     }
 
     .strikePrice {
@@ -102,14 +108,17 @@
         color: #272F32;
         font-size: 12px;
         font-weight: normal;
+
     }
 
     .productSalePrice {
         font-family: 'Source Sans Pro', sans-serif;
+        color: red;
         height: 1.2em;
         font-size: 14px;
         font-weight: bold;
         color: #2a4597;
+
     }
 
     .productBuy {
@@ -202,8 +211,6 @@
 
 
 .FourTellContainer {
-
-
     .owl-controls {
         z-index: 11;
         position: absolute;
@@ -222,7 +229,7 @@
         .owl-next {
             background-position: 0 -30px !important;
             position: absolute;
-            right: -10px;
+            right: 0px;
             top: 100px;
             float: right;
         }
@@ -230,7 +237,7 @@
         .owl-prev {
             background-position: 0 0;
             position: absolute;
-            left: -10px;
+            left: 0px;
             top: 100px;
             float: left;
         }
@@ -487,4 +494,3 @@
     .productBuy {
     }
 }
-
