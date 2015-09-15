@@ -1,0 +1,203 @@
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+.FourTellContainer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.FourTellContainer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.toutWrapper4T {
+  border: 1px solid #dddddd;
+  background: none;
+}
+.product4TCaption {
+  padding: 0;
+  margin: 5px 0 0 5px;
+  text-align: left;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #034285;
+  padding-left: 10px;
+}
+.product4T {
+  background-color: transparent;
+  padding: 5px;
+  margin: 0;
+  width: 120px;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.product4T + .product4T {
+  border-left: 1px dotted #dddddd;
+}
+.product4T a.home {
+  text-decoration: none;
+}
+.product4T a.home:hover {
+  text-decoration: underline;
+}
+.product4T .productImage {
+  padding: 10px 0;
+  width: 100%;
+  height: 120px;
+}
+.product4T .productImage .productImageImg {
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  vertical-align: middle;
+  display: inline;
+}
+.product4T .ratingImage .ratingImageImg {
+  border: none;
+  vertical-align: middle;
+  display: inline;
+  padding: 2px;
+}
+.product4T .productTitle {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  overflow: hidden;
+  font-weight: bold;
+  height: 3.5em;
+  min-height: 3.5em;
+}
+.product4T .productTitle:hover {
+  height: auto;
+}
+.product4T .productPrice {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 1.2em;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 8px;
+  color: #cc0000;
+}
+.product4T .strikePrice {
+  text-decoration: line-through;
+  color: #dddddd;
+}
+.product4T .productSalePrice {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  height: 1.2em;
+  font-size: 11px;
+  font-weight: bold;
+}
+.product4T .productBuy {
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+.product4T .productBuy img,
+.product4T .productBuy input,
+.product4T .productBuy a {
+  cursor: pointer;
+  max-width: 100%;
+  border: medium none;
+}
+/* For scrollables. */
+.scrollable {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.scrollable .items {
+  /* this cannot be too large;
+         * must fit ev-ery-thing */
+  width: 20000em;
+  position: absolute;
+  clear: both;
+}
+.scrollable .items .scrollGroup,
+.scrollable .items .product4T {
+  float: left;
+}
+/* For the buttons. */
+a.browse {
+  background: url(../images/hori_large.png) no-repeat;
+  display: block;
+  width: 15px;
+  height: 18px;
+  float: left;
+  margin: 100px 0 0;
+  cursor: pointer;
+  font-size: 1px;
+}
+a.right {
+  background-position: 0 -30px;
+  clear: right;
+  margin-right: 10px;
+}
+a.left {
+  background-position: 0 0;
+  margin-left: 10px;
+}
+a.disabled {
+  visibility: hidden !important;
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.PD14T a.browse {
+  margin-top: 70px;
+}
+.product4TPD1 {
+  width: 180px;
+}
+.product4TPD1 .productImage {
+  width: 50%;
+  height: 90px;
+  float: left;
+}
+.product4TPD1 .productTitle {
+  width: 50%;
+  float: right;
+  height: 5em;
+  min-height: 5em;
+}
+.product4TPD1 .productTitle:hover {
+  height: auto;
+}
+.product4TPD1 .productPrice {
+  clear: right;
+}
+/* Tout2 on PD page */
+.product4TPD2 {
+  width: 130px;
+}
+/* Tout on the home page. */
+.HOME4T {
+  padding-top: 10px;
+  width: 650px;
+  border-radius: 8px;
+  background: #fff;
+}
+.product4THome {
+  width: 135px;
+}
+.product4THome:hover {
+  background: #D2E8EE;
+}
+/* Category pages */
+/* Search */
+/* View Cart */
+.VC4T {
+  float: left;
+}
+.product4TVC {
+  width: 120px;
+}
+/* Checkout */
+/* Quick Cart */
+/* Quick view */
+
