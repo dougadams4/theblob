@@ -1,0 +1,290 @@
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+.FourTellContainer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.FourTellContainer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* default state */
+.state-indicator {
+  color: transparent;
+  position: absolute;
+  top: -999em;
+  left: -999em;
+  z-index: 1;
+  /* small desktop */
+  /* tablet */
+  /* mobile phone */
+  /* mobile phone vertical */
+}
+@media only screen and (max-width: 980px) {
+  .state-indicator {
+    z-index: 2;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .state-indicator {
+    z-index: 3;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .state-indicator {
+    z-index: 4;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .state-indicator {
+    z-index: 5;
+  }
+}
+.toutWrapper4T {
+  border: 1px solid #dddddd;
+  background: none;
+}
+.product4TCaption {
+  padding: 0 10px;
+  text-align: left;
+  font-weight: bold;
+}
+.product4T {
+  background-color: #FFF;
+  margin: 10px 5px;
+  padding: 0;
+  width: 150px;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+}
+.product4T + .product4T {
+  border-left: 1px dotted #dddddd;
+}
+.product4T .productImage {
+  padding: 10px 0;
+  width: 100%;
+  height: 140px;
+}
+.product4T .productImage .productImageImg {
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  vertical-align: middle;
+  display: inline;
+}
+.product4T .ratingImage .ratingImageImg {
+  border: none;
+  vertical-align: middle;
+  display: inline;
+  padding: 2px;
+}
+.product4T .productTitle {
+  width: 100%;
+  overflow: hidden;
+  font-weight: bold;
+  height: 3.3em;
+  min-height: 3.3em;
+}
+.product4T .productTitle:hover {
+  height: auto;
+}
+.product4T .productPrice {
+  font-family: Tahoma, Geneva, sans-serif;
+  height: 1.2em;
+  font-size: 14px;
+  color: black;
+  font-weight: normal;
+}
+.product4T .strikePrice {
+  text-decoration: line-through;
+}
+.product4T .productSalePrice {
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #EF4D0F;
+  height: 1.2em;
+  font-size: 14px;
+  font-weight: bold;
+}
+.product4T .productBuy {
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+.product4T .productBuy img,
+.product4T .productBuy input {
+  max-width: 100%;
+  border: medium none;
+}
+/* For scrollables. */
+.scrollable {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.scrollable .items {
+  /* this cannot be too large;
+         * must fit ev-ery-thing */
+  width: 20000em;
+  position: absolute;
+  clear: both;
+}
+.scrollable .items .scrollGroup,
+.scrollable .items .product4T {
+  float: left;
+}
+/* For the buttons. */
+a.browse {
+  background: url(../images/hori_large.png) no-repeat;
+  display: block;
+  width: 15px;
+  height: 18px;
+  float: left;
+  margin: 100px 0 0;
+  cursor: pointer;
+  font-size: 1px;
+}
+a.right {
+  background-position: 0 -30px;
+  clear: right;
+  margin-right: 10px;
+}
+a.left {
+  background-position: 0 0;
+  margin-left: 10px;
+}
+a.disabled {
+  visibility: hidden !important;
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.PD14T {
+  border: 1px solid #9e9e9e;
+  padding: 15px 0;
+  padding-top: 0;
+  float: left;
+  width: 100%;
+}
+.product4TPD1 {
+  width: 140px;
+  margin: 0 auto;
+}
+.product4TPD1 + .product4TPD1 {
+  border: none;
+}
+.product4TPD1 .productImage {
+  height: auto;
+  min-height: 0;
+}
+.product4TPD1 .productTitle {
+  min-height: 0;
+  height: auto;
+}
+@media only screen and (max-width: 980px) {
+  .PD14T {
+    border: 1px solid #9e9e9e;
+    padding: 15px 0;
+    padding-top: 0;
+    float: left;
+    width: 100%;
+  }
+  .product4TPD1 {
+    width: 20%;
+    float: left;
+    margin: 0 2%;
+  }
+  .product4TPD1 .productTitle {
+    height: 3.3em;
+    min-height: 3.3em;
+  }
+  .product4TPD1 .productTitle:hover {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .product4TPD1 {
+    width: 45%;
+    float: left;
+    margin: 0 1%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .product4TPD1 .productPrice {
+    height: 2.5em;
+  }
+  .product4TPD1 .productSalePrice {
+    height: 2.5em;
+  }
+}
+/* Tout2 on PD page */
+/* Tout on the home page. */
+.product4THome {
+  width: 170px;
+  float: left;
+  padding: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .product4THome {
+    width: 110px;
+  }
+  .product4THome .productPrice {
+    height: 2.5em;
+  }
+  .product4THome .productSalePrice {
+    height: 2.5em;
+  }
+}
+/* Category pages */
+/* Search */
+/* View Cart */
+/* Checkout */
+/* Quick Cart */
+/* Quick view */
+/* Admin/Account */
+.product4TAdmin {
+  width: 170px;
+}
+@media only screen and (max-width: 980px) {
+  .product4TAdmin {
+    width: 155px;
+  }
+  .product4TAdmin .productSalePrice {
+    height: 2.5em;
+  }
+  .product4TAdmin .productPrice {
+    height: 2.5em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .product4TAdmin {
+    width: 110px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*.product4TAdmin {
+        width: 90px;
+        float: left;
+        margin: 0 2px;
+
+        .productPrice {
+            height: 2.5em;
+        }
+
+        .productSalePrice {
+            height: 2.5em;
+        }
+    }*/
+}
+/* Wish */
+@media only screen and (max-width: 768px) {
+  .product4TWish {
+    width: 130px;
+    float: left;
+  }
+}
+
