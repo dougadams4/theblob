@@ -20,9 +20,7 @@
         height: 0;
         clear: both;
         visibility: hidden;
-    }
-
-.FourTellContainer {
+    }.FourTellContainer {
     display: block;
     margin: 0px;
     padding: 0px;
@@ -87,13 +85,8 @@
         padding: 2px;
     }
 
-    .product4T a.home {
-        text-decoration: none;
-    }
-
     .product4T .productTitle {
         height: 3.4em;
-        font-size: 16px;
         width: 100%;
         overflow: hidden;
         font-weight: bold;
@@ -155,7 +148,7 @@ a.browse {
     width: 15px;
     height: 18px;
     float: left;
-    margin: 90px 0px;
+    margin: 100px 0px;
     cursor: pointer;
     font-size: 1px;
 }
