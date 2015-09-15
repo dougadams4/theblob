@@ -35,14 +35,14 @@
 }
 
 .product4TCaption {
-    background: url(../images/bg.jpg) repeat-x;
-    padding: 0 5px;
+    background: url(../images/4-tell-header.jpg) repeat-x;
+    padding: 6px 0 5px 20px;
     text-align: left;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: Oswald,sans-serif;
-    color: #6f6f6f;
-    font-size: 20px;
+    color: white;
+    font: bold 14px arial,verdana,sans-serif;
+    font-style: italic;
 }
 
 .product4T {
@@ -218,6 +218,7 @@ a.disabled {
 
 .product4TPD2 {
     width: 130px;
+    padding: 5px 7px;
 }
 
     .product4TPD2 + .product4TPD2 {
