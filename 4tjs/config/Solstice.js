@@ -1,14 +1,16 @@
 (function (_4TellBoost, $, undefined) {
     _4TellBoost.CONFIG = {
         SiteInfo: {
-            baseURL: "www.solsticesupply.com/",
+            baseURL: "www.CLIENTURL.com",
             alias: "Solstice",
-            GA_UA: "UA-2454024-2",
+            GA_UA: "",
             platform: "4TellMa.js",
-            custom: true,
-            addCartBtnAtts: "<button type='button' title='Add to Cart' class='button btn-cart' ><span><span>View Details</span></span></button>",
-            pricePrefix: "",
-            salePricePrefix: "",
+            addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
+            addCartImage: "",
+            spacerImage: "/web/assets/images/spacer.gif",
+            emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
@@ -16,69 +18,54 @@
             Auto: [{
                 enable: true,
                 resultType: 1,
-                numItems: 15,
-                caption: "<h3>Recommended for you...</h3>",
-                captionStyle: "title-container product4TCaption",
+                numItems: 12,
+                caption: "Our customers also bought...",
                 productStyle: "product4T product4THome",
                 divSelect: ".product-slider-container-big",
                 divPosition: "replace",
                 carousel: {
-                    numVis: 5,
+                    numVis: 4,
                     circular: true
                 },
                 showRatings: true,
-                maxImageHeight: 180,
+                maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.location.origin.match("shrd.com")) { tout.enable = false; return; }
-                        var spaceAvailable = $("#banners_slider_home_page").outerWidth();
-                        if (1170 > spaceAvailable) {
-                            tout.carousel = false;
-                            tout.numItems = Math.floor(spaceAvailable / 220);
-                        }
-                        //A less clever man would just do an if statement
-                        (2 <= tout.numItems) || (tout.enable = false);
-                        if (tout.enable) { $(tout.divSelect).hide(); }
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }],
             ProductDetail: [{
                 enable: true,
                 resultType: 0,
-                numItems: 4,
-                caption: "Customers also bought...",
+                numItems: 2,
+                caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
-                //divSelect: "#product_addtocart_form",
-                divSelect: "#product_acc_athlete_custom_tab1",
-                divPosition: "below",
+                divSelect: ".product-slider-container-big",
+                divPosition: "replace",
+                carousel: {
+                    numVis: 4,
+                    circular: true
+                },
                 showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.location.origin.match("shrd.com")) { tout.enable = false; return; }
-                    }
-                },
+                rawJS: {},
                 inCart: false
             },
             {
                 enable: true,
                 resultType: 3,
                 numItems: 4,
-                caption: "Customers also viewed",
+                caption: "Similar Items",
                 productStyle: "product4T product4TPD2",
-                divSelect: ".product-tabs-container",
-                divPosition: "below",
+                divSelect: "#second4TellContainer",
+                divPosition: "append",
+                setHeight: true,
+                setWidth: false,
+                imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 120,
                 showRatings: true,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.location.origin.match("shrd.com")) { tout.enable = false; return; }
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }],
             Search: [{
@@ -88,20 +75,17 @@
                 enable: true,
                 resultType: 5,
                 numItems: 4,
-                fillMode: "genomic",
-                caption: "Related Top Sellers",
+                caption: "More ideas...",
                 productStyle: "product4T product4TCat",
-                divSelect: ".products-grid",
-                divPosition: "above",
-                maxImageHeight: 200,
+                divSelect: "#main4TellContainer",
+                divPosition: "append",
+                setHeight: false,
+                setWidth: false,
+                imageSize: "&maxx=100&maxy=100",
+                maxImageHeight: 100,
                 showRatings: true,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.location.origin.match("shrd.com")) { tout.enable = false; return; }
-                        tout.enable = tout.enable && $("div.col-main li.item").length > 15;
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }],
             AddToCart: [{
@@ -110,16 +94,15 @@
                 numItems: 4,
                 caption: "You may also like...",
                 productStyle: "product4T product4TVC",
-                divSelect: ".cart-collaterals",
-                divPosition: "below",
+                divSelect: "#second4TellContainer",
+                divPosition: "append",
+                setHeight: true,
+                setWidth: false,
+                imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: true,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.location.origin.match("shrd.com")) { tout.enable = false; return; }
-                    }
-                },
+                rawJS: {},
                 inCart: true
             }]
         }
