@@ -1,0 +1,577 @@
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+@grey: #DDD;
+
+.FourTellContainer {
+    display: block;
+    margin: 0;
+    padding: 0;
+    .clearfix
+}
+
+.clearfix() {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+.expandOnHover(@height) {
+    height: @height;
+    min-height: @height;
+
+    &:hover {
+        height: auto;
+    }
+}
+
+.toutWrapper4T {
+    border: 1px solid @grey;
+    background: none;
+}
+
+.product4TCaption {
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    padding: 0;
+    margin: 5px 0 0 5px;
+    text-align: left;
+}
+
+.product4T {
+    font-family: Roboto;
+    background-color: transparent;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+        padding: 10px 0;
+        width: 100%;
+        height: auto;
+
+        .productImageImg {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            vertical-align: middle;
+            display: inline;
+        }
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+            border: none;
+            vertical-align: middle;
+            display: inline;
+            padding: 2px;
+        }
+    }
+
+    .productTitle {
+        font-family: Roboto,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        text-align: left;
+        color: #000;
+        width: 100%;
+        overflow: hidden;
+        .expandOnHover(3.7em);
+    }
+
+    .productPrice {
+        text-align: left;
+        font-family: Roboto,Arial,sans-serif;
+        font-weight: normal;
+        color: #000;
+        height: 1.2em;
+    }
+
+    .MSRP4T {
+        font-family: Roboto,Arial,sans-serif;
+        font-weight: normal;
+        /*color: #666;*/
+    }
+
+    .strikePrice {
+        line-height: 22px;
+        font-size: 12px;
+        float: right;
+        width: 50%;
+        text-align: left;
+        /*text-decoration: line-through;*/
+        color: darken(@grey, 30%);
+    }
+
+    .productSalePrice {
+        float: left;
+        text-align: left;
+        font-family: Roboto,Arial,sans-serif;
+        font-size: 18px;
+        font-weight: Bold;
+        font-style: italic;
+        color: #d00;
+        text-transform: uppercase;
+        height: 1.2em;
+    }
+
+    .YouSave4T {
+        font-family: Roboto,Arial,sans-serif;
+        color: #d00;
+    }
+
+    .productBuy {
+        clear: both;
+        margin: 0 0 10px;
+        text-decoration: none;
+        text-align: left;
+
+        img, input {
+            padding: 8px;
+            max-width: 100%;
+            background: linear-gradient(to bottom, #ffa03c 0%, #ffa73d 50%, #ff7c00 51%, #ff7d00 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            border: 0 none;
+            border-radius: 5px;
+            color: #fff;
+            font-family: Roboto Condensed,Arial,sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            height: 30px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            width: 110px;
+
+            &:hover {
+                background: #ff7c00;
+            }
+        }
+    }
+}
+/* For scrollables. */
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+/* display none until init */
+.owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+}
+
+.owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item {
+    float: left;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+    cursor: pointer;
+}
+
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing {
+    cursor: url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+}
+
+
+
+.owl-controls {
+    z-index: 11;
+    position: absolute;
+    left: 0;
+    /*top: 40%;*/
+    top: 0;
+    height: auto;
+    width: 100%;
+
+    .owl-buttons div {
+        /*background: linear-gradient(to bottom, #ffffff 1%, #e9e9e9 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 0 #ccc;
+        color: #5f5f5f;
+        padding: 20px;*/
+        width: 15px;
+        height: 18px;
+    }
+
+    .owl-next {
+        position: absolute;
+        right: -15px;
+        top: 80px;
+        float: right;
+    }
+
+    .owl-prev {
+        position: absolute;
+        left: -50px;
+        top: 80px;
+        float: left;
+    }
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.product4TCaptionPD1 {
+}
+
+.product4TPD1 {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Tout2 on PD page */
+.product4TCaptionPD2 {
+}
+
+.product4TPD2 {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Tout on the home page. */
+.product4TCaptionHome {
+}
+
+.product4THome {
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+        width: 80%;
+        float: left;
+    }
+
+    .strikePrice {
+        float: right;
+    }
+
+    .productBuy {
+    }
+}
+/* Category pages */
+.product4TCaptionCat {
+}
+
+#CAT4T {
+    .product4TCaption {
+        text-align: left;
+    }
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+.product4TCat {
+    .productTitle {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    @media only screen and (min-width: 400px) {
+        .productImage {
+            width: 50%;
+            float: left;
+            height: 100%;
+
+            .productImageImg {
+            }
+        }
+
+        .productTitle {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 50%;
+            float: right;
+        }
+
+        .productBuy {
+            clear: right;
+            text-align: left;
+        }
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+        clear: right;
+    }
+
+    .YouSave4T {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .productPrice {
+        width: auto;
+        text-decoration: line-through;
+        margin-right: 10px;
+        float: left;
+    }
+
+    .MSRP4T {
+        display: none;
+    }
+
+    .productBuy {
+    }
+}
+/* Search */
+.product4TCaptionSearch {
+}
+
+.product4TSearch {
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* View Cart */
+.product4TCaptionVC {
+}
+
+.product4TVC {
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Checkout */
+.product4TCaptionCheck {
+}
+
+.product4TCheck {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick Cart */
+.product4TCaptionQC {
+}
+
+.product4TQC {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick view */
+.product4TCaptionQV {
+}
+
+.product4TQV {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
