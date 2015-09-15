@@ -9,7 +9,7 @@
             addCartImage: "/v/vspfiles/templates/SustainableSupply/images/buttons/btn_addtocart_small.gif",
             spacerImage: "/v/vspfiles/templates/SustainableSupply/images/clear1x1.gif",
             emptyImage: "/v/vspfiles/templates/SustainableSupply/images/nophoto.gif",
-            hideIfNoImage: true,
+            //hideIfNoImage: true,
             priceClass: "price2",
             pricePrefix: "",
             salePricePrefix: "On Sale: ",
@@ -26,7 +26,7 @@
                 tout1: {
                     enable: true,
                     resultType: 0,
-                    numItems: 6,
+                    numItems: 12,
                     caption: "Our customers also bought...",
                     productStyle: "product4T product4TPD1",
                     divSelect: ".colors_pricebox",
