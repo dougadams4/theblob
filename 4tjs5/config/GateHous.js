@@ -19,46 +19,36 @@
             ProductDetail: [{
                 enable: true,
                 resultType: 0,
-                numItems: 12,
+                numItems: 8,
                 caption: "Customers also bought...",
                 captionStyle: 'product4TCaption product4TCaptionPD1',
                 productStyle: "product4T product4TPD1",
                 divSelect: "div.4tellbox",
                 divPosition: "above",
                 carousel: {
-                    items: 4,
+                    items: 2,
                     navigation: true,
                     navigationText: false,
                     pagination: false
                 },
                 showRatings: true,
                 maxImageHeight: 160,
-                wrapper: "<table align='center' class='PD14T'><tr><td></td></tr></table>",
+                wrapper: "<table align='center'><tr><td></td></tr></table>",
                 inCart: false
             },
                  {
                      enable: true,
                      resultType: 3,
-                     numItems: 12,
+                     numItems: 4,
                      caption: "Customers also viewed...",
                      captionStyle: 'product4TCaption product4TCaptionPD1',
                      productStyle: "product4T product4TPD2",
                      divSelect: "div.4tellbox",
                      divPosition: "below",
-                     carousel: {
-                         items: 4,
-                         navigation: true,
-                         navigationText: false,
-                         pagination: false
-                     },
                      maxImageHeight: 120,
                      showRatings: true,
-                     wrapper: "<table align='center' class='PD14T'><tr><td></td></tr></table>",
-                     rawJS: {
-                         preDisplay: function () {
-                             $('table.colors_lines_light').remove();
-                         }
-                     },
+                     wrapper: "<table width='100%'><tr><td></td></tr></table>",
+                     rawJS: { preDisplay: function () { $('table.colors_lines_light').remove(); } },
                      inCart: false
                  }],
             AddToCart: [{
