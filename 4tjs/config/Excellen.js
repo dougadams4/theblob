@@ -21,63 +21,70 @@
                     enable: false
                 }
             },
-            ProductDetail: [{
-                enable: true,
-                resultType: 0,
-                numItems: 4,
-                caption: "Our customers also bought...",
-                captionStyle: " product_title product4TCaption",
-                productStyle: "product4T product4TPD1",
-                divSelect: "form#add table:has(table .blue_titles):last",
-                divPosition: "below",
-                showRatings: true,
-                imageSize: "&maxx=120&maxy=120",
-                maxImageHeight: 150,
-                wrapper: "<table width='100%' class='PD14T'><tr><td></td></tr></table>",
-                inCart: false
-            }, {
-                enable: true,
-                resultType: 3,
-                numItems: 5,
-                caption: "Customers who viewed this product, also viewed...",
-                captionStyle: "orange_header product4TCaption",
-                productStyle: "product4T product4TPD2",
-                divSelect: "tr:has(tr td.orange_header):first",
-                divPosition: "below",
-                imageSize: "&maxx=120&maxy=120",
-                maxImageHeight: 120,
-                showRatings: true,
-                wrapper: "<tr><td colspan='2'></td></tr>",
-                rawJS: {
-                    preDisplay: function (tout) {
-                        $("tr:has(span.red_price):first").hide();
-                    }
+            ProductDetail: {
+                tout1: {
+                    enable: true,
+                    resultType: 0,
+                    numItems: 4,
+                    caption: "Our customers also bought...",
+                    captionStyle: " product_title product4TCaption",
+                    productStyle: "product4T product4TPD1",
+                    divSelect: "form#add table:has(table .blue_titles):last",
+                    divPosition: "below",
+                    showRatings: true,
+                    imageSize: "&maxx=120&maxy=120",
+                    maxImageHeight: 150,
+                    wrapper: "<table width='100%' class='PD14T'><tr><td></td></tr></table>",
+                    inCart: false
                 },
-                inCart: false
-
-            }],
-            Search: [{
-                enable: false
-
-            }],
-            Category: [{
-                enable: false
-            }],
-            AddToCart: [{
-                enable: true,
-                resultType: 0,
-                numItems: 4,
-                caption: "You may also like...",
-                captionStyle: " product_title product4TCaption",
-                productStyle: "product4T product4TVC",
-                divSelect: "tr:has(#Table5)",
-                divPosition: "below",
-                imageSize: "&maxx=100&maxy=100",
-                maxImageHeight: 100,
-                showRatings: true,
-                wrapper: "<tr><td colspan='6'></td></tr>",
-                inCart: true
-            }]
+                tout2: {
+                    enable: true,
+                    resultType: 3,
+                    numItems: 5,
+                    caption: "Customers who viewed this product, also viewed...",
+                    captionStyle: "orange_header product4TCaption",
+                    productStyle: "product4T product4TPD2",
+                    divSelect: "tr:has(tr td.orange_header):first",
+                    divPosition: "below",
+                    imageSize: "&maxx=120&maxy=120",
+                    maxImageHeight: 120,
+                    showRatings: true,
+                    wrapper: "<tr><td colspan='2'></td></tr>",
+                    rawJS: {
+                        preDisplay: function (tout) {
+                            $("tr:has(span.red_price):first").hide();
+                        }
+                    },
+                    inCart: false
+                }
+            },
+            Search: {
+                tout1: {
+                    enable: false
+                }
+            },
+            Category: {
+                tout1: {
+                    enable: false
+                }
+            },
+            AddToCart: {
+                tout1: {
+                    enable: true,
+                    resultType: 0,
+                    numItems: 4,
+                    caption: "You may also like...",
+                    captionStyle: " product_title product4TCaption",
+                    productStyle: "product4T product4TVC",
+                    divSelect: "tr:has(#Table5)",
+                    divPosition: "below",
+                    imageSize: "&maxx=100&maxy=100",
+                    maxImageHeight: 100,
+                    showRatings: true,
+                    wrapper: "<tr><td colspan='6'></td></tr>",
+                    inCart: true
+                }
+            }
         }
     }
 }(window._4TellBoost = window._4TellBoost || {}, jQuery));
