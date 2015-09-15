@@ -13,6 +13,7 @@
     background: none;
     display: block;
 }
+
 .FourTellContainer {
     display: block;
     margin: 0px;
@@ -117,19 +118,34 @@
         clear: both;
     }
 
+
     .product4T .strikePrice {
         text-decoration: line-through;
         color: grey;
     }
 
     .product4T .productBuy {
+        cursor: pointer;
         margin: 0 0 10px;
         text-decoration: none;
     }
 
         .product4T .productBuy img, .productBuy input {
+            background: #d1221b; /* Old browsers */
+            background: -moz-linear-gradient(top, #d1221b 0%, #ba170a 63%, #ba352e 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1221b), color-stop(63%,#ba170a), color-stop(99%,#ba352e)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #d1221b 0%,#ba170a 63%,#ba352e 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #d1221b 0%,#ba170a 63%,#ba352e 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #d1221b 0%,#ba170a 63%,#ba352e 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #d1221b 0%,#ba170a 63%,#ba352e 99%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1221b', endColorstr='#ba352e',GradientType=0 ); /* IE6-9 */
+            font-weight: bold;
+            color: white;
             max-width: 100%;
-            border: medium none;
+            /*border: 1px solid #f66e6c;*/
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
         }
 
 /* For scrollables. */
