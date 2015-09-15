@@ -54,7 +54,7 @@
                 divSelect: "table.colors_pricebox",
                 divPosition: "below",
                 carousel: {
-                    items: 2,
+                    itemsCustom: [[0,2]],
                     scrollPerPage: true,
                     navigation: true,
                     navigationText: false,
