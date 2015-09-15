@@ -10,99 +10,86 @@
             pricePrefix: "",
             salePricePrefix: "On Sale: ",
             includeBase: false,
-            siteEnable: false
+            siteEnable: false,
         },
         PageSettings: {
+            Auto: [{
+                enable: false
+            }],
             Home: [{
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "WELCOME TO THE GENTLEMAN'S GAZETTE SHOP - HERE ARE SOME RECOMMENDATIONS FOR YOU",
-                captionStyle: "product4TCaption product4TCaptionPD2",
+                showCaption: false,
                 productStyle: "product4T product4THome",
-                divSelect: ".homenew",
-                divPosition: "above",
+                divSelect: "#header_mainmenu",
+                divPosition: "below",
                 carousel: {
-                    numVis: 3,
-                    circular: true
+                    items: 4,
+                    itemsCustom: [[0,1],[480,2],[768,3],[992,4],[1200,4],[1400,4]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
-                inCart: false
-            }],
-            //Strange home page.
-            Auto: [{
-                enable: true,
-                resultType: 0,
-                numItems: 12,
-                caption: "WELCOME TO THE GENTLEMAN'S GAZETTE SHOP - HERE ARE SOME RECOMMENDATIONS FOR YOU",
-                productStyle: "product4T product4THome",
-                divSelect: ".homenew",
-                divPosition: "above",
-                carousel: {
-                    numVis: 4,
-                    circular: true
+                rawJS: {
+                     preInit: function(tout) {
+                           $("#tout1_hm_4Tell").parent("div").children('h3').hide();
+                     },
+                     perProduct: function(itemdata) {
+                         if(itemdata.title.length > 20) {
+                               itemdata.title = itemdata.title.substring(0,17) + "...";
+ 
+                         }
+                     }
                 },
-                showRatings: true,
-                maxImageHeight: 150,
-                wrapper: "<div class='PD14T'></div>",
                 inCart: false
             }],
             ProductDetail: [{
                 enable: true,
-                resultType: "3,0",
-                numItems: "8,7",
-                caption: "Frequently bought together...",
-                captionStyle: "product4TCaption product4TCaptionPD2",
-                productStyle: "product4T product4TPD2",
-                divSelect: ".yotpo-main-widget",
-                divPosition: "above",
+                resultType: 3,
+                numItems: 8,
+                showCaption: true,
+                caption: "Recommended for You",
+                productStyle: "product4T product4TPD1",
+                divSelect: "#tout1_pdp_4Tell",
+                divPosition: "replace",
                 carousel: {
-                    numVis: 5,
-                    circular: true
+                    items: 4,
+                    itemsCustom: [[0,1],[480,2],[768,3],[992,4]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 maxImageHeight: 120,
                 showRatings: true,
                 wrapper: "<div class='PD14T'></div>",
-                inCart: false
-            }, {
-                enable: false,
-                resultType: 0,
-                numItems: 12,
-                caption: "Our customers also bought...",
-                productStyle: "product4T product4TPD1",
-                divSelect: ".more-views",
-                divPosition: "below",
-                carousel: {
-                    numVis: 3,
-                    circular: true
+                rawJS: {
+                     preInit: function(tout) {
+                         $("#tout1_pdp_4Tell").parent("div").children("h2").hide();
+                     },
+                     perProduct: function(itemdata) {
+                         if(itemdata.title.length > 20) {
+                               itemdata.title = itemdata.title.substring(0,17) + "...";
+ 
+                         }
+                     }
                 },
-                showRatings: true,
-                maxImageHeight: 150,
-                wrapper: "<div class='PD14T'></div>",
                 inCart: false
-            }],
-            AddToCart: {
-                tout1: {
-                    enable: true,
-                    resultType: 0,
-                    numItems: 15,
-                    caption: "You may also like...",
-                    captionStyle: "product4TCaption product4TCaptionVC",
-                    productStyle: "product4T product4TVC",
-                    divSelect: ".cart .clear",
-                    divPosition: "below",
-                    carousel: {
-                        numVis: 5,
-                        circular: true
-                    },
-                    maxImageHeight: 100,
-                    showRatings: true,
-                    wrapper: "<div class='PD14T'></div>",
-                    inCart: true
-                }
-            }
+             },{
+                enable: true,
+                appendResults: true,
+                resultType: 0,
+                numItems: 7,
+                startPosition: 1
+             }],
+            AddToCart: [{
+                enable: false
+            }]
         }
     }
-}(window._4TellBoost = window._4TellBoost || {}, jQuery));
+}(window._4TellBoost, window._4TellBoost.jq || jQuery));
