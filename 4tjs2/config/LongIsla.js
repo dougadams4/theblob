@@ -92,7 +92,6 @@
                     productStyle: "product4T product4TVC",
                     divSelect: "table#v65-cart-checkout-parent td:first",
                     divPosition: "above",
-                    newDivID: "second4TellContainer",
                     carousel: {
                         circular: true,
                         numVis: 2
