@@ -5,18 +5,16 @@
             alias: "UroTuni",
             GA_UA: "UA-30174149-1",
             platform: "4TellVs.js",
-            addCartBtnAtts: "img class='vCSS_input_addtocart' alt='Add to Cart'",
-            addCartImage: "/v/vspfiles/templates/147/images/buttons/btn_addtocart.gif",
+            addCartBtnAtts: "div class='vCSS_input_addtocart'> VIEW PRODUCT <div",
             spacerImage: "/v/vspfiles/templates/147/images/clear1x1.gif",
             emptyImage: "/v/vspfiles/templates/147/images/nophoto.gif",
-            pricePrefix: "Our Price: ",
-            salePricePrefix: "On Sale: ",
+            pricePrefix: "Price: ",
+            salePricePrefix: "Sale: ",
             includeBase: false,
-            siteEnable: false
+            siteEnable: true
         },
         PageSettings: {
-            Home: {
-                tout1: {
+            Home: [{
                     enable: false,
                     resultType: 4,
                     numItems: 16,
@@ -38,26 +36,64 @@
                         }
                     },
                     inCart: false
-                }
-            },
-            ProductDetail: {
-                tout1: {
+                }],
+            
+            ProductDetail: [{
                     enable: true,
                     resultType: 0,
                     numItems: 12,
                     caption: "Customers also bought...",
                     productStyle: "product4T product4TPD1",
-                    divSelect: ".colors_pricebox",
-                    divPosition: "below",
+                    divSelect: "table:has(font.pricecolor.colors_productprice)",
+                    divPosition: "above",
                     carousel: {
-                        numVis: 3,
-                        circular: true
+                    items: 2,
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                     },
+                    responsive: {
+                    1: {
+                        carousel: {
+                              items: 2,
+                        }
+                    },
+
+                    2: {
+                        carousel: {
+                              items: 2,
+                        }
+                    },
+
+                    3: {
+                         carousel: {
+                              items: 1,
+                        }
+                    },
+
+                    4: {
+                        carousel: {
+                              items: 1,
+                        }
+                    }
+                },
+
                     maxImageHeight: 160,
-                    wrapper: "<table width='435' class='toutWrapper4T'><tr><td></td></tr></table>",
+                    wrapper: "<div></div>",
+                    rawJS:{
+                   
+                          perProduct: function(itemdata) {
+                                if(itemdata.title.length > 20) {
+                                     itemdata.title = itemdata.title.substring(0,17) + "...";
+
+                                }
+                          }
+
+                    },
                     inCart: false
                 },
-                tout2: {
+                {
                     enable: true,
                     resultType: 3,
                     numItems: 8,
@@ -66,68 +102,173 @@
                     divSelect: "#v65-product-related",
                     divPosition: "replace",
                     carousel: {
-                        numVis: 4,
-                        circular: true
+                        items: 4,
+                        scrollPerPage: true,
+                        navigation: true,
+                        navigationText: false,
+                        pagination: false
                     },
-                    maxImageHeight: 140,
+                    responsive: {
+                    1: {
+                        carousel: {
+                             items: 4,
+                        },
+                    },
+
+                    2: {
+                       carousel: {
+                             items: 4,
+                       },
+                    },
+
+                    3: {
+                        carousel: {
+                             items: 2,
+                        },
+                    },
+
+                    4: {
+                       carousel: {
+                             items: 1,
+                             },
+                    }
+                },
                     showRatings: true,
+                    rawJS:{
+                   
+                          perProduct: function(itemdata) {
+                                if(itemdata.title.length > 20) {
+                                     itemdata.title = itemdata.title.substring(0,17) + "...";
+
+                                }
+                          }
+
+                    },
                     wrapper: "<table width='100%' class='toutWrapper4T'><tr><td></td></tr></table>",
                     inCart: false
-                }
-            },
-            Search: {
-                tout1: {
+                }],
+           
+            Search: [{            
                     enable: false
-                }
-            },
-            Category: {
-                tout1: {
+            }],
+            Category: [{
                     enable: true,
                     resultType: 5,
                     numItems: 12,
                     caption: "Related Top Sellers",
                     productStyle: "product4T product4TCat",
-                    divSelect: "#MainForm",
-                    divPosition: "above",
+                    divSelect: ".top-bar",
+                    divPosition: "below",
                     carousel: {
-                        numVis: 4,
-                        circular: true
+                        items: 4,
+                        scrollPerPage: true,
+                        navigation: true,
+                        navigationText: false,
+                        pagination: false
                     },
-                    maxImageHeight: 100,
-                    wrapper: "<table width='100%' class='toutWrapper4T'><tr><td></td></tr></table>",
+                    responsive: {
+                    1: {
+                        carousel: {
+                             items: 4,
+                        },
+                    },
+
+                    2: {
+                       carousel: {
+                             items: 4,
+                       },
+                    },
+
+                    3: {
+                        carousel: {
+                             items: 2,
+                        },
+                    },
+
+                    4: {
+                       carousel: {
+                             items: 1,
+                             },
+                    }
+                },
+
+                    showRatings: true,
+                    rawJS:{
+                   
+                          perProduct: function(itemdata) {
+                                if(itemdata.title.length > 20) {
+                                     itemdata.title = itemdata.title.substring(0,17) + "...";
+
+                                }
+                          }
+
+                    },
+                    wrapper: "<div width='100%' class='toutWrapper4T'></div>",
                     rawJS: {
                         preInit: function (tout) {
                             tout.enable = tout.enable && $(".pricecolor").length >= 15;
                         }
                     },
                     inCart: false
-                }
-            },
-            AddToCart: {
-                tout1: {
+                
+            }],
+            AddToCart: [{
                     enable: true,
                     resultType: 0,
-                    numItems: 4,
+                    numItems: 8,
                     caption: "You may also like...",
                     productStyle: "product4T product4TVC",
                     orientation: "horizontal",
-                    divSelect: "#v65-cart-checkout-parent td:first",
-                    divPosition: "replace",
+                    divSelect: ".btn_checkout_guest",
+                    divPosition: "below",
                     carousel: {
-                        numVis: 2,
-                        circular: true
+                        items: 2,
+                        scrollPerPage: true,
+                        navigation: true,
+                        navigationText: false,
+                        pagination: false
                     },
-                    maxImageHeight: 120,
+                    responsive: {
+                    1: {
+                        carousel: {
+                             items: 2,
+                        },
+                    },
+
+                    2: {
+                       carousel: {
+                             items: 2,
+                       },
+                    },
+
+                    3: {
+                        carousel: {
+                             items: 2,
+                        },
+                    },
+
+                    4: {
+                       carousel: {
+                             items: 1,
+                             },
+                    }
+                },
+                    
                     showRatings: true,
                     wrapper: "<td class='toutWrapper4T' width='374'></td>",
-                    rawJS: {
-                        preInit: function (tout) {
-                            tout.enable = tout.enable && $('#v65-onepage-payment-details-parent-table').length == 0;
-                        }
+                    rawJS:{
+                   
+                          perProduct: function(itemdata) {
+                                if(itemdata.title.length > 20) {
+                                     itemdata.title = itemdata.title.substring(0,17) + "...";
+
+                                }
+                          }
+
                     },
                     inCart: true
-                }
-            }
+                
+            }]
         }
     };
-}(window._4TellBoost = window._4TellBoost || {}, jQuery));
+}(window._4TellBoost, window._4TellBoost.jq || jQuery));
