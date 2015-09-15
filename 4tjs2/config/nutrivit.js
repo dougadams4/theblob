@@ -3,14 +3,14 @@
         SiteInfo: {
             baseURL: "www.nutrivitasuplementos.com",
             alias: "nutrivit",
-            GA_UA: "UA-12949390-6",
+            GA_UA: "",
             platform: "4TellBc.js",
             addCartBtnAtts: "a class='icon-cart btn'> </a ",
             emptyImage: "/templates/__custom/images/ProductDefault.gif",
             pricePrefix: "",
             salePricePrefix: "",
             includeBase: false,
-            siteEnable: true
+            siteEnable: false
         },
         PageSettings: {
             Home: [{
@@ -21,8 +21,7 @@
                 resultType: 0,
                 numItems: 12,
                 //Accented �
-                caption: "Sugerimos tamb&#233;m!",
-                captionStyle: "product4TCaption product4TCaptionPD1",
+                caption: "Sugerimos tamb&#233;m",
                 productStyle: "product4T product4TPD1",
                 divSelect: ".yotpo-main-widget",
                 divPosition: "above",
@@ -30,7 +29,7 @@
                     numVis: 4,
                     circular: true
                 },
-                showRatings: false,
+                showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
@@ -73,13 +72,9 @@
                     circular: true
                 },
                 maxImageHeight: 100,
-                showRatings: false,
-                wrapper: "<div class='VC4T'></div>",
-                rawJS: {
-                    preDisplay: function () {
-                        //$("#SuggestiveCartContent").hide();
-                    }
-                },
+                showRatings: true,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {},
                 inCart: true
             }]
         }
