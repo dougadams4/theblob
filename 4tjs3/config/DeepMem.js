@@ -17,7 +17,7 @@
         },
         PageSettings: {
             Home: [{
-                enable: false,
+                enable: true,
                 resultType: 1,
                 numItems: 12,
                 rotateRecs: true,
@@ -27,7 +27,7 @@
                 divSelect: "#featured-scroll",
                 divPosition: "replace",
                 carousel: {
-                    itemsCustom: [[0, 2], [400, 4]],
+                    items: 4,
                     navigation: true,
                     navigationText: false,
                     pagination: false
@@ -46,7 +46,7 @@
                 divSelect: ".secondary",
                 divPosition: "below",
                 carousel: {
-                    itemsCustom: [[0, 2], [400, 4]],
+                    itemsCustom: [[0, 2], [400, 3]],
                     navigation: true,
                     navigationText: false,
                     pagination: false
@@ -118,7 +118,7 @@
                 divSelect: ".chk-buttons",
                 divPosition: "below",
                 carousel: {
-                    itemsCustom: [[0, 2], [400, 3]],
+                    items: 3,
                     navigation: true,
                     navigationText: false,
                     pagination: false
