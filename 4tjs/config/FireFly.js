@@ -4,112 +4,87 @@
             baseURL: "www.fireflybuys.com",
             alias: "FireFly",
             GA_UA: "UA-1666027-6",
-            platform: "4TellBc.js",
-            addCartBtnAtts: "button type='submit'><i class='icon-shopping-cart'></i><span>Add to Cart</span></button",
-            emptyImage: "/templates/__custom/images/ProductDefault.gif",
+            platform: "4TellADN.js",
+            addCartBtnAtts: "<input type='submit' class='AddToCartButton' value=''/>",
+            priceClass: "variantprice",
             pricePrefix: "Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
         PageSettings: {
-            Home: [{
-                enable: false
-            }],
-            ProductDetail: [{
-                enable: true,
-                resultType: 0,
-                numItems: 10,
-                caption: "Customers also bought...",
-                productStyle: "product4T product4TPD2",
-                divSelect: "#DescriptionTab",
-                divPosition: "below",
-                carousel: {
-                    numVis: 5,
-                    circular: true
+            Home: {
+                tout1: {
+                    enable: false
+                }
+            },
+            ProductDetail: {
+                tout1: {
+                    enable: true,
+                    resultType: 0,
+                    numItems: 3,
+                    caption: "Customers also bought...",
+                    productStyle: "product4T product4TPD1",
+                    divSelect: "div#rcolumn2",
+                    divPosition: "replace",
+                    showRatings: true,
+                    maxImageHeight: 150,
+                    wrapper: "<div id='rcolumn2'></div>",
+                    inCart: false
                 },
-                showRatings: false,
-                maxImageHeight: 150,
-                wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.outerWidth < 1000) {
-                            tout.numItems = 2;
-                            tout.carousel = false;
-                        }
-                    }
-                },
-                inCart: false
-            }, {
-                enable: true,
-                resultType: 3,
-                numItems: 10,
-                caption: "Customers also viewed...",
-                productStyle: "product4T product4TPD2",
-                divSelect: "#ReviewsTab",
-                divPosition: "above",
-                carousel: {
-                    numVis: 5,
-                    circular: true
-                },
-                maxImageHeight: 190,
-                showRatings: false,
-                wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.outerWidth < 1000) {
-                            tout.numItems = 6;
-                            tout.carousel = false;
+                tout2: {
+                    enable: true,
+                    resultType: 3,
+                    numItems: 12,
+                    caption: "Customers also viewed...",
+                    productStyle: "product4T product4TPD2",
+                    divSelect: "#prodpagecontent",
+                    divPosition: "below",
+                    carousel: {
+                        numVis: 4,
+                        circular: true
+                    },
+                    maxImageHeight: 120,
+                    showRatings: true,
+                    inCart: false
+                }
+            },
+            Category: {
+                tout1: {
+                    enable: false
+                }
+            },
+            Search: {
+                tout1: {
+                    enable: false
+                }
+            },
+            AddToCart: {
+                tout1: {
+                    enable: true,
+                    resultType: 0,
+                    numItems: 12,
+                    caption: "You may also like...",
+                    productStyle: "product4T product4TVC",
+                    orientation: "horizontal",
+                    divSelect: "#pnlCartSummarySubTotals > table",
+                    divPosition: "above",
+                    carousel: {
+                        numVis: 3,
+                        circular: true
+                    },
+                    maxImageHeight: 100,
+                    showRatings: true,
+                    wrapper: "<div id='VC4T'></div>",
+                    rawJS: {
+                        preDisplay: function (tout) {
+                            $('#pnlUpsellProducts,#relatedItemContent').hide();
+                            $(tout.divSelect).attr('width', '30%'); $('#pnlOrderNotes > table').css('clear', 'left');
                         }
                     },
-                    preDisplay: function () {
-                        $("#SimilarProductsByCustomerViewsTab, #RelatedProductsTab").hide();
-                    }
-                },
-                inCart: false
-            }],
-            Category: [{
-                enable: false
-            }],
-            Search: [{
-                enable: false
-            }],
-            AddToCart: [{
-                enable: true,
-                resultType: 0,
-                numItems: 12,
-                caption: "You may also like...",
-                productStyle: "product4T product4TVC",
-                divSelect: ".ProceedToCheckout",
-                divPosition: "above",
-                carousel: {
-                    numVis: 3,
-                    circular: true
-                },
-                maxImageHeight: 100,
-                showRatings: false,
-                wrapper: "<div class='VC4T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.outerWidth < 1000) {
-                            tout.numItems = 6;
-                            tout.carousel = false;
-                        }
-                    },
-                    preDisplay: function () {
-                        $(".cart-contents ~ .product-grid").hide();
-                    }
-                },
-                inCart: true
-            }]
+                    inCart: true
+                }
+            }
         }
     };
-
-    $(document).ready(function () {
-        if ($("#CartHeader").length > 0) {
-            _4TellBoost.setPageType("AddToCart");
-        } else if ($("body.category").length > 0) {
-            _4TellBoost.setPageType("Category");
-        }
-    });
 }(window._4TellBoost = window._4TellBoost || {}, jQuery));
