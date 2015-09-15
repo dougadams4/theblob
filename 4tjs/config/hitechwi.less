@@ -52,18 +52,9 @@
     border: none;
     text-align: center;
     vertical-align: middle;
-    text-decoration: none;
 
     & + & {
         border-left: 1px dotted @grey;
-    }
-
-    a.home {
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 
     .productImage {
@@ -92,12 +83,10 @@
 
 
     .productTitle {
-        text-decoration: none;
-        color: black;
         width: 100%;
         overflow: hidden;
         font-weight: bold;
-        .expandOnHover(3.5em)
+        .expandOnHover(3.4em)
     }
 
     .productPrice {
@@ -126,8 +115,7 @@
         margin: 0 0 10px;
         text-decoration: none;
 
-        img, input, a {
-            cursor: pointer;
+        img, input {
             max-width: 100%;
             border: medium none;
         }
@@ -183,28 +171,15 @@ a.disabled {
 .product4TCaptionPD1 {
 }
 
-.PD14T {
-    a.browse {
-        margin-top: 70px;
-    }
-}
-
 .product4TPD1 {
-    width: 180px;
+    width: 110px;
 
     .productImage {
-        width: 50%;
-        height: 90px;
-        float: left;
-
         .productImageImg {
         }
     }
 
     .productTitle {
-        width: 50%;
-        float: right;
-        .expandOnHover(5em)
     }
 
     .ratingImage {
@@ -216,7 +191,6 @@ a.disabled {
     }
 
     .productPrice {
-        clear: right;
     }
 
     .productBuy {
@@ -256,19 +230,11 @@ a.disabled {
 }
 
 .HOME4T {
-    padding-top: 10px;
-    width: 650px;
     border-radius: 8px;
     background: #fff;
 }
 
 .product4THome {
-    width: 135px;
-
-    &:hover {
-        background: #D2E8EE;
-    }
-
     .productImage {
         .productImageImg {
         }
@@ -350,13 +316,7 @@ a.disabled {
 .product4TCaptionVC {
 }
 
-.VC4T {
-    float: left;
-}
-
 .product4TVC {
-    width: 120px;
-
     .productImage {
         .productImageImg {
         }
@@ -463,4 +423,3 @@ a.disabled {
     .productBuy {
     }
 }
-
