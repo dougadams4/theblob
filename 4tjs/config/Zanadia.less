@@ -1,0 +1,539 @@
+/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+#second4TellContainer {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0;
+    background: none;
+    display: block;
+    float: left;
+    border: 1px solid #DDD;
+    .clearfix
+}
+
+@grey: #DDD;
+
+.FourTellContainer {
+    display: block;
+    margin: 0;
+    padding: 0;
+    .clearfix
+}
+
+.clearfix() {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+.expandOnHover(@height) {
+    height: @height;
+    min-height: @height;
+
+    &:hover {
+        height: auto;
+    }
+}
+
+.toutWrapper4T {
+    border: 1px solid @grey;
+    background: none;
+}
+
+.product4TCaption {
+    color: #211302;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0;
+    margin: 3px 0 0 3px;
+    text-align: left;
+}
+
+.product4T {
+    background-color: #FFFFFF;
+    margin: 10px 10px 0 0;
+    padding: 0;
+    width: 175px;
+    float: left;
+    clear: none;
+    text-align: center;
+    vertical-align: middle;
+
+    .productImage {
+        padding: 10px 0;
+        width: 100%;
+        height: 130px;
+
+        .productImageImg {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            vertical-align: middle;
+            display: inline;
+        }
+    }
+
+    .ratingImage {
+    }
+
+    .ratingImageImg {
+        border: none;
+        vertical-align: middle;
+        display: inline;
+        padding: 2px;
+    }
+
+    .productTitle {
+        font-size: 12px;
+        height: 30px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .productPrice {
+        font-family: Arial, Helvetica, sans-serif;
+        height: 15px;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .productSalePrice {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #902018;
+        height: 15px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .strikePrice {
+        text-decoration: line-through;
+        color: grey;
+    }
+
+
+    .productBuy {
+        cursor: pointer;
+        margin: 0 0 10px;
+        text-decoration: none;
+
+        .productBuy img {
+            max-width: 100%;
+        }
+    }
+}
+/* For scrollables. */
+.scrollable {
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollable .items {
+    /* this cannot be too large;
+         * must fit ev-ery-thing */
+    width: 20000em;
+    position: absolute;
+    clear: both;
+}
+
+.items div.scrollGroup, .items div.product4T {
+    float: left;
+}
+
+/* For the buttons. */
+a.browse {
+    background: url(../images/hori_large.png) no-repeat;
+    display: block;
+    width: 15px;
+    height: 18px;
+    float: left;
+    margin: 100px 0 0;
+    cursor: pointer;
+    font-size: 1px;
+}
+
+a.right {
+    background-position: 0 -30px;
+    clear: right;
+    margin-right: 10px;
+}
+
+a.left {
+    background-position: 0 0;
+    margin-left: 10px;
+}
+
+a.disabled {
+    visibility: hidden !important;
+}
+
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+
+/* Tout1 on PD page. */
+.product4TCaptionPD1 {
+}
+
+#ProductDetailItemWrapper1 {
+    margin: 0 10px;
+}
+
+.product4TPD1 {
+    width: 120px;
+    padding: 10px;
+    margin: 3px;
+
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Tout2 on PD page */
+.product4TCaptionPD2 {
+}
+
+.product4TPD2 {
+    margin: 1px;
+    width: 160px;
+    padding: 3px;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Tout on the home page. */
+.product4TCaptionHome {
+}
+
+.product4THome {
+    width: 180px;
+    padding: 0 23px;
+
+    & + & {
+        border-left: 1px solid @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Category pages */
+.product4TCaptionCat {
+}
+
+.product4TCat {
+    width: 160px;
+    margin: 3px;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Search */
+.product4TCaptionSearch {
+}
+
+.SEARCH4T {
+    padding-left: 10px;
+    border: 1px solid #777;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.product4TSearch {
+    width: 150px;
+    padding: 0 8px;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* View Cart */
+.product4TCaptionVC {
+    /*padding: 10px;
+    margin: 0;
+    text-align: left;
+    color: black;*/
+    clear: both;
+}
+
+#VC4T a.browse {
+    margin: 40% 0;
+}
+
+.product4TVC {
+    margin: 0;
+    width: 160px;
+    padding: 5px 3px;
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Checkout */
+.product4TCaptionCheck {
+    /* padding: 10px;
+    margin: 0;
+    text-align: left;
+    color: black;*/
+}
+
+.product4TCheck {
+}
+
+.product4TCheck .productImage {
+}
+
+.product4TCheck .productImageImg {
+}
+
+.product4TCheck .productTitle {
+}
+
+.product4TCheck .ratingImage {
+}
+
+.product4TCheck .ratingImageImg {
+}
+
+.product4TCheck .productSalePrice {
+    color: #902018;
+}
+
+.product4TCheck .productPrice {
+}
+
+
+.product4TCheck .productBuy {
+}
+
+/* Quick Cart */
+.product4TCaptionQC {
+}
+
+.product4TQC {
+}
+
+.product4TQC .productImage {
+}
+
+.product4TQC .productImageImg {
+}
+
+.product4TQC .productTitle {
+}
+
+.product4TQC .ratingImage {
+}
+
+.product4TQC .ratingImageImg {
+}
+
+.product4TQC .productSalePrice {
+}
+
+.product4TQC .productPrice {
+}
+
+
+.product4TQC .productBuy {
+}
+
+/* Quick view */
+.product4TCaptionQV {
+}
+
+.product4TQV {
+    margin: 4px 0;
+    padding: 0;
+    width: 120px;
+}
+
+.product4TQV .productImage {
+}
+
+.product4TQV .productImageImg {
+}
+
+.product4TQV .productTitle {
+    height: 15px;
+    width: 120px;
+}
+
+.product4TQV .ratingImage {
+}
+
+.product4TQV .ratingImageImg {
+}
+
+.product4TQV .productSalePrice {
+}
+
+.product4TQV .productPrice {
+}
+
+
+.product4TQV .productBuy {
+}
+
