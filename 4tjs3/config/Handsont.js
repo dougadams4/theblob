@@ -48,16 +48,35 @@
             ProductDetail: [{
                 enable: true,
                 resultType: 0,
-                numItems: 4,
+                numItems: 12,
                 caption: "Customers also bought...",
                 captionStyle: "menu-headers product4TCaption",
                 productStyle: "product4T product4TPD1",
-                divSelect: "#column1 > table:first",
-                divPosition: "replace",
+                divSelect: ".detail-section",
+                divPosition: "below",
+                carousel: {
+                    items: 4,
+                    itemsCustom: [[0, 1], [481, 2], [768, 3], [768, 2], [1024, 3], [1203, 4]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
+                },
                 imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 150,
                 showRatings: false,
                 wrapper: "<div class='PD14T'></div>",
+                rawJS: {
+                    preInit: function(tout) { //swap result types for high-priced items
+                        var p = $("span#price");
+                        if (!p || !p.length) return;
+                        p = $(p).html().substring(1);
+                        if (!p || isNaN(p)) return;
+                        if (Number(p) < 200) return;
+                        tout.resultType = 3;
+                        tout.caption = "Customers also viewed...";
+                    }
+                },
                 inCart: false
             }, {
                 enable: true,
@@ -66,10 +85,11 @@
                 caption: "Customers also viewed...",
                 captionStyle: "product4TCaption product4TCaptionPD2",
                 productStyle: "product4T product4TPD2",
-                divSelect: "#REL4T",
+                divSelect: ".relatedBlock",
                 divPosition: "replace",
                 carousel: {
-                    items: 4,
+                    items: 5,
+                    itemsCustom: [[0, 1], [481, 2], [768, 3], [768, 4], [1024, 5], [1203, 5]],
                     scrollPerPage: true,
                     navigation: true,
                     navigationText: false,
@@ -80,8 +100,14 @@
                 showRatings: false,
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {
-                    preDisplay: function (tout) {
-                        jQuery(tout.divSelect).parents("table").css("table-layout", "fixed");
+                    preInit: function(tout) { //swap result types for high-priced items
+                        var p = $("span#price");
+                        if (!p || !p.length) return;
+                        p = $(p).html().substring(1);
+                        if (!p || isNaN(p)) return;
+                        if (Number(p) < 200) return;
+                        tout.resultType = 0;
+                        tout.caption = "Customers also bought...";
                     }
                 },
                 inCart: false
@@ -92,12 +118,20 @@
             Category: [{
                 enable: true,
                 resultType: 5,
-                numItems: 4,
+                numItems: 12,
                 caption: "Related Top Sellers",
                 captionStyle: "menu-headers product4TCaption",
                 productStyle: "product4T product4TPD1",
-                divSelect: "#column1 > table:first",
-                divPosition: "replace",
+                divSelect: "#categoryHeader",
+                divPosition: "below",
+                carousel: {
+                    items: 5,
+                    itemsCustom: [[0, 1], [481, 2], [768, 3], [768, 4], [1024, 5], [1203, 5]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
+                },
                 imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 150,
                 showRatings: false,
@@ -107,23 +141,32 @@
             AddToCart: [{
                 enable: true,
                 resultType: 0,
-                numItems: 4,
+                numItems: 12,
                 caption: "You may also like...",
                 captionStyle: "menu-headers product4TCaption",
                 productStyle: "product4T product4TVC",
-                divSelect: "#column1 > table:first",
-                divPosition: "replace",
+                divSelect: ".third-party-payment",
+                divPosition: "below",
+                carousel: {
+                    items: 3,
+                    itemsCustom: [[0, 1], [481, 2], [768, 3], [768, 1], [1024, 2], [1203, 3]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
+                },
                 imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 100,
                 showRatings: false,
-                wrapper: "<div class='VC4T'></div>",
+                wrapper: "<table style='table-layout: fixed; width: 60%' ><tr><td><div class='VC4T'></div></td></tr></table>",
                 rawJS: {
-                    preDisplay: function () {
-                        $("table.alternative, .checkout-headers").hide();
+                    preInit: function () {
+                      $("#viewCart>div.header").remove();
+                      $(".productBlockContainer.columns-3").remove();
                     }
                 },
                 inCart: true
             }]
         }
     }
-}(window._4TellBoost = window._4TellBoost || {}, jQuery));
+}(window._4TellBoost, window._4TellBoost.jq || jQuery));
