@@ -53,7 +53,11 @@
                 showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {},
+                rawJS: {
+                    preDisplay: function () {
+                        jQuery(".related-products-wrapper").hide();
+                    }
+                },
                 inCart: false
             }, {
                 enable: true,
@@ -118,6 +122,27 @@
                 maxImageHeight: 100,
                 showRatings: true,
                 wrapper: "<div class='VC4T'></div>",
+                rawJS: {},
+                inCart: true
+            }],
+            Auto: [{
+                enable: true,
+                resultType: 0,
+                numItems: 12,
+                caption: "You May Also Like",
+                productStyle: "product4T product4TVC",
+                divSelect: "#ACLN-content .col-lg-6",
+                divPosition: "below",
+                carousel: {
+                    items: 4,
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: ["<img src='//www.mrtakeoutbags.com/mm5/images/icons/arrow-left-2.png' />", "<img src='//www.mrtakeoutbags.com/mm5/images/icons/arrow-right-2.png' />"],
+                    pagination: false
+                },
+                maxImageHeight: 100,
+                showRatings: true,
+                wrapper: "<div class='ACC4T'></div>",
                 rawJS: {},
                 inCart: true
             }]
