@@ -9,8 +9,8 @@
             addCartImage: "/templates/__custom/images/listentoyourgut/add_to_cart_button.png",
             emptyImage: "/templates/__custom/images/ProductDefault.gif",
             priceClass: "price2",
-            pricePrefix: "",
-            salePricePrefix: "",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
@@ -32,9 +32,8 @@
                     navigationText: false,
                     pagination: false
                 },
-                showRatings: false,
+                showRatings: true,
                 maxImageHeight: 180,
-                wrapper: "<div class='HOME4T'></div>",
                 rawJS: {
                     preDisplay: function () {
                         $("#mainrightside, #HomeNewProducts").hide();
@@ -49,10 +48,10 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "Customers also bought",
+                caption: "Our customers also bought...",
                 captionStyle: "product4TCaption product4TCaptionPD1",
                 productStyle: "product4T product4TPD1",
-                divSelect: "#SimilarProductsByCustomerViews",
+                divSelect: ".FacebookLikeButtonContainer",
                 divPosition: "below",
                 carousel: {
                     items: 2,
@@ -61,7 +60,7 @@
                     navigationText: false,
                     pagination: false
                 },
-                showRatings: false,
+                showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
                 inCart: false
@@ -69,11 +68,11 @@
                 enable: true,
                 resultType: 3,
                 numItems: 4,
-                caption: "<h2>Customers also viewed</h2>",
+                caption: "<h2>Our customers also viewed...</h2>",
                 productStyle: "product4T product4TPD2",
                 divSelect: "#SideTopSellers",
                 divPosition: "replace",
-                showRatings: false,
+                showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD24T'></div>",
                 inCart: false
@@ -85,7 +84,7 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "More Ideas",
+                caption: "You may also like...",
                 captionStyle: "product4TCaption product4TCaptionPD1",
                 productStyle: "product4T product4TVC",
                 divSelect: "#frmCompare",
@@ -98,7 +97,7 @@
                     pagination: false
                 },
                 maxImageHeight: 170,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='PD14T'></div>",
                 inCart: true
             }],
@@ -106,7 +105,7 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "You may also like",
+                caption: "You may also like...",
                 captionStyle: "product4TCaption product4TCaptionPD1",
                 productStyle: "product4T product4TVC",
                 divSelect: ".KeepShopping",
@@ -119,7 +118,7 @@
                     pagination: false
                 },
                 maxImageHeight: 170,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='VC4T'></div>",
                 rawJS: {
                     preDisplay: function () {
