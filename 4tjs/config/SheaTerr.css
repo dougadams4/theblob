@@ -173,29 +173,30 @@ a.disabled {
 * custom CSS. */
 
 /* Tout1 on PD page. */
+.PD4T {
+    width: 730px;
+    margin: 0 auto;
+}
 
 .product4TCaptionPD1 {
 }
 
 .product4TPD1 {
-    /*padding: 5px 4px;*/
-    width: 140px;
-    margin: 5px auto;
+    padding: 5px 4px;
+    width: 150px;
 }
 
     .product4TPD1 + .product4TPD1 {
-        border-top: 1px dotted #DDD;
+        border-left: 1px dotted #DDD;
     }
 
     .product4TPD1 .productImage {
-        height: auto;
     }
 
     .product4TPD1 .productImageImg {
     }
 
     .product4TPD1 .productTitle {
-        height: auto;
     }
 
     .product4TPD1 .ratingImage {
@@ -236,7 +237,6 @@ a.disabled {
     }
 
     .product4TPD2 .productTitle {
-        height: 3.6em;
     }
 
     .product4TPD2 .ratingImage {
