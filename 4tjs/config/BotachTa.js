@@ -6,7 +6,7 @@
             GA_UA: "UA-43926901-1",
             platform: "4TellBc.js",
             custom: true,
-            addCartBtnAtts: "input type='button' value='Choose Options' class='btn addToCartButton'",
+            addCartBtnAtts: "a>Choose Options</a",
             addCartImage: "",
             emptyImage: "/templates/__custom/images/ProductDefault.gif",
             pricePrefix: "",
@@ -18,17 +18,11 @@
             Home: [{
                 enable: true,
                 resultType: 1,
-                numItems: 12,
+                numItems: 4,
                 caption: "<h2>You may also like...</h2>",
-                productStyle: "product4T product4TPD2",
+                productStyle: "product4T ",
                 divSelect: "#SideTopSellers",
                 divPosition: "replace",
-                carousel: {
-                    items: 4,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
                 showRatings: false,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
@@ -41,15 +35,18 @@
                 numItems: 20,
                 fillMode: "none",
                 caption: "<h2>Customers also bought</h2>",
-                //showCaption: false,
+                showCaption: false,
                 productStyle: "product4T product4TPD3",
-                divSelect: "#SideProductRelated",
-                divPosition: "replace",
+                divSelect: "#ProductDescription",
+                divPosition: "above",
+                showRatings: false,
                 maxImageHeight: 150,
                 wrapper: "<div id='Featured4Tell'></div>",
                 rawJS: {
-                    preInit: function (tout) {
-                        $(tout.divSelect).hide();
+                    preDisplay: function () {
+                        $('#ProductTabs .Active').removeClass('Active');
+                        $("#ProductDescription").hide();
+                        $("#ProductTabsList").prepend("<li id='Featured4Tell_Tab' class='Active'><a onclick='ActiveProductTab(\"Featured4Tell_Tab\"); return false;' href='#'>Suggested Products</a></li>");
                     }
                 },
                 inCart: false
@@ -59,9 +56,10 @@
                 resultType: 0,
                 numItems: 3,
                 caption: "<h2>Customers also bought</h2>",
-                productStyle: "product4T product4TPD1",
-                divSelect: "#SidePopularProducts",
+                productStyle: "product4T ",
+                divSelect: "#SideProductRelated",
                 divPosition: "replace",
+                showRatings: false,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {
@@ -75,11 +73,11 @@
                 resultType: 3,
                 numItems: 3,
                 caption: "<h2>Customers also viewed</h2>",
-                productStyle: "product4T product4TPD2",
-                divSelect: "#SimilarProductsByCustomerViews",
-                divPosition: "replace",
+                productStyle: "product4T ",
+                divSelect: "#SideCurrencySelector",
+                divPosition: "above",
                 maxImageHeight: 120,
-                //showRatings: false,
+                showRatings: false,
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
                 inCart: false
@@ -88,7 +86,7 @@
                 enable: false
             }],
             Category: [{
-                enable: false,
+                enable: true,
                 resultType: 5,
                 numItems: 4,
                 caption: "<h2>Related Top Sellers</h2>",
@@ -104,17 +102,11 @@
             AddToCart: [{
                 enable: true,
                 resultType: 0,
-                numItems: 12,
+                numItems: 4,
                 caption: "<h2>You may also like...</h2>",
-                productStyle: "product4T product4TVC",
-                divSelect: "#CartContent",
-                divPosition: "below",
-                carousel: {
-                    items: 4,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
+                productStyle: "product4T ",
+                divSelect: "#SideTopSellers",
+                divPosition: "replace",
                 maxImageHeight: 100,
                 showRatings: false,
                 wrapper: "<div class='PD14T'></div>",
@@ -122,7 +114,7 @@
                 inCart: true
             }],
             QuickCart: [{
-                enable: false,
+                enable: true,
                 resultType: 0,
                 numItems: 4,
                 caption: "<h2>You may also like...</h2>",
