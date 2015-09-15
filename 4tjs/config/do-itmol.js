@@ -6,6 +6,9 @@
             GA_UA: "UA-31846346-1",
             platform: "4Tell3d.js",
             addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
+            addCartImage: "",
+            spacerImage: "/web/assets/images/spacer.gif",
+            emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
             pricePrefix: "Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
@@ -18,16 +21,19 @@
             ProductDetail: [{
                 enable: true,
                 resultType: 0,
-                numItems: 4,
-                caption: "Customers Also Bought",
-                captionStyle: "product4TCaption product4TCaptionPD1",
+                numItems: 12,
+                caption: "Our Customers Also Bought",
                 productStyle: "product4T product4TPD1",
-                divSelect: "#column2 table:first",
-                divPosition: "replace",
+                divSelect: "tr:has(tr #imagecaptiont)",
+                divPosition: "below",
+                carousel: {
+                    numVis: 4,
+                    circular: true
+                },
                 showRatings: false,
-                imageSize: "&maxx=120&maxy=0",
+                imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 150,
-                wrapper: "<div class='PD14T'></div>",
+                wrapper: "<tr><td colspan='2'><div class='PD14T'></div></td></tr>",
                 rawJS: {},
                 inCart: false
             }, {
