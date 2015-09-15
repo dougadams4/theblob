@@ -14,16 +14,6 @@
         return ratingDiv;
     };
 
-    _4TellBoost.addCartItem = function (id) {
-        if (!id || (id.substring(0, 1) === "[")) return;
-        id = id.match(/\w+/)[0];
-        _4TellBoost.Service.cartList[_4TellBoost.Service.cartCount] = id;
-        _4TellBoost.Service.cartCount++;
-        if (jQuery.inArray(id, _4TellBoost.UserData.cart) === -1) {
-            _4TellBoost.UserData.cart.unshift(id);
-            _4TellBoost.UserData.save();
-        }
-    };
     _4TellBoost.getBuyBtn = function (tout, itemdata) {
         var buyWrapper = $("<div class='productBuy' />");
         var buyBtn = $("<" + _4TellBoost.SiteInfo.addCartBtnAtts + " />");
