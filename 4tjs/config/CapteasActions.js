@@ -1,5 +1,6 @@
 (function (_4TellBoost, $, undefined) {
     _4TellBoost.Service.customLoaded = true;
+    _4TellBoost.Service.address = "stage.4-Tell.net/Boost2.0/";
     _4TellBoost.call4TellRest = function (operation, query) {
         if (_4TellBoost.Service.pageType === "Home")
             //REGEXES ROCK. This one pulls out any blockIDs, cartIDs, etc, 
