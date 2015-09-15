@@ -1,0 +1,104 @@
+(function (_4TellBoost, $, undefined) {
+    _4TellBoost.CONFIG = {
+        SiteInfo: {
+            baseURL: "www.pixibeauty.co.uk/",
+            alias: "PixiBeUK",
+            GA_UA: "UA-26177676-2",
+            platform: "4TellMa.js",
+            custom: true,
+            addCartBtnAtts: "<input type='button' value='View Details'>",
+            addCartImage: "//www.pixibeauty.co.uk/skin/frontend/pixibeauty/pixibeauty/images/addtocart.png",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
+            includeBase: false,
+            siteEnable: true
+        },
+        PageSettings: {
+            Auto: [{
+                enable: true,
+                resultType: "5,1",
+                numItems: "6,6",
+                caption: "Pixi by Petra's Best Sellers",
+                productStyle: "product4T product4THome",
+                divSelect: ".std",
+                divPosition: "below",
+                carousel: {
+                    numVis: 4,
+                    circular: true
+                },
+                showRatings: true,
+                maxImageHeight: 150,
+                wrapper: "<table width='100%' class='PD14T'><tr><td></td></tr></table>",
+                rawJS: {
+                    preInit: function () {
+                        _4TellBoost.setCatId("27");
+                    }
+                },
+                inCart: false
+            }],
+            ProductDetail: [{
+                enable: true,
+                resultType: 0,
+                numItems: 12,
+                caption: "Customers Who Bought This Item Also Bought",
+                productStyle: "product4T product4TPD1",
+                divSelect: "#super-product-table, .add-to-box",
+                divPosition: "below",
+                carousel: {
+                    numVis: 4,
+                    circular: true
+                },
+                showRatings: true,
+                maxImageHeight: 150,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {
+                    preDisplay: function () {
+                        $("div.box-up-sell").hide();
+                    }
+                },
+                inCart: false
+            }, {
+                enable: false,
+                resultType: 3,
+                numItems: 4,
+                caption: "Similar Items",
+                productStyle: "product4T product4TPD2",
+                divSelect: ".block-product-subscribe",
+                divPosition: "above",
+                maxImageHeight: 120,
+                showRatings: true,
+                showPrice: false,
+                wrapper: "<div class='PD14T'></div>",
+                inCart: false
+            }],
+            Search: [{
+                enable: false
+            }],
+            Category: [{
+                enable: false
+            }],
+            AddToCart: [{
+                enable: true,
+                resultType: 0,
+                numItems: 8,
+                caption: "You may also like",
+                productStyle: "product4T product4TVC",
+                divSelect: ".totals",
+                divPosition: "below",
+                carousel: {
+                    numVis: 2,
+                    circular: true
+                },
+                maxImageHeight: 100,
+                showRatings: true,
+                wrapper: "<div id='VC4T'></div>",
+                rawJS: {
+                    preDisplay: function () {
+                        $(".crosssell").hide();
+                    }
+                },
+                inCart: true
+            }]
+        }
+    }
+}(window._4TellBoost = window._4TellBoost || {}, jQuery));
