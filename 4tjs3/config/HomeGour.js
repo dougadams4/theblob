@@ -35,7 +35,7 @@
                 enable: true,
                 resultType: 0,
                 numItems: 3,
-                caption: "Customers also bought",
+                caption: "Customers also bought...",
                 captionStyle: "checkout-headers product4TCaption product4TCaptionPD1",
                 productStyle: "product4T product4TPD1",
                 divSelect: "#modTopSellers",
@@ -50,11 +50,11 @@
                     enable: true,
                     resultType: 3,
                     numItems: 12,
-                    caption: "CUSTOMERS ALSO VIEWED",
+                    caption: "Similar Items...",
                     captionStyle: "checkout-headers product4TCaption product4TCaptionPD2",
-                    productStyle: "product4T product4TPD2",
-                    divSelect: ".pr_review_summary",
-                    divPosition: "above",
+                    productStyle: "product4T product4TPD1",
+                    divSelect: ".relatedBlock",
+                    divPosition: "replace",
                     carousel: {
                         items: 3,
                         navigation: true,
@@ -65,18 +65,14 @@
                     maxImageHeight: 120,
                     showRatings: false,
                     wrapper: "<div class='PD24T'></div>",
-                    rawJS: {
-                        preInit: function () {
-                            $(".relatedBlock").hide();
-                        }
-                    },
+                    rawJS: {},
                     inCart: false
                 }],
             AddToCart: [{
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "You may also like",
+                caption: "You may also like...",
                 captionStyle: "checkout-headers product4TCaption2",
                 productStyle: "product4T product4TVC",
                 divSelect: "#recalculate",
