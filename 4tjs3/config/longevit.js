@@ -22,7 +22,10 @@
                 divPosition: "replace",
                 carousel: {
                     numVis: 5,
-                    circular: true
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 showRatings: true,
                 maxImageHeight: 150,
@@ -36,14 +39,17 @@
             }, {
                 enable: true,
                 resultType: 4,
-                numItems: 6,
+                numItems: 12,
                 caption: "Featured Products",
                 productStyle: "product4T product4THome",
                 divSelect: ".em-tabgroups .em-area06",
                 divPosition: "below",
                 carousel: {
-                    numVis: 3,
-                    circular: true
+                    numVis: 6,
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 showRatings: true,
                 maxImageHeight: 150,
@@ -53,18 +59,21 @@
             }, {
                 enable: true,
                 resultType: 4,
-                numItems: 6,
-                caption: "More Top Sellers",
+                numItems: 12,
+                caption: "Trending Now",
                 productStyle: "product4T product4THome",
                 divSelect: ".em-tabgroups .clear",
                 divPosition: "above",
                 carousel: {
-                    numVis: 3,
-                    circular: true
+                    numVis: 6,
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 showRatings: true,
                 maxImageHeight: 150,
-                wrapper: "<div class='HOME4T' style='float:right'></div>",
+                wrapper: "<div class='HOME4T'></div>",
                 rawJS: {},
                 inCart: false
             }],
@@ -92,7 +101,10 @@
                 divPosition: "below",
                 carousel: {
                     numVis: 5,
-                    circular: true
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 maxImageHeight: 120,
                 showRatings: true,
@@ -129,8 +141,11 @@
                 divSelect: ".totals",
                 divPosition: "below",
                 carousel: {
-                    numVis: 5,
-                    circular: true
+                    numVis: 3,
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 maxImageHeight: 100,
                 showRatings: true,
