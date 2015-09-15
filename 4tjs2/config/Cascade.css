@@ -1,18 +1,6 @@
 /*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
-#main4TellContainer {
-    margin: 0;
-    padding: 0;
-    display: block;
-}
-
-#second4TellContainer {
-    margin: 0;
-    padding: 0;
-    background: none;
-    display: block;
-}
 
 .FourTellContainer {
     display: block;
@@ -274,6 +262,10 @@ a.disabled {
     text-align: left;
     color: black;
     clear: both;
+}
+
+#v65-cart-checkout-parent form {
+    width: 100%;
 }
 
 .product4TVC {
