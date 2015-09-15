@@ -5,16 +5,14 @@
             alias: "successo",
             GA_UA: "UA-1071924-1",
             platform: "4TellDIY.js",
-            //ABTesting: 2,
-            //persistentTesting: false,
-            addCartBtnAtts: "input type='button' value='See Details'",
+            addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
             addCartImage: "",
             spacerImage: "/web/assets/images/spacer.gif",
             emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
-            pricePrefix: "",
-            salePricePrefix: "",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
             includeBase: false,
-            siteEnable: false
+            siteEnable: true
         },
         PageSettings: {
             Home: [{
@@ -24,66 +22,45 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "Customers also bought:",
+                caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
-                divSelect: "#tout1_pdp_4Tell",
+                //divSelect: "#tout1_pdp_4Tell",
                 divPosition: "replace",
                 carousel: {
-                    itemsCustom: [[0, 2], [400, 3]],
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
-                showPrice: false,
-                showTitle: false,
-                showBuyButton: false,
                 showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {},
-                testGroup: {
-                    0: {},
-                    1: {
-                        enable: false,
-                        rawJS: {}
-
+                rawJS: {
+                    preInit: function () {   //First, check to see if this came from email.
+                        var emailRec = location.search.match(/(?:4Tee=)([\w+,?]+)[&\?]?/);
+                        if (emailRec && emailRec.length) {
+                            var params = emailRec[1].split(",");
+                            //Sometimes the productID has dashes in it, which causes Volusion to freak out,
+                            //so we have to scrape the productID off the page.
+                            var id = params[2] || $("#tout1_pdp_4Tell").data().products;
+                            ga('send', "event", "4TellEmail", "Email-" + _4TellBoost.emailTypes[params[0]] + "-" + params[1], id);
+                        }
                     }
                 },
                 inCart: false
             }, {
                 enable: true,
                 resultType: 3,
-                numItems: 9,
-                caption: "Customers also viewed:",
+                numItems: 4,
+                caption: "Similar Items",
                 productStyle: "product4T product4TPD2",
-                divSelect: ".product_pg_upsell:has(.upsell_pics)",
-                divPosition: "above",
-                carousel: {
-                    itemsCustom: [[0, 2], [400, 3]],
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
-                showPrice: false,
-                showTitle: false,
-                showBuyButton: false,
+                divSelect: "#second4TellContainer",
+                divPosition: "append",
+                setHeight: true,
+                setWidth: false,
+                imageSize: "&maxx=120&maxy=120",
+                maxImageHeight: 120,
                 showRatings: true,
                 wrapper: "<div class='PD24T'></div>",
-                rawJS: {
-                    preDisplay: function (tout) {
-                        jQuery(tout.divSelect).hide();
-                    }
-                },
-                testGroup: {
-                    0: {},
-                    1: {
-                        enable: false,
-                        rawJS: {}
-
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }],
             Search: [{
@@ -102,74 +79,25 @@
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: true,
-                showPrice: false,
                 wrapper: "<div class='CAT4T'></div>",
                 rawJS: {},
                 inCart: false
             }],
-            //AddToCart: [{
-            Auto: [{
+            AddToCart: [{
                 enable: true,
                 resultType: 0,
-                numItems: 12,
+                numItems: 4,
                 caption: "You may also like...",
                 productStyle: "product4T product4TVC",
-                divSelect: ".cart-upsell",
-                divPosition: "below",
-                carousel: {
-                    itemsCustom: [[0, 2], [400, 4]],
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
-                //showPrice: false,
-                //showTitle: false,
-                showBuyButton: false,
+                divSelect: "#second4TellContainer",
+                divPosition: "append",
+                setHeight: true,
+                setWidth: false,
+                imageSize: "&maxx=100&maxy=100",
+                maxImageHeight: 100,
                 showRatings: true,
                 wrapper: "<div class='VC4T'></div>",
                 rawJS: {},
-                testGroup: {
-                    0: {},
-                    1: {
-                        enable: false,
-                        rawJS: {}
-
-                    }
-                },
-
-                inCart: true
-            },
-            {
-                enable: false,
-                resultType: 4,
-                numItems: 12,
-                caption: "Summer TIME FAVORITES",
-                productStyle: "product4T product4TVC",
-                divSelect: ".cart-upsell, .VC4T",
-                divPosition: "above",
-                carousel: {
-                    itemsCustom: [[0, 2], [400, 4]],
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
-                //showPrice: false,
-                //showTitle: false,
-                showBuyButton: false,
-                showRatings: true,
-                wrapper: "<div class='VC4T'></div>",
-                rawJS: {},
-                testGroup: {
-                    0: {},
-                    1: {
-                        enable: false,
-                        rawJS: {}
-
-                    }
-                },
-
                 inCart: true
             }]
         }
