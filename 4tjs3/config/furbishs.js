@@ -1,11 +1,10 @@
 (function (_4TellBoost, $, undefined) {
     _4TellBoost.CONFIG = {
         SiteInfo: {
-            baseURL: "www.furbishstudio.com/",
+            baseURL: "www.CLIENTURL.com",
             alias: "furbishs",
             GA_UA: "UA-34564846-3",
             platform: "4TellShp.js",
-            custom: true,
             addCartBtnAtts: "<input type='submit' value='Item Details' class='add_to_cart'>",
             includeBase: false,
             siteEnable: true
@@ -16,9 +15,9 @@
             }],
             ProductDetail: [{
                 enable: true,
-                resultType: 3,
+                resultType: 0,
                 numItems: 12,
-                caption: "YOU'VE GOT GREAT TASTE! I BET YOU'D LOVE THESE TOO",
+                caption: "Other items that may interest you",
                 productStyle: "product4T product4TPD1",
                 divSelect: "#cross-sell",
                 divPosition: "replace",
@@ -35,7 +34,6 @@
                 rawJS: {
                     preInit: function () {
                         _4TellBoost.addProductID(ISRParams.product.id.toString());
-                        $("#cross-sell").hide();
                     }
                 },
                 inCart: false
@@ -80,9 +78,9 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "DID YOU SEE THESE - THEY TOTALLY LOOK LIKE YOU!",
+                caption: "You may also like",
                 productStyle: "product4T product4TVC",
-                divSelect: ".cart-alt1.sect2",
+                divSelect: ".cart-totals",
                 divPosition: "below",
                 carousel: {
                     items: 4,
@@ -94,22 +92,16 @@
                 maxImageHeight: 100,
                 showRatings: true,
                 wrapper: "<div class='VC4T'></div>",
-                rawJS: {
-                    preInit: function () {
-                        jQuery(".quantity input[type=text]").each(function () {
-                            _4TellBoost.addCartItem(jQuery(this).data("id").toString());
-                        });
-                    }
-                },
+                rawJS: {},
                 inCart: true
             }],
             Auto: [{
                 enable: true,
-                resultType: 1,
+                resultType: 0,
                 numItems: 12,
-                caption: "CHECK OUT WHAT'S HOT TODAY!",
+                caption: "More ideas for you",
                 productStyle: "product4T product4TCat",
-                divSelect: ".fs-pg-content, .product, .featured-collections, .featured-products",
+                divSelect: ".fs-pg-content, .product, .featured-collections",
                 divPosition: "below",
                 carousel: {
                     items: 4,
@@ -123,11 +115,7 @@
                 wrapper: "<div class='CAT4T'></div>",
                 rawJS: {
                     preInit: function (tout) {
-                        if ($(".featured-products").length) {
-                            tout.caption = "A FEW OF OUR FAVORITES";
-                        }
-                        tout.enable = tout.enable && 0 == $("#feed").length;
-                        tout.startPos = Math.floor(Math.random() * (20 - tout.numItems));
+                        tout.enable = tout.enable && 0 == $(".featured-collections").length;
                     }
                 },
                 inCart: false
