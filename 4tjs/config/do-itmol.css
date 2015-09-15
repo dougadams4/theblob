@@ -141,32 +141,12 @@ a.disabled {
 /* Here follows custom classes, so as to permit each page to have its own
 * custom CSS. */
 /* Tout1 on PD page. */
-.product4TCaptionPD1 {
-  font-size: 15px;
-  padding: 5px;
-}
-.PD14T {
-  width: 195px;
-  background: url(//store.do-itmolds.com/assets/templates/v40003/images/mod_bg.png) repeat-y;
-}
 .product4TPD1 {
   width: 140px;
-  margin: 0 auto;
-}
-.product4TPD1 + .product4TPD1 {
-  border-top: 1px dotted #aaaaaa;
-  border-left: none;
-}
-.product4TPD1 .productImage {
-  height: auto;
-}
-.product4TPD1 .productTitle {
-  height: auto;
-  min-height: 0;
 }
 /* Tout2 on PD page */
 .product4TPD2 {
-  width: 125px;
+  width: 140px;
 }
 /* Tout on the home page. */
 /* Category pages */
