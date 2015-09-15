@@ -6,7 +6,7 @@
             GA_UA: "UA-10001586-2",
             platform: "4TellShp.js",
             custom: true,
-            //ABTesting: 2,
+            ABTesting: 2,
             persistentTesting: false,
             addCartBtnAtts: "<input type='submit' value='Item Details' class='add_to_cart'>",
             pricePrefix: "",
@@ -16,7 +16,7 @@
         },
         PageSettings: {
             Home: [{
-                enable: false,
+                enable: true,
                 resultType: 1,
                 numItems: 12,
                 fillmode: "all",
@@ -37,7 +37,7 @@
                 rawJS: {
                     preInit: function (tout) {
                         if (window.outerWidth < 750) {
-                            tout.numItems = tout.carousel.items;
+                            tout.numItems = tout.carousel.numVis;
                             tout.carousel = false;
                         }
                     }
@@ -73,7 +73,7 @@
                 rawJS: {
                     preInit: function (tout) {
                         if (window.outerWidth < 750) {
-                            tout.numItems = tout.carousel.items;
+                            tout.numItems = tout.carousel.numVis;
                             tout.carousel = false;
                         }
                     }
