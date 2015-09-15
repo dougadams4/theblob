@@ -57,7 +57,21 @@
                 enable: false
             }],
             Category: [{
-                enable: false
+                enable: true,
+                resultType: 5,
+                numItems: 4,
+                caption: "More ideas...",
+                productStyle: "product4T product4TCat",
+                divSelect: "#main4TellContainer",
+                divPosition: "append",
+                setHeight: false,
+                setWidth: false,
+                imageSize: "&maxx=100&maxy=100",
+                maxImageHeight: 100,
+                showRatings: true,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {},
+                inCart: false
             }],
             AddToCart: [{
                 enable: true,
