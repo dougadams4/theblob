@@ -5,7 +5,7 @@
             alias: "JBPrince",
             GA_UA: "",
             platform: "4TellDIY.js",
-            addCartBtnAtts: "input type='button' value='Add to Cart' class='btn'",
+            addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
             addCartImage: "",
             spacerImage: "/web/assets/images/spacer.gif",
             emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
@@ -89,32 +89,20 @@
                 inCart: false
             }],
             AddToCart: [{
-                enable: true,
+                enable: false,
                 resultType: 0,
-                numItems: 12,
+                numItems: 4,
                 caption: "You may also like...",
                 productStyle: "product4T product4TVC",
-                divSelect: "#tout1_cart_4Tell",
-                divPosition: "replace",
-                carousel: {
-                    items: 4,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
+                divSelect: "#second4TellContainer",
+                divPosition: "append",
+                setHeight: true,
+                setWidth: false,
+                imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: true,
                 wrapper: "<div class='VC4T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        _4TellBoost.UserData.clearCart();
-                        _4TellBoost.addCartItem($("#tout1_cart_4Tell").data().cart)
-                        //$("input.textqtybox").map(function () {
-                        //    _4TellBoost.addCartItem($(this).attr("sku"));
-                        //});
-                    }
-                },
+                rawJS: {},
                 inCart: true
             }]
         }
