@@ -73,7 +73,7 @@
                 inCart: false
             }],
             AddToCart: [{
-                enable: true,
+                enable: false,
                 resultType: 0,
                 numItems: 4,
                 caption: "You may also like...",
