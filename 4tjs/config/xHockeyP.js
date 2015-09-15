@@ -1,15 +1,15 @@
 (function (_4TellBoost, $, undefined) {
     _4TellBoost.CONFIG = {
         SiteInfo: {
-            baseURL: "www.xhockeyproducts.com/",
+            baseURL: "www.xhockeyproducts.com",
             alias: "xHockeyP",
             GA_UA: "UA-19394545-1",
             platform: "4TellMa.js",
             addCartBtnAtts: "<button type='button' title='Add to Cart' class='button btn-cart'>Add to Cart</button>",
-            pricePrefix: "Price: ",
+            pricePrefix: "Our Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
-            siteEnable: true
+            siteEnable: false
         },
         PageSettings: {
             Home: [{
@@ -20,7 +20,7 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "Customers also bought",
+                caption: "Customers also bought...",
                 productStyle: "product4T product4TPD1",
                 divSelect: ".box-up-sell",
                 divPosition: "replace",
@@ -29,9 +29,8 @@
                     circular: true
                 },
                 showRatings: true,
-
                 maxImageHeight: 80,
-                wrapper: "<div id='PD14T' style='float:left'></div>",
+                wrapper: "<div id='PD14T'></div>",
                 rawJS: {},
                 inCart: false
             },
@@ -39,7 +38,7 @@
                      enable: true,
                      resultType: 3,
                      numItems: 3,
-                     caption: "More ideas for you",
+                     caption: "More ideas for you...",
                      productStyle: "product4T product4TPD2",
                      divSelect: ".block-related",
                      divPosition: "replace",
@@ -59,10 +58,10 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "You may also like",
+                caption: "You may also like...",
                 productStyle: "product4T product4TVC",
-                divSelect: ".mobile-grid-half",
-                divPosition: "below",
+                divSelect: ".crosssell",
+                divPosition: "replace",
                 carousel: {
                     circular: true,
                     numVis: 4
@@ -70,11 +69,7 @@
                 maxImageHeight: 140,
                 showRatings: true,
                 wrapper: "<div id='VC4T'></div>",
-                rawJS: {
-                    preDisplay: function () {
-                        $(".crosssell").hide();
-                    }
-                },
+                rawJS: {},
                 inCart: true
             }]
         }
