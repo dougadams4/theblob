@@ -34,16 +34,9 @@
   border: none;
   text-align: center;
   vertical-align: middle;
-  text-decoration: none;
 }
 .product4T + .product4T {
   border-left: 1px dotted #dddddd;
-}
-.product4T a.home {
-  text-decoration: none;
-}
-.product4T a.home:hover {
-  text-decoration: underline;
 }
 .product4T .productImage {
   padding: 10px 0;
@@ -64,13 +57,11 @@
   padding: 2px;
 }
 .product4T .productTitle {
-  text-decoration: none;
-  color: black;
   width: 100%;
   overflow: hidden;
   font-weight: bold;
-  height: 3.5em;
-  min-height: 3.5em;
+  height: 3.4em;
+  min-height: 3.4em;
 }
 .product4T .productTitle:hover {
   height: auto;
@@ -99,9 +90,7 @@
   text-decoration: none;
 }
 .product4T .productBuy img,
-.product4T .productBuy input,
-.product4T .productBuy a {
-  cursor: pointer;
+.product4T .productBuy input {
   max-width: 100%;
   border: medium none;
 }
@@ -148,28 +137,8 @@ a.disabled {
 /* Here follows custom classes, so as to permit each page to have its own
 * custom CSS. */
 /* Tout1 on PD page. */
-.PD14T a.browse {
-  margin-top: 70px;
-}
 .product4TPD1 {
-  width: 180px;
-}
-.product4TPD1 .productImage {
-  width: 50%;
-  height: 90px;
-  float: left;
-}
-.product4TPD1 .productTitle {
-  width: 50%;
-  float: right;
-  height: 5em;
-  min-height: 5em;
-}
-.product4TPD1 .productTitle:hover {
-  height: auto;
-}
-.product4TPD1 .productPrice {
-  clear: right;
+  width: 110px;
 }
 /* Tout2 on PD page */
 .product4TPD2 {
@@ -177,27 +146,12 @@ a.disabled {
 }
 /* Tout on the home page. */
 .HOME4T {
-  padding-top: 10px;
-  width: 650px;
   border-radius: 8px;
   background: #fff;
-}
-.product4THome {
-  width: 135px;
-}
-.product4THome:hover {
-  background: #D2E8EE;
 }
 /* Category pages */
 /* Search */
 /* View Cart */
-.VC4T {
-  float: left;
-}
-.product4TVC {
-  width: 120px;
-}
 /* Checkout */
 /* Quick Cart */
 /* Quick view */
-
