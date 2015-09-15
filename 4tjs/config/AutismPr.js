@@ -75,8 +75,7 @@
                     captionStyle: "titles product4TCaption product4TCaptionCat",
                     productTitleStyle: "productnamecolor colors_productname productTitle",
                     productStyle: "product4T product4TCat",
-                    divSelect: "#main4TellContainer",
-                    divPosition: "append",
+                    orientation: "vertical",
                     maxImageHeight: 100,
                     showRatings: true,
                     rawJS: {
@@ -85,8 +84,10 @@
                             if (tout.enable && (results && results.length)) {
                                 var resultCell = results.parent();
                                 resultCell.css('vertical-align', 'top');
-                                var newCell = $("<td width='130px' valign='top' style='border: 1px solid #DFE0E0;'><div id='main4TellContainer'></div></td>");
+                                var newCell = $("<td width='25%' valign='top' style='border: 1px solid #DFE0E0;'><div id='" + tout.newDivID + "'></div></td>");
                                 newCell.insertAfter(resultCell);
+                                tout.divSelect = '#' + tout.newDivID;
+                                tout.divPosition = 'append';
                             }
                         }
                     },
@@ -102,8 +103,7 @@
                     captionStyle: "titles product4TCaption",
                     productTitleStyle: "productnamecolor colors_productname productTitle",
                     productStyle: "product4T product4TSearch",
-                    divSelect: "#main4TellContainer",
-                    divPosition: "append",
+                    orientation: "vertical",
                     maxImageHeight: 100,
                     showRatings: true,
                     rawJS: {
@@ -112,8 +112,10 @@
                             if (tout.enable && (results && results.length)) {
                                 var resultCell = results.parent();
                                 resultCell.css('vertical-align', 'top');
-                                var newCell = $("<td width='130px' valign='top' style='border: 1px solid #DFE0E0;'><div id='main4TellContainer'></div></td>");
+                                var newCell = $("<td width='25%' valign='top' style='border: 1px solid #DFE0E0;'><div id='" + tout.newDivID + "'></div></td>");
                                 newCell.insertAfter(resultCell);
+                                tout.divSelect = '#' + tout.newDivID;
+                                tout.divPosition = 'append';
                             }
                         }
                     },
