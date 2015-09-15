@@ -1,7 +1,18 @@
 /*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
-.FourTellContainer {
+#main4TellContainer {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+#second4TellContainer {
+    margin: 0;
+    padding: 0;
+    background: none;
+    display: block;
+}.FourTellContainer {
     display: block;
     margin: 0px;
     padding: 0px;
@@ -28,6 +39,7 @@
     font-weight: bold;
 }
 
+
 .product4T {
     background-color: #FFFFFF;
     margin: 5px;
@@ -42,6 +54,8 @@
 
     .product4T .productImage {
         padding: 10px 0;
+        clear: both !important;
+        float: none !important;
         width: 100%;
         height: auto;
     }
@@ -55,6 +69,8 @@
     }
 
     .product4T .ratingImage {
+        float: none !important;
+        clear: both !important;
     }
 
     .product4T .ratingImageImg {
@@ -72,6 +88,13 @@
         cursor: pointer;
     }
 
+    .product4T .productTitleIE {
+    }
+
+
+    .product4T .productTitleText {
+    }
+
     .product4T .strikePrice {
         text-decoration: line-through;
         color: #999 !important;
@@ -83,6 +106,8 @@
         color: #333;
         font-size: 13px;
         font-weight: normal;
+        clear: both !important;
+        float: none !important;
     }
 
     .product4T .productSalePrice {
@@ -181,11 +206,9 @@ a.disabled {
     }
 
     .product4TPD1 .productTitle {
-        height: 6em;
     }
 
         .product4TPD1 .productTitle:hover {
-            min-height: 6em;
             height: auto;
         }
 
