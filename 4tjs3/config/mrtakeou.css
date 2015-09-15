@@ -1,1 +1,237 @@
-.FourTellContainer{display:block;margin:0;padding:0}.FourTellContainer:after{content:".";display:block;height:0;clear:both;visibility:hidden}.toutWrapper4T{border:1px solid #ddd;background:none}.product4TCaption{font-family:'Open Sans',Helvetica,sans-serif !important;font-size:18px!important;padding:0;margin:5px 0 0 5px;text-align:left;font-weight:400;border-bottom:1px solid #000;width:100%;color:#4b4b4b}.product4T{background-color:transparent;padding:5px 0;margin:0 auto;width:100%;border:none;text-align:center;vertical-align:middle}.product4T+.product4T{border-left:1px dotted #ddd}.product4T .productImage{padding:10px 0;width:150px;height:150px;align:center}.product4T .productImage .productImageImg{max-width:100%;max-height:100%;border:none;vertical-align:middle;display:inline}.product4T .ratingImage .ratingImageImg{border:none;vertical-align:middle;display:inline;padding:2px}.product4T .productTitle{font-family:'Open Sans',Helvetica,sans-serif !important;width:100%;overflow:hidden;font-weight:normal;font-size:14px;height:5.5em;min-height:5.5em;color:black}.product4T .productTitle:hover{height:auto}.product4T .productPrice{font-family:'Open Sans',Helvetica,sans-serif;height:1.2em;font-size:12px;font-weight:normal;color:black;display:none}.product4T .strikePrice{text-decoration:line-through;color:#ddd;display:none}.product4T .productSalePrice{font-family:Arial,Helvetica,sans-serif;color:red;height:1.2em;font-size:13px;font-weight:bold;display:none}.product4T .productBuy{margin:0 0 10px;text-decoration:none;padding-top:10px}.product4T .productBuy img,.product4T .productBuy input{max-width:100%;border:medium none;background-color:#f27940;color:#fff}.owl-carousel .owl-wrapper:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel{display:none;position:relative;width:100%;-ms-touch-action:pan-y}.owl-carousel .owl-wrapper{display:none;position:relative;-webkit-transform:translate3d(0px,0px,0px)}.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%}.owl-carousel .owl-wrapper-outer.autoHeight{-webkit-transition:height 500ms ease-in-out;-moz-transition:height 500ms ease-in-out;-ms-transition:height 500ms ease-in-out;-o-transition:height 500ms ease-in-out;transition:height 500ms ease-in-out}.owl-carousel .owl-item{float:left}.owl-controls .owl-page,.owl-controls .owl-buttons div{cursor:pointer}.owl-controls{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.grabbing{cursor:url(grabbing.png) 8 8,move}.owl-carousel .owl-wrapper,.owl-carousel .owl-item{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}.FourTellContainer .owl-carousel .owl-item{float:left}.FourTellContainer .owl-carousel .owl-item .product4T{width:80%;margin-left:auto;margin-right:auto}.FourTellContainer .owl-controls{z-index:11;position:absolute;left:0;top:0;height:auto;width:100%}.FourTellContainer .owl-controls .owl-buttons div{width:30px}.FourTellContainer .owl-controls .owl-buttons div img{max-width:100%}.FourTellContainer .owl-controls .owl-next{position:absolute;right:0px;top:100px;float:right}.FourTellContainer .owl-controls .owl-prev{position:absolute;left:0px;top:100px;float:left}.PD14T{width:50%;float:left}.PD24T{float:left;clear:both;width:100%}
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+.FourTellContainer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.FourTellContainer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.toutWrapper4T {
+  border: 1px solid #dddddd;
+  background: none;
+}
+.product4TCaption {
+  font-family: 'Open Sans', Helvetica, sans-serif !important;
+  font-size: 18px !important;
+  padding: 0;
+  text-align: left;
+  font-weight: 400;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  color: #4b4b4b;
+}
+.product4T {
+  background-color: transparent;
+  padding: 5px 0;
+  margin: 0 auto;
+  width: 100%;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+}
+.product4T + .product4T {
+  border-left: 1px dotted #dddddd;
+}
+.product4T .productImage {
+  padding: 10px 0;
+  width: 150px;
+  height: 150px;
+  align: center;
+}
+.product4T .productImage .productImageImg {
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  vertical-align: middle;
+  display: inline;
+}
+.product4T .ratingImage .ratingImageImg {
+  border: none;
+  vertical-align: middle;
+  display: inline;
+  padding: 2px;
+}
+.product4T .productTitle {
+  font-family: 'Open Sans', Helvetica, sans-serif !important;
+  width: 100%;
+  overflow: hidden;
+  font-weight: normal;
+  font-size: 14px;
+  height: 5.5em;
+  min-height: 5.5em;
+  color: black;
+}
+.product4T .productTitle:hover {
+  height: auto;
+}
+.product4T .productPrice {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  height: 1.2em;
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+  display: none;
+}
+.product4T .strikePrice {
+  text-decoration: line-through;
+  color: #dddddd;
+  display: none;
+}
+.product4T .productSalePrice {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  height: 1.2em;
+  font-size: 13px;
+  font-weight: bold;
+  display: none;
+}
+.product4T .productBuy {
+  margin: 0 0 10px;
+  text-decoration: none;
+  padding-top: 10px;
+}
+.product4T .productBuy img,
+.product4T .productBuy input {
+  max-width: 100%;
+  border: medium none;
+  background-color: #f27940;
+  color: #ffffff;
+}
+/* For scrollables. */
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+/* display none until init */
+.owl-carousel {
+  display: none;
+  position: relative;
+  width: 100%;
+  -ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper {
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+.owl-carousel .owl-item {
+  float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  cursor: pointer;
+}
+.owl-controls {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* mouse grab icon */
+.grabbing {
+  cursor: url(grabbing.png) 8 8, move;
+}
+/* fix */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+.FourTellContainer .owl-carousel .owl-item {
+  float: left;
+}
+.FourTellContainer .owl-carousel .owl-item .product4T {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.FourTellContainer .owl-controls {
+  z-index: 11;
+  position: absolute;
+  left: 0;
+  /*top: 40%;*/
+  top: 0;
+  height: auto;
+  width: 100%;
+}
+.FourTellContainer .owl-controls .owl-buttons div {
+  width: 20px;
+  /*height: 89px;*/
+}
+.FourTellContainer .owl-controls .owl-buttons div img {
+  max-width: 100%;
+}
+.FourTellContainer .owl-controls .owl-next {
+  /*background: url(//www.mrtakeoutbags.com/mm5/images/icons/arrow-right-2.png);*/
+  position: absolute;
+  right: -5px;
+  top: 100px;
+  float: right;
+}
+.FourTellContainer .owl-controls .owl-prev {
+  /*background: url(//www.mrtakeoutbags.com/mm5/images/icons/arrow-left-2.png);*/
+  position: absolute;
+  left: -5px;
+  top: 100px;
+  float: left;
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.PD14T {
+  margin-top: 40px;
+  padding-left: 15px;
+  width: 50%;
+  float: left;
+}
+/* Tout2 on PD page */
+.PD24T {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+/* Tout on the home page. */
+/* Category pages */
+/* Search */
+/* View Cart */
+/* Checkout */
+/* Quick Cart */
+/* Quick view */
+.ACC4T {
+  clear: both;
+}
+
