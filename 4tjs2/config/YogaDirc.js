@@ -82,15 +82,34 @@
                     maxImageHeight: 140,
                     showRatings: false,
                     showBuyButton: false,
-
                     inCart: false
                 }
             },
-            Category: {
-                tout1: {
-                    enable: false
-                }
-            },
+            Category: [{
+                enable: true,
+                resultType: 5,
+                numItems: 12,
+                caption: "Related Top Sellers",
+                captionStyle: "titles product4TCaption product4TCaptionCat",
+                productStyle: "product4T product4TCat",
+                divSelect: "#frmsortby br:first",
+                divPosition: "replace",
+                imageSize: "&maxx=100&maxy=100",
+                carousel: {
+                    numVis: 4,
+                    circular: true
+                },
+                maxImageHeight: 100,
+                showRatings: false,
+                showBuyButton: false,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {
+                    preInit: function (tout) {
+                        tout.enable = tout.enable && "268" == _4TellBoost.Service.catId;
+                    }
+                },
+                inCart: false
+            }],
             Search: {
                 tout1: {
                     enable: true,
