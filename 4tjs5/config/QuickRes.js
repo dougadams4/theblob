@@ -43,13 +43,13 @@
                 enable: true,
                 resultType: 0,
                 numItems: 8,
-                caption: "Customers also bought...",
+                caption: "Our customers also bought...",
                 captionStyle: "titles titles2 product4TCaption",
                 productStyle: "product4T product4TPD1",
-                divSelect: ".secondary",
+                divSelect: ".beta-col",
                 divPosition: "below",
                 carousel: {
-                    itemsCustom: [[0, 4]],
+                    itemsCustom: [[0, 2]],
                     navigation: true,
                     navigationText: false,
                     pagination: false
