@@ -1,10 +1,10 @@
-﻿/*************************************************************/
+/*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
 .FourTellContainer {
   display: block;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 .FourTellContainer:after {
   content: ".";
@@ -121,7 +121,7 @@ a.browse {
 a.right {
   background-position: 0 -30px;
   clear: right;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 a.left {
   background-position: 0 0;
@@ -191,14 +191,13 @@ a.disabled {
 /* Search */
 /* View Cart */
 .VC4T {
-  clear: both;
+  float: left;
 }
 .KeepShopping {
   clear: right;
 }
 .product4TVC {
-  padding: 4px;
-  width: 160px;
+  width: 140px;
 }
 .product4TVC .productTitle {
   height: 4em;
@@ -209,8 +208,5 @@ a.disabled {
 }
 /* Checkout */
 /* Quick Cart */
-.product4TQC {
-  width: 140px;
-}
 /* Quick view */
 
