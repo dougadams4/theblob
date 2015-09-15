@@ -47,7 +47,6 @@
                 divSelect: "#rTabs",
                 divPosition: "below",
                 carousel: {
-                    scrollPerPage: true,
                     items: 4,
                     navigation: true,
                     navigationText: false,
