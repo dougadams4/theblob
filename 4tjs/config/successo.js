@@ -2,13 +2,10 @@
     _4TellBoost.CONFIG = {
         SiteInfo: {
             baseURL: "www.CLIENTURL.com",
-            alias: "successo",
+            alias: "CLIENTAL",
             GA_UA: "",
             platform: "4TellDIY.js",
-            addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
-            addCartImage: "",
-            spacerImage: "/web/assets/images/spacer.gif",
-            emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
+            addCartBtnAtts: "<input type='submit' class='AddToCartButton' value=''/>",
             pricePrefix: "Our Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
@@ -21,11 +18,11 @@
             ProductDetail: [{
                 enable: true,
                 resultType: 0,
-                numItems: 12,
+                numItems: 2,
                 caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
-                //divSelect: "#tout1_pdp_4Tell",
-                divPosition: "replace",
+                divSelect: "#main4TellContainer",
+                divPosition: "append",
                 carousel: {
                     numVis: 4,
                     circular: true
@@ -33,18 +30,7 @@
                 showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function () {   //First, check to see if this came from email.
-                        var emailRec = location.search.match(/(?:4Tee=)([\w+,?]+)[&\?]?/);
-                        if (emailRec && emailRec.length) {
-                            var params = emailRec[1].split(",");
-                            //Sometimes the productID has dashes in it, which causes Volusion to freak out,
-                            //so we have to scrape the productID off the page.
-                            var id = params[2] || $("#tout1_pdp_4Tell").data().products;
-                            ga('send', "event", "4TellEmail", "Email-" + params[0] + "-" + params[1], id);
-                        }
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }, {
                 enable: true,
@@ -59,7 +45,7 @@
                 imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 120,
                 showRatings: true,
-                wrapper: "<div class='PD24T'></div>",
+                wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
                 inCart: false
             }],
@@ -79,7 +65,7 @@
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: true,
-                wrapper: "<div class='CAT4T'></div>",
+                wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
                 inCart: false
             }],
@@ -96,7 +82,7 @@
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: true,
-                wrapper: "<div class='VC4T'></div>",
+                wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
                 inCart: true
             }]
