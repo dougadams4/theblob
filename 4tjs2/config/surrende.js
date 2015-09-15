@@ -33,7 +33,7 @@
                 inCart: false
             }, {
                 enable: true,
-                resultType: 1,
+                resultType: 4,
                 numItems: 12,
                 caption: "<h2>Recommended for you...</h2>",
                 productStyle: "product4T product4THome",
