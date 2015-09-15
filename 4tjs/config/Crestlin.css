@@ -62,7 +62,7 @@
     }
 
     .product4T .productTitle {
-        height: 3.8em;
+        height: 3.4em;
         width: 100%;
         overflow: hidden;
         font-weight: bold;
@@ -89,7 +89,6 @@
     }
 
     .product4T .productBuy {
-        padding-top: 5px;
         margin: 0 0 10px;
         text-decoration: none;
     }
@@ -171,7 +170,7 @@ a.disabled {
 
 .PD14T {
     float: right;
-    /*width: 100%;*/
+    width: 205px;
     border: 1px solid #DDD;
     border-radius: 8px;
     border-top: none;
@@ -183,15 +182,19 @@ a.disabled {
     width: 150px;
 }
 
+    .product4TPD1 + .product4TPD1 {
+        border-top: 1px dotted #DDD;
+    }
+
     .product4TPD1 .productImage {
-        /*height: auto;*/
+        height: auto;
     }
 
     .product4TPD1 .productImageImg {
     }
 
     .product4TPD1 .productTitle {
-        /*height: auto;*/
+        height: auto;
     }
 
     .product4TPD1 .ratingImage {
