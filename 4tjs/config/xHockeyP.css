@@ -19,13 +19,11 @@
 }
 .product4TCaption {
   padding: 5px;
-  color: #333;
   text-align: left;
-  font-size: 19px;
-  font-family: "Oswald", georgia, serif;
+  font: 1em "Roboto Condensed", arial, verdana, sans-serif;
+  font-weight: bold;
 }
 .product4T {
-  font-family: "Oswald", georgia, serif;
   background-color: transparent;
   padding: 5px;
   margin: 0;
@@ -66,7 +64,7 @@
   height: auto;
 }
 .product4T .productPrice {
-  font-family: "Oswald", georgia, serif;
+  font-family: Arial, Helvetica, sans-serif;
   height: 1.2em;
   font-size: 13px;
   font-weight: normal;
@@ -146,20 +144,10 @@ a.disabled {
   border-top: 1px dotted #dddddd;
   border-left: none;
 }
-.product4TPD2 .productImage {
-  height: auto;
-}
-.product4TPD2 .productTitle {
-  height: auto;
-  min-height: 0;
-}
 /* Tout on the home page. */
 /* Category pages */
 /* Search */
 /* View Cart */
-#VC4T {
-  float: left;
-}
 .product4TVC {
   width: 160px;
   padding: 5px 10px;
