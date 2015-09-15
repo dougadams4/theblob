@@ -1,18 +1,6 @@
 ﻿/*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
-#main4TellContainer {
-    margin: 0;
-    padding: 0;
-    display: block;
-}
-
-#second4TellContainer {
-    margin: 0;
-    padding: 0;
-    background: none;
-    display: block;
-}
 
 .FourTellContainer {
     display: block;
@@ -74,43 +62,47 @@
         padding: 2px;
     }
 
-    .product4T .productTitle {
-        height: 4.4em;
-        width: 100%;
-        overflow: hidden;
-        font-weight: bold;
-    }
+a.home {
+    text-decoration: none;
+}
 
-    .product4T .productPrice {
-        font-family: Arial, Helvetica, sans-serif;
-        height: 1.2em;
-        font-size: 13px;
-        font-weight: normal;
-    }
+.product4T .productTitle {
+    height: 4.4em;
+    width: 100%;
+    overflow: hidden;
+    font-weight: bold;
+}
 
-    .product4T .productSalePrice {
-        font-family: Arial, Helvetica, sans-serif;
-        color: red;
-        height: 1.2em;
-        font-size: 13px;
-        font-weight: bold;
-    }
+.product4T .productPrice {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 1.2em;
+    font-size: 13px;
+    font-weight: normal;
+}
 
-    .product4T .strikePrice {
-        text-decoration: line-through;
-        color: grey;
-    }
+.product4T .productSalePrice {
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    height: 1.2em;
+    font-size: 13px;
+    font-weight: bold;
+}
 
-    .product4T .productBuy {
-        margin: 0 0 10px;
-        text-decoration: none;
-    }
+.product4T .strikePrice {
+    text-decoration: line-through;
+    color: grey;
+}
 
-        .product4T .productBuy img, .productBuy input {
-            background-color: white;
-            max-width: 100%;
-            border: medium none;
-        }
+.product4T .productBuy {
+    margin: 0 0 10px;
+    text-decoration: none;
+}
+
+    .product4T .productBuy img, .productBuy input {
+        background-color: white;
+        max-width: 100%;
+        border: medium none;
+    }
 
 /* For scrollables. */
 .scrollable {
