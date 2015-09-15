@@ -4,9 +4,8 @@ jQuery.noConflict();
         SiteInfo: {
             baseURL: "www.CLIENTURL.com",
             alias: "Crestlin",
-            GA_UA: "",
+            GA_UA: "UA-8168579-3 ",
             platform: "4TellDIY.js",
-            custom: true,
             addCartBtnAtts: "input type='image'",
             addCartImage: "Themes/Default/Images/btn-view-detail-alt.gif",
             pricePrefix: "As low as ",
@@ -41,7 +40,7 @@ jQuery.noConflict();
             }, {
                 enable: true,
                 resultType: 4,
-                numItems: 15,
+                numItems: 10,
                 caption: "Featured",
                 showCaption: false,
                 productStyle: "product4T product4THome",
