@@ -1,4 +1,4 @@
-﻿/*************************************************************/
+/*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
 .FourTellContainer {
@@ -13,32 +13,6 @@
   clear: both;
   visibility: hidden;
 }
-/* default state */
-.state-indicator {
-  color: transparent;
-  position: absolute;
-  top: -999em;
-  left: -999em;
-  z-index: 1;
-}
-/* small desktop */
-@media only screen and (max-width: 980px) {
-  .state-indicator {
-    z-index: 2;
-  }
-}
-/* tablet */
-@media only screen and (min-width: 768px) and (max-width: 980px) {
-  .state-indicator {
-    z-index: 3;
-  }
-}
-/* mobile phone */
-@media only screen and (max-width: 767px) {
-  .state-indicator {
-    z-index: 4;
-  }
-}
 .toutWrapper4T {
   border: 1px solid #dddddd;
   background: none;
@@ -48,8 +22,11 @@
   text-align: left;
   font-weight: bold;
   background: #037abd;
+  background: -moz-linear-gradient(top, #037abd 0%, #037abd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #037abd), color-stop(100%, #037abd));
   background: -webkit-linear-gradient(top, #037abd 0%, #037abd 100%);
+  background: -o-linear-gradient(top, #037abd 0%, #037abd 100%);
+  background: -ms-linear-gradient(top, #037abd 0%, #037abd 100%);
   background: linear-gradient(to bottom, #037abd 0%, #037abd 100%);
   color: white;
   border-radius: 2px;
@@ -59,7 +36,6 @@
   padding: 5px;
   margin: 0;
   width: 140px;
-  float: left;
   border: none;
   text-align: center;
   vertical-align: middle;
@@ -101,10 +77,6 @@
   font-size: 13px;
   font-weight: normal;
 }
-.product4T .strikePrice {
-  text-decoration: line-through;
-  color: gray;
-}
 .product4T .productSalePrice {
   font-family: Arial, Helvetica, sans-serif;
   color: red;
@@ -113,18 +85,13 @@
   font-weight: bold;
 }
 .product4T .productBuy {
-  margin: 4px 0 10px;
+  margin: 0 0 10px;
   text-decoration: none;
 }
 .product4T .productBuy img,
 .product4T .productBuy input {
   max-width: 100%;
   border: medium none;
-}
-@media only screen and (max-width: 980px) {
-  .product4T + .product4T {
-    border: none;
-  }
 }
 /* For scrollables. */
 .scrollable {
@@ -185,54 +152,16 @@ a.disabled {
 }
 /* Tout2 on PD page */
 .product4TPD2 {
-  margin-top: 10px;
-  padding: 6px;
+  padding: 5px 8px;
   width: 160px;
 }
-.product4TPD2 .productImage {
-  height: 140px;
-}
-@media only screen and (max-width: 768px) {
-  .HOME24T .product4TPD2 {
-    float: none;
-    width: 80%;
-    margin: 0 auto;
-  }
-  .HOME24T .product4TPD2 + .HOME24T .product4TPD2 {
-    border: none;
-  }
-}
 /* Tout on the home page. */
-.product4TCaptionHome {
-  font-size: 14px;
-  padding: 5px;
-}
 .HOME4T {
-  clear: both;
-  margin: 0 auto;
-  width: 1180px;
+  float: left;
+  width: 49%;
 }
-@media only screen and (max-width: 980px) {
-  .HOME4T {
-    clear: both;
-    width: auto;
-  }
-}
-/*#AutoItemWrapper1, #AutoItemWrapper3 {
-
-    &:after {
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden;
-    }
-
-    margin: 0 auto;
-    width: 1120px;
-}*/
 .product4THome {
-  width: 175px;
+  width: 170px;
 }
 .product4THome .productImage {
   height: 130px;
@@ -242,14 +171,8 @@ a.disabled {
 /* View Cart */
 .VC4T {
   width: 1060px;
-  margin: 10px auto;
+  margin: 0 auto;
   clear: both;
-}
-@media only screen and (max-width: 980px) {
-  .VC4T {
-    clear: both;
-    width: auto;
-  }
 }
 .product4TVC {
   width: 190px;
