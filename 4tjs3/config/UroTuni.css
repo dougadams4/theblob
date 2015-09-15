@@ -1,6 +1,27 @@
 ﻿/*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
+/* default state */
+.state-indicator {
+    color: transparent;
+    position: absolute;
+    top: -999em;
+    left: -999em;
+    z-index: 1;
+    /* desktop */
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        z-index: 2;
+    }
+    /* tablet */
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        z-index: 3;
+    }
+    /* mobile */
+    @media only screen and (min-width: 0px)  and (max-width: 479px) {
+        z-index: 4;
+    }
+}
+
 #main4TellContainer {
     margin: 0;
     padding: 0;
@@ -31,18 +52,22 @@
 
 .toutWrapper4T {
     margin: 5px 0;
-    border: 1px solid #DDD;
-    border-radius: 8px 0 0;
-    background: #EEE;
 }
 
 .product4TCaption {
-    color: #444;
-    padding: 0;
-    margin: 5px 0 0 5px;
+    color: #333333;
+    display: inline-block;
     text-align: left;
-    font-size: 13px;
+    width: 100%;
+    font-size: 14px;
     font-weight: bold;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-family: inherit;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0 1px;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    margin-bottom:10px;
 }
 
 .product4T {
@@ -63,6 +88,7 @@
         float: none;
         width: 100%;
         height: 130px;
+        position: relative;
     }
 
     .product4T .productImageImg {
@@ -71,6 +97,18 @@
         border: none;
         vertical-align: middle;
         display: inline;
+        
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        width: auto;
+        height: auto;
+        border: none;
     }
 
     .product4T .ratingImage {
@@ -83,22 +121,27 @@
         vertical-align: middle;
         display: inline;
         padding: 2px;
+
+        
     }
 
     .product4T .productTitle {
-        height: 6.6em;
+        height: 4.6em;
+        text-align: center;
         width: 100%;
         overflow: hidden;
         font-weight: bold;
+        font: 900 16px "Open Sans", Helvetica, Arial, sans-serif;
+        color: #000;
     }
 
     .product4T .productPrice {
-        font-family: Arial, Helvetica, sans-serif;
-        height: 1.2em;
-        font-size: 13px;
-        font-weight: normal;
         clear: both;
         float: none;
+        font-weight: bold;
+        color: #D20000;
+        font-size: 16px;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
     }
 
     .product4T .productSalePrice {
@@ -121,25 +164,190 @@
         text-decoration: none;
     }
 
-        .product4T .productBuy img, .productBuy input {
-            max-width: 100%;
-            border: medium none;
+        .product4T .productBuy img, .productBuy input, .product4T .productBuy div {
+            width: 96px;
+            margin: auto;
+            background: black;
+            color: white;
+            padding: 1px, 10px, 1px, 10px;
+            font: 10px "Open Sans", Helvetica, Arial, sans-serif;
+            font-weight: bold;
         }
 
+.product4T .productBuy div:hover {
+
+     cursor:pointer;
+     
+}
 /* For scrollables. */
-.scrollable {
-    float: left;
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+/* display none until init */
+.owl-carousel {
+    display: none;
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    -ms-touch-action: pan-y;
 }
 
-    .scrollable .items {
-        /* this cannot be too large;
-         * must fit ev-ery-thing */
-        width: 20000em;
+.owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item {
+    float: left;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+    cursor: pointer;
+}
+
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing {
+    cursor: url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+}
+
+.FourTellContainer .owl-controls {
+       z-index: 11;
         position: absolute;
-        clear: both;
+        left: 0;
+        /*top: 40%;*/
+        top: 0;
+        height: auto;
+        width: 100%;
+}
+
+.FourTellContainer .owl-controls .owl-buttons div {
+
+            display: block !important;
+            -webkit-border-radius: 0px !important;
+            margin: 0px !important;
+            padding: 0px !important;
+            width: 15px !important;
+            height: 18px !important;
+
+}
+
+.FourTellContainer .owl-controls .owl-buttons .owl-next {
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAwCAMAAAD5JNAAAAAAqFBMVEX///+wsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLG4mILSAAAAN3RSTlMAAQIDCAkLEhMaIiorLTg9QENHTlZcX2JkZn2Bg4uhpaetuL/Fx87Y3N7h6Onq7PL0+fr7/P3+pwOaKAAAAMhJREFUeF7d0EeywkAMRdE2tsGRnKOJDmTa9Nv/zj71B2ppwAa4szORqp6iGr21YjXHp4uVGy9z1ES/vQGs/UEBa7e1Ohuy4/WzG0COZgeAeQIID6uncNDJHsb6UzLPDfm/6VELq3R3F1bh4qrxVrZgtH9pxetuSwva4xda9xrC5bYrrF/7UcD8hr4uQusawH2XCkMfp8Iw+TzhhnlknYAZeFZDYWAifJhFzLes7zlkc161XHa/GPj8/6b9ITlfxq6iLqdx89sef8r8Ldm5n+0eAAAAAElFTkSuQmCC') no-repeat !important;
+            background-position-x: 0px !important;
+            background-position-y: -30px !important;
+            position: absolute !important;
+            right: 0px;
+            top: 100px;
+            float: right;
+
+
+}
+
+.FourTellContainer .owl-controls .owl-buttons .owl-prev {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAwCAMAAAD5JNAAAAAAqFBMVEX///+wsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLG4mILSAAAAN3RSTlMAAQIDCAkLEhMaIiorLTg9QENHTlZcX2JkZn2Bg4uhpaetuL/Fx87Y3N7h6Onq7PL0+fr7/P3+pwOaKAAAAMhJREFUeF7d0EeywkAMRdE2tsGRnKOJDmTa9Nv/zj71B2ppwAa4szORqp6iGr21YjXHp4uVGy9z1ES/vQGs/UEBa7e1Ohuy4/WzG0COZgeAeQIID6uncNDJHsb6UzLPDfm/6VELq3R3F1bh4qrxVrZgtH9pxetuSwva4xda9xrC5bYrrF/7UcD8hr4uQusawH2XCkMfp8Iw+TzhhnlknYAZeFZDYWAifJhFzLes7zlkc161XHa/GPj8/6b9ITlfxq6iLqdx89sef8r8Ldm5n+0eAAAAAElFTkSuQmCC') no-repeat !important;
+            background-position: 0 0;
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            float: left;
+}
+
+
+.FourTellContainer {
+    .owl-carousel .owl-item {
+        float: left;
+
+        .product4T {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
+
+    .owl-controls {
+        z-index: 11;
+        position: absolute;
+        left: 0;
+        /*top: 40%;*/
+        top: 0;
+        height: auto;
+        width: 100%;
+
+        .owl-buttons div {
+            display: block !important;
+            -webkit-border-radius: 0px !important;
+            margin: 0px !important;
+            padding: 0px !important;
+            width: 15px !important;
+            height: 18px !important;
+        }
+
+        .owl-next {
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAwCAMAAAD5JNAAAAAAqFBMVEX///+wsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLG4mILSAAAAN3RSTlMAAQIDCAkLEhMaIiorLTg9QENHTlZcX2JkZn2Bg4uhpaetuL/Fx87Y3N7h6Onq7PL0+fr7/P3+pwOaKAAAAMhJREFUeF7d0EeywkAMRdE2tsGRnKOJDmTa9Nv/zj71B2ppwAa4szORqp6iGr21YjXHp4uVGy9z1ES/vQGs/UEBa7e1Ohuy4/WzG0COZgeAeQIID6uncNDJHsb6UzLPDfm/6VELq3R3F1bh4qrxVrZgtH9pxetuSwva4xda9xrC5bYrrF/7UcD8hr4uQusawH2XCkMfp8Iw+TzhhnlknYAZeFZDYWAifJhFzLes7zlkc161XHa/GPj8/6b9ITlfxq6iLqdx89sef8r8Ldm5n+0eAAAAAElFTkSuQmCC') no-repeat !important;
+            background-position-x: 0px !important;
+            background-position-y: -30px !important;
+            position: absolute !important;
+            right: 0px;
+            top: 100px;
+            float: right;
+        }
+
+        .owl-prev {
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAwCAMAAAD5JNAAAAAAqFBMVEX///+wsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLG4mILSAAAAN3RSTlMAAQIDCAkLEhMaIiorLTg9QENHTlZcX2JkZn2Bg4uhpaetuL/Fx87Y3N7h6Onq7PL0+fr7/P3+pwOaKAAAAMhJREFUeF7d0EeywkAMRdE2tsGRnKOJDmTa9Nv/zj71B2ppwAa4szORqp6iGr21YjXHp4uVGy9z1ES/vQGs/UEBa7e1Ohuy4/WzG0COZgeAeQIID6uncNDJHsb6UzLPDfm/6VELq3R3F1bh4qrxVrZgtH9pxetuSwva4xda9xrC5bYrrF/7UcD8hr4uQusawH2XCkMfp8Iw+TzhhnlknYAZeFZDYWAifJhFzLes7zlkc161XHa/GPj8/6b9ITlfxq6iLqdx89sef8r8Ldm5n+0eAAAAAElFTkSuQmCC') no-repeat !important;
+            background-position: 0 0;
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            float: left;
+        }
+    }
+}
 
 /* Quite necessary; customize to fit. */
 .items .scrollGroup, .items .product4T {
@@ -180,8 +388,16 @@ a.disabled {
 .product4TCaptionPD1 {
 }
 
+.ProductDetail1 {
+    float: right;
+    width: 528px;
+    display: inline-block;
+}
+
 .product4TPD1 {
-    margin: 2px;
+   margin:auto;
+   float:none;
+   width:98%;
 }
 
     .product4TPD1 + .product4TPD1 {
@@ -214,13 +430,19 @@ a.disabled {
     }
 
 /* Tout2 on PD page */
+.ProductDetail2 .FourTellContainer {
+    max-width:1140px;
+}
+
 .product4TCaptionPD2 {
 }
 
 .product4TPD2 {
-    width: 140px;
+    width: 100%;
     margin: 4px;
     padding: 5px 10px;
+    margin:auto;
+    float:none;
 }
 
     .product4TPD2 + .product4TPD2 {
@@ -228,7 +450,7 @@ a.disabled {
     }
 
     .product4TPD2 .productImage {
-        height: 120px;
+        height: 211px;;
     }
 
     .product4TPD2 .productImageImg {
@@ -299,12 +521,22 @@ a.disabled {
     }
 
 /* Category pages */
+.toutWrapper4T.Category1 {
+    width:100%;
+    max-width:1140px;
+    display:block;
+    margin:auto;
+    
+}
+
 .product4TCaptionCat {
 }
 
 .product4TCat {
     padding: 5px;
-    width: 150px;
+    width: 100%;
+    float:none;
+    margin:auto;
 }
 
     .product4TCat .productImage {
@@ -333,6 +565,11 @@ a.disabled {
     }
 
 /* View Cart */
+.toutWrapper4T.AddToCart1 {
+    float: left;
+}
+
+
 .product4TCaptionVC {
     padding: 10px;
     margin: 0;
@@ -344,7 +581,9 @@ a.disabled {
 .product4TVC {
     margin: 4px;
     padding: 0 4px;
-    width: 140px;
+    width: 100%;
+    margin: auto;
+    float: none;
 }
 
     .product4TVC + .product4TVC {
@@ -352,14 +591,14 @@ a.disabled {
     }
 
     .product4TVC .productImage {
-        height: 90px;
+        height: 115px;
     }
 
     .product4TVC .productImageImg {
     }
 
     .product4TVC .productTitle {
-        height: 7em;
+        height: 2em;
     }
 
     .product4TVC .ratingImage {
@@ -378,4 +617,3 @@ a.disabled {
 
     .product4TVC .productBuy {
     }
-
