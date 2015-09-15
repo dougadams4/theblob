@@ -1,0 +1,633 @@
+/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+@grey: #DDD;
+
+.FourTellContainer {
+    display: block;
+    margin: 0;
+    padding: 0;
+    .clearfix
+}
+
+.clearfix() {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+.expandOnHover(@height) {
+    height: @height;
+    min-height: @height;
+
+    &:hover {
+        height: auto;
+    }
+}
+
+.toutWrapper4T {
+    border: 1px solid @grey;
+    background: none;
+}
+
+.product4TCaption {
+    color: #211302;
+    border-bottom: 1px solid #d2d2d2;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 130%;
+    font-weight: bold;
+    padding: 0;
+    margin: 3px 0 0 3px;
+    text-align: left;
+}
+
+.product4T {
+    background-color: #FFFFFF;
+    margin: 10px 10px 0 0;
+    padding: 0;
+    width: 175px;
+    text-align: center;
+    vertical-align: middle;
+
+    .productImage {
+        padding: 10px 0;
+        width: 100%;
+        height: 130px;
+
+        .productImageImg {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            vertical-align: middle;
+            display: inline;
+        }
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+            border: none;
+            vertical-align: middle;
+            display: inline;
+            padding: 2px;
+        }
+    }
+
+    .productTitle {
+        color: #73853A;
+        font-family: Tahoma,Geneva,sans-serif;
+        font-size: 14px;
+        text-decoration: underline;
+        text-transform: none;
+        .expandOnHover( 4.5em);
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .productPrice {
+        color: #666666;
+        font-family: Georgia,Serif;
+        font-size: 14px;
+        font-weight: normal;
+        height: 1.2em;
+        line-height: 15px;
+        width: 90%;
+        float: left;
+    }
+
+    .productSalePrice {
+        font-family: Georgia,Serif;
+        font-size: 14px;
+        color: #666;
+        height: 1.2em;
+        padding-left: 10px;
+        float: left;
+    }
+
+    .strikePrice {
+        width: 50%;
+        text-decoration: line-through;
+        color: grey;
+        text-align: right;
+    }
+
+
+    .productBuy {
+        clear: both;
+        cursor: pointer;
+        padding: 5px;
+        text-decoration: none;
+
+        .productBuy img {
+            max-width: 100%;
+        }
+    }
+}
+/* For scrollables. */
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+/* display none until init */
+.owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+}
+
+.owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item {
+    float: left;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+    cursor: pointer;
+}
+
+.owl-controls {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing {
+    cursor: url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+}
+
+
+.FourTellContainer {
+    .owl-carousel .owl-item {
+        float: left;
+
+        .product4T {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .owl-controls {
+        z-index: 11;
+        position: absolute;
+        left: 0;
+        /*top: 40%;*/
+        top: 0;
+        height: auto;
+        width: 100%;
+
+        .owl-buttons div {
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAwCAMAAAD5JNAAAAAAqFBMVEX///+wsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLG4mILSAAAAN3RSTlMAAQIDCAkLEhMaIiorLTg9QENHTlZcX2JkZn2Bg4uhpaetuL/Fx87Y3N7h6Onq7PL0+fr7/P3+pwOaKAAAAMhJREFUeF7d0EeywkAMRdE2tsGRnKOJDmTa9Nv/zj71B2ppwAa4szORqp6iGr21YjXHp4uVGy9z1ES/vQGs/UEBa7e1Ohuy4/WzG0COZgeAeQIID6uncNDJHsb6UzLPDfm/6VELq3R3F1bh4qrxVrZgtH9pxetuSwva4xda9xrC5bYrrF/7UcD8hr4uQusawH2XCkMfp8Iw+TzhhnlknYAZeFZDYWAifJhFzLes7zlkc161XHa/GPj8/6b9ITlfxq6iLqdx89sef8r8Ldm5n+0eAAAAAElFTkSuQmCC') /*../images/hori_large.png*/ no-repeat;
+            width: 15px;
+            top: 70px;
+            height: 18px;
+        }
+
+        .owl-next {
+            background-position: 0 -30px !important;
+            position: absolute;
+            right: 0px;
+            float: right;
+        }
+
+        .owl-prev {
+            background-position: 0 0;
+            position: absolute;
+            left: 0px;
+            float: left;
+        }
+    }
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+
+/* Tout1 on PD page. */
+.product4TCaptionPD1 {
+}
+
+#ProductDetailItemWrapper1 {
+    margin: 0 10px;
+}
+
+.product4TPD1 {
+    width: 120px;
+    margin: 3px;
+
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Tout2 on PD page */
+.product4TCaptionPD2 {
+}
+
+.PD24T {
+    /*.toutWrapper4T*/
+}
+
+.product4TPD2 {
+    margin: 1px;
+    width: 160px;
+    padding: 3px;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Tout on the home page. */
+.product4TCaptionHome {
+}
+
+.HOME4T {
+    .product4TCaption {
+        text-shadow: 1px 1px 0 #ccc;
+        font-size: 30px;
+        text-align: center;
+        color: #555555;
+        text-transform: capitalize;
+        border-bottom: 1px solid #555555;
+    }
+}
+
+.product4THome {
+    width: 180px;
+
+    & + & {
+        border-left: 1px solid @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Category pages */
+.product4TCaptionCat {
+}
+
+.product4TCat {
+    width: 160px;
+    margin: 3px;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Search */
+.product4TCaptionSearch {
+}
+
+.SEARCH4T {
+    margin: 0 auto;
+    max-width: 1020px;
+
+    .product4TCaption {
+        text-shadow: 1px 1px 0 #ccc;
+        font-size: 30px;
+        text-align: center;
+        color: #555555;
+        text-transform: capitalize;
+        border-bottom: 1px solid #555555;
+    }
+}
+
+.product4TSearch {
+    width: 150px;
+    padding: 0 8px;
+
+    & + & {
+        border-left: 1px dotted @grey;
+    }
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* View Cart */
+.product4TCaptionVC {
+    /*padding: 10px;
+    margin: 0;
+    text-align: left;
+    color: black;*/
+    clear: both;
+}
+
+.VC4T {
+    width: 100%;
+    clear: both;
+}
+
+.product4TVC {
+    margin: 0;
+    width: 160px;
+    padding: 5px 3px;
+
+    .productImage {
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Checkout */
+.product4TCaptionCheck {
+    /* padding: 10px;
+    margin: 0;
+    text-align: left;
+    color: black;*/
+}
+
+.product4TCheck {
+}
+
+.product4TCheck .productImage {
+}
+
+.product4TCheck .productImageImg {
+}
+
+.product4TCheck .productTitle {
+}
+
+.product4TCheck .ratingImage {
+}
+
+.product4TCheck .ratingImageImg {
+}
+
+.product4TCheck .productSalePrice {
+    color: #902018;
+}
+
+.product4TCheck .productPrice {
+}
+
+
+.product4TCheck .productBuy {
+}
+
+/* Quick Cart */
+.product4TCaptionQC {
+}
+
+.product4TQC {
+    .productImage {
+        height: 100px;
+
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+
+
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
+/* Quick view */
+.product4TCaptionQV {
+}
+
+.product4TQV {
+    margin: 4px 0;
+    padding: 0;
+    width: 120px;
+}
+
+.product4TQV .productImage {
+}
+
+.product4TQV .productImageImg {
+}
+
+.product4TQV .productTitle {
+    height: 15px;
+    width: 120px;
+}
+
+.product4TQV .ratingImage {
+}
+
+.product4TQV .ratingImageImg {
+}
+
+.product4TQV .productSalePrice {
+}
+
+.product4TQV .productPrice {
+}
+
+
+.product4TQV .productBuy {
+}
+
