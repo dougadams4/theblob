@@ -17,6 +17,7 @@
                 resultType: 1,
                 numItems: 15,
                 caption: "Recommended for you",
+                captionStyle: "product4TCaption product4TCaptionHome",
                 productStyle: "product4T product4TPD2",
                 divSelect: ".em-main .omega div:first",
                 divPosition: "replace",
@@ -36,13 +37,13 @@
             }, {
                 enable: true,
                 resultType: 4,
-                numItems: 6,
+                numItems: 12,
                 caption: "Featured Products",
-                productStyle: "product4T product4THome",
+                productStyle: "product4T product4TPD2",
                 divSelect: ".em-tabgroups .em-area06",
                 divPosition: "below",
                 carousel: {
-                    numVis: 3,
+                    numVis: 6,
                     circular: true
                 },
                 showRatings: true,
@@ -53,18 +54,18 @@
             }, {
                 enable: true,
                 resultType: 4,
-                numItems: 6,
+                numItems: 12,
                 caption: "More Top Sellers",
-                productStyle: "product4T product4THome",
+                productStyle: "product4T product4TPD2",
                 divSelect: ".em-tabgroups .clear",
                 divPosition: "above",
                 carousel: {
-                    numVis: 3,
+                    numVis: 6,
                     circular: true
                 },
                 showRatings: true,
                 maxImageHeight: 150,
-                wrapper: "<div class='HOME4T' style='float:right'></div>",
+                wrapper: "<div class='HOME4T' ></div>",
                 rawJS: {},
                 inCart: false
             }],
