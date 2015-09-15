@@ -1,0 +1,191 @@
+(function (_4TellBoost, $, undefined) {
+    _4TellBoost.CONFIG = {
+        SiteInfo: {
+            baseURL: "www.longevitywarehouse.com/",
+            alias: "longevit",
+            GA_UA: "UA-19838822-1",
+            platform: "4TellMa.js",
+            addCartBtnAtts: "<button type='button' title='Add to Cart' class='button btn-cart' ><span><span>Add to Cart</span></span></button>",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
+            includeBase: false,
+            siteEnable: true
+        },
+        PageSettings: {
+            Auto: [{
+                enable: true,
+                resultType: 4,
+                numItems: 12,
+                caption: "Featured Products",
+                productStyle: "product4T product4THome",
+                divSelect: ".em-tabgroups .em-area06",
+                divPosition: "below",
+                carousel: {
+                    numVis: 6,
+                    circular: true
+                },
+                showRatings: true,
+                maxImageHeight: 150,
+                wrapper: "<div class='HOME4T'></div>",
+                rawJS: {
+                    preInit: function (tout) {
+                        if (800 > window.innerWidth) {
+                            tout.numItems = tout.carousel.numVis;
+                            tout.carousel = false;
+                        }
+                    }
+                },
+                inCart: false
+            }, {
+                enable: true,
+                resultType: 1,
+                numItems: 10,
+                caption: "Recommended for you",
+                captionStyle: "product4TCaption product4TCaptionHome",
+                productStyle: "product4T product4TPD2",
+                divSelect: ".em-main .omega div:first",
+                divPosition: "replace",
+                carousel: {
+                    numVis: 5,
+                    circular: true
+                },
+                showRatings: true,
+                maxImageHeight: 150,
+                wrapper: "<div class='HOME24T'></div>",
+                rawJS: {
+                    preInit: function (tout) {
+                        if (1100 > window.innerWidth) {
+                            tout.numItems = 4;
+                            tout.carousel = false;
+                        }
+                        $(tout.divSelect).hide();
+                        //tout.enable = tout.enable && _4TellBoost.UserData.data.Viewed.length;
+                    }
+                },
+                inCart: false
+            }, {
+                enable: true,
+                resultType: 4,
+                numItems: 12,
+                caption: "Trending Now",
+                productStyle: "product4T product4THome",
+                divSelect: ".cms-area-07:has(.grid_19)",
+                divPosition: "replace",
+                carousel: {
+                    numVis: 6,
+                    circular: true
+                },
+                showRatings: true,
+                maxImageHeight: 150,
+                wrapper: "<div class='HOME4T' ></div>",
+                rawJS: {
+                    preInit: function (tout) {
+                        if (800 > window.innerWidth) {
+                            tout.numItems = tout.carousel.numVis;
+                            tout.carousel = false;
+                        }
+                    }
+                },
+                inCart: false
+            }],
+            ProductDetail: [{
+                enable: true,
+                resultType: 0,
+                numItems: 3,
+                caption: "Our customers also bought...",
+                productStyle: "product4T product4TPD1",
+                divSelect: ".block-related",
+                divPosition: "replace",
+                showRatings: true,
+                maxImageHeight: 150,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {
+                    preInit: function (tout) {
+                        //if (800 < window.innerWidth) {
+                        //    tout.numItems = tout.carousel.numVis;
+                        //    tout.carousel = false;
+                        //}
+                    }
+                },
+                inCart: false
+            },
+            {
+                enable: true,
+                resultType: 3,
+                numItems: 20,
+                caption: "Customer also viewed",
+                productStyle: "product4T product4TPD2",
+                divSelect: ".product-view",
+                divPosition: "below",
+                carousel: {
+                    numVis: 5,
+                    circular: true
+                },
+                maxImageHeight: 120,
+                showRatings: true,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {
+                    preInit: function (tout) {
+                        if (800 > window.innerWidth) {
+                            tout.numItems = tout.carousel.numVis;
+                            tout.carousel = false;
+                        }
+                    }
+                },
+                inCart: false
+            }],
+            Search: [{
+                enable: false
+            }],
+            Category: [{
+                enable: true,
+                resultType: 5,
+                numItems: 4,
+                caption: "More ideas...",
+                productStyle: "product4T product4TCat",
+                divSelect: "#main4TellContainer",
+                divPosition: "append",
+                setHeight: false,
+                setWidth: false,
+                imageSize: "&maxx=100&maxy=100",
+                maxImageHeight: 100,
+                showRatings: true,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {
+                    preInit: function (tout) {
+                        if (800 > window.innerWidth) {
+                            tout.numItems = tout.carousel.numVis;
+                            tout.carousel = false;
+                        }
+                    }
+                },
+                inCart: false
+            }],
+            AddToCart: [{
+                enable: true,
+                resultType: 0,
+                numItems: 20,
+                caption: "You may also like...",
+                productStyle: "product4T product4TVC",
+                divSelect: ".totals",
+                divPosition: "below",
+                carousel: {
+                    numVis: 5,
+                    circular: true
+                },
+                maxImageHeight: 160,
+                showRatings: true,
+                wrapper: "<div class='VC4T'></div>",
+                rawJS: {
+                    preInit: function (tout) {
+                        if (800 > window.innerWidth) {
+                            tout.numItems = tout.carousel.numVis;
+                            tout.carousel = false;
+                        }
+                    }
+                },
+                inCart: true
+            }]
+        }
+    }
+}(window._4TellBoost = window._4TellBoost || {}, jQuery));
