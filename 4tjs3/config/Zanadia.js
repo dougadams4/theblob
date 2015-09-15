@@ -5,7 +5,8 @@
             alias: "Zanadia",
             GA_UA: "UA-211504-1",
             platform: "4Tell3d.js",
-            addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
+            addCartBtnAtts: "img alt='Add to Cart'",
+            addCartImage: "assets/templates/default/images/btn-related-add-to-cart.gif",
             spacerImage: "/web/assets/images/spacer.gif",
             emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
             pricePrefix: "",
@@ -18,7 +19,7 @@
                 enable: true,
                 resultType: 1,
                 numItems: 12,
-                caption: "Recommended for you",
+                caption: "Top Sellers",
                 productStyle: "product4T product4THome",
                 divSelect: "#homeHeader",
                 divPosition: "below",
@@ -30,8 +31,6 @@
                     navigationText: false,
                     pagination: false
                 },
-                showRatings: false,
-                wrapper: "<div class='HOME4T'></div>",
                 rotateRecs: true,
                 inCart: false
             }],
@@ -61,9 +60,9 @@
                 numItems: 12,
                 caption: "Customers Also Viewed:",
                 captionStyle: "titles product4TCaption",
-                productStyle: "product4T product4TPD1",
-                divSelect: ".rewardsPointsBlock",
-                divPosition: "below",
+                productStyle: "product4T product4TPD2",
+                divSelect: ".relatedBlock",
+                divPosition: "replace",
                 carousel: {
                     items: 4,
                     scrollPerPage: true,
@@ -73,16 +72,8 @@
                 },
                 imageSize: "&maxx=130&maxy=130",
                 maxImageHeight: 180,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='PD24T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        tout.enable = tout.enable && !jQuery(".dontShow4T").length;
-                    },
-                    preDisplay: function () {
-                        jQuery(".accessoriesBlock, .relatedBlock").hide();
-                    }
-                },
                 inCart: false
             }],
             Category: [{
@@ -99,28 +90,21 @@
                     circular: true
                 },
                 imageSize: "&maxx=120&maxy=120",
-                showRatings: false,
                 maxImageHeight: 150,
                 inCart: false
             }],
             Search: [{
                 enable: true,
                 resultType: 0,
-                numItems: 12,
+                numItems: 4,
                 caption: "You May Also Like",
+                captionStyle: "titles product4TCaption",
                 productStyle: "product4T product4TSearch",
-                divSelect: "#newreleases",
-                divPosition: "above",
-                carousel: {
-                    items: 4,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
+                divSelect: "#main4TellContainer",
+                divPosition: "replace",
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 130,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='SEARCH4T'></div>",
                 inCart: false
             }],
@@ -135,22 +119,23 @@
                     navigationText: false,
                     pagination: false
                 },
+                numRows: 2,
                 caption: "You May Also Like:",
                 captionStyle: "titles product4TCaption",
                 productStyle: "product4T product4TVC",
                 divSelect: ".third-party-payment",
-                divPosition: "below",
+                divPosition: "above",
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 140,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='VC4T'></div>",
                 inCart: true
             }],
             QuickCart: [{
-                enable: false,
-                resultType: 0,
+                enable: true,
+                resultType: 4,
                 numItems: 12,
-                caption: "You may also like: ",
+                caption: "Top Sellers: ",
                 productStyle: "product4T product4TQC",
                 divSelect: ".quickCartRelated",
                 divPosition: "replace",
@@ -163,8 +148,12 @@
                 },
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 140,
-                showRatings: false,
-                rawJS: {},
+                showRatings: true,
+                rawJS: {
+                    preInit: function (tout) {
+                        tout.enable = ($(tout.divSelect) && $(tout.divSelect).length);
+                    }
+                },
                 wrapper: "<div class='QC4T'></div>",
                 inCart: false
             }]
