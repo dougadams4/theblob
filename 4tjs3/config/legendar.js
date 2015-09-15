@@ -6,8 +6,8 @@
             GA_UA: "UA-1557322-1",
             platform: "4Tell3d.js",
             addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
-            pricePrefix: "",
-            salePricePrefix: "",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
@@ -16,13 +16,13 @@
                 enable: true,
                 resultType: 1,
                 numItems: 12,
-                caption: "Recommended for you",
+                caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
                 divSelect: ".feat-item-list",
                 divPosition: "replace",
                 carousel: {
                     items: 4,
-                    scrollPerPage: true,
+                    scrollByPage: true,
                     navigation: true,
                     navigationText: false,
                     pagination: false
@@ -38,13 +38,13 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "Customers also bought",
+                caption: "Customers also bought...",
                 productStyle: "product4T product4TPD1",
-                divSelect: ".detail-section",
+                divSelect: ".details",
                 divPosition: "below",
                 carousel: {
-                    items: 3,
-                    scrollPerPage: true,
+                    items: 4,
+                    scrollByPage: true,
                     navigation: true,
                     navigationText: false,
                     pagination: false
@@ -59,13 +59,13 @@
                 enable: true,
                 resultType: 3,
                 numItems: 12,
-                caption: "Customers also viewed",
+                caption: "Customers also viewed...",
                 productStyle: "product4T product4TPD2",
-                divSelect: ".relatedBlock, .accessoriesBlock",
+                divSelect: ".relatedBlock",
                 divPosition: "replace",
                 carousel: {
-                    items: 3,
-                    scrollPerPage: true,
+                    items: 4,
+                    scrollByPage: true,
                     navigation: true,
                     navigationText: false,
                     pagination: false
@@ -74,11 +74,7 @@
                 maxImageHeight: 120,
                 showRatings: true,
                 wrapper: "<div class='PD24T'></div>",
-                rawJS: {
-                    preDisplay: function (tout) {
-                        $(tout.divSelect).hide();
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }],
             Search: [{
@@ -88,13 +84,13 @@
                 enable: true,
                 resultType: 5,
                 numItems: 4,
-                caption: "More ideas",
+                caption: "More ideas...",
                 productStyle: "product4T product4TCat",
                 divSelect: "#main4TellContainer",
                 divPosition: "append",
                 carousel: {
                     items: 4,
-                    scrollPerPage: true,
+                    scrollByPage: true,
                     navigation: true,
                     navigationText: false,
                     pagination: false
@@ -110,13 +106,13 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "You may also like",
+                caption: "You may also like...",
                 productStyle: "product4T product4TVC",
                 divSelect: ".chk-buttons",
                 divPosition: "below",
                 carousel: {
-                    items: 3,
-                    scrollPerPage: true,
+                    items: 4,
+                    scrollByPage: true,
                     navigation: true,
                     navigationText: false,
                     pagination: false
