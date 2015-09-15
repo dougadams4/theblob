@@ -381,12 +381,16 @@ a.disabled {
     margin-bottom: 10px;
 }
 
-    .CAT4T a.left {
+.CAT24T {
+    min-width: 1170px;
+}
+
+    .CAT4T a.left, .CAT24T a.left {
         background: url("../images/top_seller_left.jpg") no-repeat scroll 0% 0% transparent;
         height: 190px;
     }
 
-    .CAT4T a.right {
+    .CAT4T a.right, .CAT24T a.right {
         background: url("../images/top_seller_right.jpg") no-repeat scroll 0% 0% transparent;
         height: 190px;
     }
@@ -529,7 +533,8 @@ img[src*=Kicker] {
     display: none;
 }
 
-.VC4T {width: 1000px;
+.VC4T {
+    width: 1000px;
     margin: 0 auto;
 }
 
