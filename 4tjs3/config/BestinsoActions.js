@@ -3,7 +3,7 @@
 
     $(document).ready(function () {
         if ($("#info-pain-div").length) {
-            //_4TellBoost.setPageType("Category");
+            _4TellBoost.setPageType("Category");
             _4TellBoost.setCatId("100");
             $("form[name=frmsortby]").attr("action", "view_category.asp?cat=100#prod");
         }
