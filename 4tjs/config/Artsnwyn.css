@@ -1,7 +1,26 @@
 /*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
+#main4TellContainer {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
 
+#second4TellContainer {
+    margin: 0;
+    padding: 0;
+    background: none;
+    display: block;
+}
+
+    #main4TellContainer:after, #second4TellContainer:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
 
 .FourTellContainer {
     display: block;
@@ -38,6 +57,7 @@
 
 .product4T {
     background-color: #FFFFFF;
+    height: 250px;
     margin: 5px 14px;
     padding: 0;
     width: 160px;
@@ -104,10 +124,11 @@
 }
 
 .product4T .productBuy {
-    display: none;
     cursor: pointer;
     margin: 0 0 10px;
     text-decoration: none;
+    clear: both !important;
+    float: none !important;
     text-align: center;
 }
 
