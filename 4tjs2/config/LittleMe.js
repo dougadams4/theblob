@@ -15,48 +15,45 @@
             siteEnable: true
         },
         PageSettings: {
-            Home: {
-                tout1: {
-                    enable: true,
-                    resultType: "4,4",
-                    numItems: "5,5",
-                    startPos: "11,11",
-                    caption: "<h2>Top Sellers</h2>",
-                    productStyle: "product4T product4THome",
-                    divSelect: "#HomeFeaturedProducts",
-                    divPosition: "replace",
-                    carousel: {
-                        numVis: 5,
-                        circular: true
-                    },
-                    showRatings: false,
-                    maxImageHeight: 150,
-                    wrapper: "<div class='PD14T'></div>",
-                    inCart: false
+            Home: [ {
+                enable: true,
+                resultType: 4,
+                numItems: 10,
+                caption: "<h2>Featured Products</h2>",
+                productStyle: "product4T product4THome",
+                divSelect: "#SideTopSellers",
+                divPosition: "replace",
+                carousel: {
+                    numVis: 5,
+                    circular: true
                 },
-                tout2: {
-                    enable: true,
-                    resultType: "4,4",
-                    numItems: "5,5",
-                    startPos: "1,1",
-                    caption: "<h2>Featured Products</h2>",
-                    productStyle: "product4T product4THome",
-                    divSelect: "#SideTopSellers",
-                    divPosition: "replace",
-                    carousel: {
-                        numVis: 5,
-                        circular: true
-                    },
-                    maxImageHeight: 120,
-                    showRatings: false,
-                    wrapper: "<div class='PD14T'></div>",
-                    inCart: false
-                }
+                maxImageHeight: 120,
+                showRatings: false,
+                wrapper: "<div class='PD14T'></div>",
+                inCart: false
             },
+            {
+                enable: true,
+                resultType: 4,
+                numItems: 10,
+                caption: "<h2>Top Sellers</h2>",
+                productStyle: "product4T product4THome",
+                divSelect: "#HomeFeaturedProducts",
+                divPosition: "replace",
+                carousel: {
+                    numVis: 5,
+                    circular: true
+                },
+                showRatings: false,
+                maxImageHeight: 150,
+                wrapper: "<div class='PD14T'></div>",
+                inCart: false
+            }
+               ],
             ProductDetail: [{
                 enable: true,
                 resultType: "0,3",
-                numItems: 15,
+                numItems: "7,8",
                 caption: "<h2>You may also like...</h2>",
                 productStyle: "product4T product4TPD1",
                 divSelect: "#ProductDetails",
@@ -92,25 +89,23 @@
                     enable: false
                 }
             },
-            AddToCart: {
-                tout1: {
-                    enable: true,
-                    resultType: 0,
-                    numItems: 12,
-                    caption: "<h2>More ideas for you...</h2>",
-                    productStyle: "product4T product4TVC",
-                    divSelect: ".KeepShopping",
-                    divPosition: "below",
-                    carousel: {
-                        numVis: 4,
-                        circular: true
-                    },
-                    maxImageHeight: 100,
-                    showRatings: false,
-                    wrapper: "<div style='clear:left; float:left'></div>",
-                    inCart: true
-                }
-            }
+            AddToCart: [{
+                enable: true,
+                resultType: "0,1",
+                numItems: "6,6",
+                caption: "<h2>More ideas for you...</h2>",
+                productStyle: "product4T product4TVC",
+                divSelect: ".KeepShopping",
+                divPosition: "below",
+                carousel: {
+                    numVis: 4,
+                    circular: true
+                },
+                maxImageHeight: 100,
+                showRatings: false,
+                wrapper: "<div style='clear:left; float:left'></div>",
+                inCart: true
+            }]
         }
     }
 }(window._4TellBoost = window._4TellBoost || {}, jQuery));
