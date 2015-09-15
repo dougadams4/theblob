@@ -4,8 +4,9 @@ jQuery.noConflict();
         SiteInfo: {
             baseURL: "www.CLIENTURL.com",
             alias: "Crestlin",
-            GA_UA: "UA-8168579-3 ",
+            GA_UA: "",
             platform: "4TellDIY.js",
+            custom: true,
             addCartBtnAtts: "input type='image'",
             addCartImage: "Themes/Default/Images/btn-view-detail-alt.gif",
             pricePrefix: "As low as ",
@@ -16,8 +17,8 @@ jQuery.noConflict();
         PageSettings: {
             Home: [{
                 enable: true,
-                resultType: 4,
-                numItems: 10,
+                resultType: 1,
+                numItems: 15,
                 caption: "Recommended for you...",
                 showCaption: false,
                 productStyle: "product4T product4THome",
@@ -40,8 +41,7 @@ jQuery.noConflict();
             }, {
                 enable: true,
                 resultType: 4,
-                numItems: 10,
-                //startPos: "11",
+                numItems: 15,
                 caption: "Featured",
                 showCaption: false,
                 productStyle: "product4T product4THome",
@@ -64,18 +64,14 @@ jQuery.noConflict();
             ProductDetail: [{
                 enable: true,
                 resultType: 0,
-                numItems: 6,
+                numItems: 2,
                 caption: "Customers also bought",
                 captionStyle: "product4TCaption product4TCaptionPD1",
                 productStyle: "product4T product4TPD1",
                 divSelect: "#tout1_pdp_4Tell",
                 divPosition: "replace",
-                carousel: {
-                    numVis: 1,
-                    circular: true
-                },
                 showPrice: false,
-                maxImageHeight: 130,
+                maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
                 inCart: false
             }, {
