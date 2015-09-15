@@ -22,14 +22,11 @@
                 numItems: 15,
                 caption: "Recommended for you",
                 productStyle: "product4T product4THome",
-                divSelect: ".homebtm",
-                divPosition: "below",
+                divSelect: "#homebox4",
+                divPosition: "above",
                 carousel: {
-                    items: 5,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 5,
+                    circular: true
                 },
                 showRatings: false,
                 maxImageHeight: 180,
@@ -48,20 +45,20 @@
                 numItems: 12,
                 caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
-                divSelect: "#rTabs",
-                divPosition: "above",
+                divSelect: "tr:has(form[name=add])",
+                divPosition: "below",
                 carousel: {
-                    items: 3,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 3,
+                    circular: true
                 },
                 imageSize: "&maxx=120&maxy=120",
                 showRatings: false,
-                maxImageHeight: 100,
-                wrapper: "<div class='PD14T'></div>",
+                maxImageHeight: 150,
+                wrapper: "<tr><td colspan='2'><div class='PD14T'></div></td></tr>",
                 rawJS: {
+                    perProduct: function (itemdata) {
+                        itemdata.imageLink = itemdata.imageLink.replace(/^www.kellyscloset.com/, "");
+                    }
                 },
                 inCart: false
             }, {
@@ -70,21 +67,23 @@
                 numItems: 12,
                 caption: "Our customers also viewed...",
                 productStyle: "product4T product4TPD2",
-                divSelect: ".relatedBlock",
-                divPosition: "replace",
+                divSelect: "#REV4T",
+                divPosition: "above",
                 carousel: {
-                    items: 4,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
                 imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 120,
                 showRatings: false,
-                wrapper: "<div class='PD24T'></div>",
+                wrapper: "<tr><td colspan='2'><div class='PD24T'></div></td></tr>",
                 rawJS: {
-
+                    preDisplay: function () {
+                        $("#REL4T").hide();
+                    },
+                    perProduct: function (itemdata) {
+                        itemdata.imageLink = itemdata.imageLink.replace(/^www.kellyscloset.com/, "");
+                    }
                 },
                 inCart: false
             }],
@@ -92,7 +91,7 @@
                 enable: false
             }],
             Category: [{
-                enable: false,
+                enable: true,
                 resultType: 5,
                 numItems: 4,
                 caption: "More ideas...",
@@ -112,25 +111,21 @@
                 enable: true,
                 resultType: 0,
                 numItems: 15,
-                caption: "<h3>You may also like...</h3>",
-                showCaption: false,
+                caption: "You may also like...",
                 productStyle: "product4T product4TVC",
-                divSelect: ".productBlockContainer",
+                divSelect: "#VC4T",
                 divPosition: "replace",
                 carousel: {
-                    items: 5,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 5,
+                    circular: true
                 },
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 150,
                 showRatings: false,
-                wrapper: "<div class='VC4T'></div>",
+                wrapper: "<tr><td colspan='6'><div class='#VC4T'></div></td></tr>",
                 rawJS: {
-                    preDisplay: function (tout) {
-                        $(tout.divSelect).prev(".header").replaceWith($(tout.caption));
+                    perProduct: function (itemdata) {
+                        itemdata.imageLink = itemdata.imageLink.replace(/^www.kellyscloset.com/, "");
                     }
                 },
                 inCart: true
