@@ -12,7 +12,7 @@
             pricePrefix: "Our Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
-            siteEnable: false,
+            siteEnable: true,
             noConflict: true
         },
         PageSettings: {
