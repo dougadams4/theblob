@@ -6,7 +6,7 @@
             GA_UA: "UA-27787806-1",
             platform: "4TellMv.js",
             addCartBtnAtts: "form method='post' action='merchant.mvc?Screen=BASK'><input type='hidden' name='Action' value='ADPR'><input type='hidden' name='Quantity' value='1'><input type='submit' value='Add To Basket' class='button'></form",
-            //addCartImage: "//www.sextoydistributing.com/Merchant2/css/00000001/images/add-to-cart-big.png",
+            addCartImage: "//dev2.sextoydistributing.com/Merchant2/css/00000001/images/add-to-cart-big.png",
             spacerImage: "/web/assets/images/spacer.gif",
             pricePrefix: "Every Day Low Price: ",
             salePricePrefix: "Our Price: ",
