@@ -54,6 +54,8 @@
 .product4T .productTitle {
   width: 100%;
   overflow: hidden;
+  color: #0b2c42;
+  font-size: 14px;
   font-weight: bold;
   height: 3.4em;
   min-height: 3.4em;
@@ -62,8 +64,8 @@
   height: auto;
 }
 .product4T .productPrice {
-  font-family: Arial, Helvetica, sans-serif;
   height: 1.2em;
+  color: #00baff;
   font-size: 13px;
   font-weight: normal;
 }
@@ -72,14 +74,15 @@
   color: #dddddd;
 }
 .product4T .productSalePrice {
-  font-family: Arial, Helvetica, sans-serif;
-  color: red;
+  color: #9e0020;
   height: 1.2em;
+  padding: 3px;
   font-size: 13px;
   font-weight: bold;
 }
 .product4T .productBuy {
   margin: 0 0 10px;
+  padding: 5px;
   text-decoration: none;
 }
 .product4T .productBuy img,
@@ -157,4 +160,3 @@ a.disabled {
 /* Checkout */
 /* Quick Cart */
 /* Quick view */
-
