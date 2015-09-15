@@ -3,8 +3,7 @@
         SiteInfo: {
             baseURL: "www.gentlemansgazette.com/",
             alias: "Gentlema",
-            GA_UA: "UA-13208334-4",
-            //GA_UA: "UA-13208334-3",
+            GA_UA: "UA-13208334-3",
             platform: "4TellMa.js",
             custom: true,
             addCartBtnAtts: "<button type='button' value='View Details'>View Details</button>",
@@ -57,8 +56,8 @@
                 caption: "Frequently bought together...",
                 captionStyle: "product4TCaption product4TCaptionPD2",
                 productStyle: "product4T product4TPD2",
-                divSelect: "#wg-assist",
-                divPosition: "below",
+                divSelect: ".yotpo-main-widget",
+                divPosition: "above",
                 carousel: {
                     numVis: 5,
                     circular: true
