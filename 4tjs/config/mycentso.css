@@ -13,32 +13,6 @@
   clear: both;
   visibility: hidden;
 }
-/* default state */
-.state-indicator {
-  color: transparent;
-  position: absolute;
-  top: -999em;
-  left: -999em;
-  z-index: 1;
-  /* small desktop */
-  /* tablet */
-  /* mobile phone */
-}
-@media only screen and (max-width: 980px) {
-  .state-indicator {
-    z-index: 2;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .state-indicator {
-    z-index: 3;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  .state-indicator {
-    z-index: 4;
-  }
-}
 .toutWrapper4T {
   border: 1px solid #dddddd;
   background: none;
@@ -47,21 +21,15 @@
   padding: 0;
   margin: 5px 0 0 5px;
   text-align: left;
-  font-family: "Merriweather";
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: #676767;
+  font-weight: bold;
 }
 .product4T {
-  float: left;
   background-color: transparent;
   padding: 5px;
   margin: 0;
   width: 120px;
   border: none;
   text-align: center;
-  text-transform: lowercase;
   vertical-align: middle;
 }
 .product4T + .product4T {
@@ -87,20 +55,19 @@
 }
 .product4T .productTitle {
   width: 100%;
-  color: #646464;
   overflow: hidden;
-  font-weight: normal;
-  height: 3.5em;
-  min-height: 3.5em;
+  font-weight: bold;
+  height: 3.4em;
+  min-height: 3.4em;
 }
 .product4T .productTitle:hover {
   height: auto;
 }
 .product4T .productPrice {
   font-family: Arial, Helvetica, sans-serif;
-  height: 1.6em;
+  height: 1.2em;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: normal;
 }
 .product4T .strikePrice {
   text-decoration: line-through;
@@ -109,23 +76,20 @@
 .product4T .productSalePrice {
   font-family: Arial, Helvetica, sans-serif;
   color: red;
-  height: 1.6em;
+  height: 1.2em;
   font-size: 13px;
   font-weight: bold;
 }
 .product4T .productBuy {
-  clear: both;
   margin: 0 0 10px;
   text-decoration: none;
 }
 .product4T .productBuy img,
 .product4T .productBuy input {
-  text-transform: lowercase;
   max-width: 70%;
-  max-width: 110px;
   border: medium none;
   font-size: 14px;
-  padding: 2px;
+  padding: 10px;
 }
 /* For scrollables. */
 .scrollable {
@@ -171,67 +135,20 @@ a.disabled {
 * custom CSS. */
 /* Tout1 on PD page. */
 .product4TPD1 {
-  width: 150px;
-  padding: 5px 5px;
-}
-@media only screen and (max-width: 767px) {
-  .product4TPD1 {
-    border: 1px dotted #dddddd;
-    width: 45%;
-    float: left;
-  }
+  width: 170px;
+  padding: 5px 10px;
 }
 /* Tout2 on PD page */
 /* Tout on the home page. */
-.HOME4T {
-  float: left;
-}
 .product4THome {
-  width: 190px;
-  padding: 5px;
-}
-.product4THome .productImage {
-  height: 250px;
-}
-@media only screen and (max-width: 767px) {
-  .product4THome {
-    border: 1px dotted #dddddd;
-    width: 45%;
-    float: left;
-  }
-}
-/* Category pages */
-.product4TCat {
-  width: 150px;
-  padding: 5px 5px;
-}
-/* Search */
-/* View Cart */
-.product4TVC {
-  width: 200px;
+  width: 170px;
   padding: 5px 10px;
 }
-@media only screen and (max-width: 767px) {
-  .product4TVC {
-    border: 1px dotted #dddddd;
-    padding: 0;
-    margin: 1%;
-    width: 45%;
-    float: left;
-  }
-}
+/* Category pages */
+/* Search */
+/* View Cart */
 /* Checkout */
 /* Quick Cart */
-#cart {
-  overflow-y: scroll;
-}
-#cart .mm-list {
-  position: relative;
-  height: auto;
-}
-.product4TQC {
-  width: 150px;
-}
 /* Quick view */
 .product4TQV {
   display: none;
