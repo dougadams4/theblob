@@ -1,14 +1,14 @@
 (function (_4TellBoost, $, undefined) {
     _4TellBoost.CONFIG = {
         SiteInfo: {
-            baseURL: "golfetail.ecomitize.com//",
+            baseURL: "www.GolfeTail.com",
             alias: "GolfeTaM",
             GA_UA: "UA-739687-1",
             platform: "4TellMa.js",
             custom: true,
-            addCartBtnAtts: "<input type='button' value='See Details'/>",
-            pricePrefix: "<span class='MSRP4T'>Retail: </span>",
-            salePricePrefix: "<span class='YouSave4T'>SALE: </span>",
+            addCartBtnAtts: "<input type='button' value='Add to Cart'/>",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
@@ -23,21 +23,18 @@
                 divSelect: "#brands",
                 divPosition: "above",
                 carousel: {
-                    itemsCustom: [[0, 1], [600, 2], [768, 3], [1100, 4]],
-                    navigation: true,
-                    navigationText: ['<a class="left carousel-control" href="#recently-viewed" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>',
-                        '<a class="right carousel-control" href="#recently-viewed" data-slide="next"><i class="fa fa-angle-double-right"></i></a>'],
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
                 maxImageHeight: 170,
-                wrapper: "<div style='margin: 0px 40px;background:#f9f9f9'></div>",
+                wrapper: "<div style='width:100%;background:#f9f9f9'></div>",
                 rawJS: {
 
                 },
                 incart: false
             }],
             ProductDetail: [{
-                enable: true,
+                enable: false,
                 resultType: 0,
                 //fillMode: "genomic",
                 numItems: 4,
@@ -52,7 +49,7 @@
                 inCart: false
             },
                 {
-                    enable: true,
+                    enable: false,
                     resultType: 3,
                     numItems: 8,
                     caption: "<img src='//az416957.vo.msecnd.net/4tjs/images/golfers-also-viewed-header.gif' />",
@@ -60,11 +57,8 @@
                     divSelect: "#home-top10",
                     divPosition: "above",
                     carousel: {
-                        itemsCustom: [[0, 2], [400, 5]],
-                        navigation: true,
-                        navigationText: ['<a class="left carousel-control" href="#recently-viewed" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>',
-                            '<a class="right carousel-control" href="#recently-viewed" data-slide="next"><i class="fa fa-angle-double-right"></i></a>'],
-                        pagination: false
+                        numVis: 4,
+                        circular: true
                     },
                     maxImageHeight: 120,
                     showRatings: true,
@@ -79,14 +73,13 @@
                 enable: true,
                 resultType: 5,
                 numItems: 12,
-                fillMode: "none",
-                caption: "Our Best Deals",
+                caption: "Category Top Sellers",
                 captionStyle: "product4TCaption product4TCaptionCat",
-                productStyle: "product4T",
+                productStyle: "product4T product4TCat",
                 divSelect: "#description, #viewed",
                 divPosition: "below",
                 carousel: {
-                    itemsCustom: [[0, 1], [768, 3], [1100, 4]],
+                    itemsCustom: [[0, 2], [400, 5]],
                     navigation: true,
                     navigationText: ['<a class="left carousel-control" href="#recently-viewed" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>',
                         '<a class="right carousel-control" href="#recently-viewed" data-slide="next"><i class="fa fa-angle-double-right"></i></a>'],
@@ -97,10 +90,6 @@
                 wrapper: "<div id='CAT4T'></div>",
                 rawJS: {
                     preInit: function (tout) {
-                        if ($(".products-grid").length) {
-                            tout.productStyle = "product4T product4TCat";
-                            tout.carousel.itemsCustom = [[0, 1], [768, 2]];
-                        }
                         //$("#viewed").hide();
                     }
                 },
@@ -116,11 +105,8 @@
                 divSelect: "#AlternativeCheckouts2",
                 divPosition: "above",
                 carousel: {
-                    itemsCustom: [[0, 1], [768, 2]],
-                    navigation: true,
-                    navigationText: ['<a class="left carousel-control" href="#recently-viewed" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>',
-                        '<a class="right carousel-control" href="#recently-viewed" data-slide="next"><i class="fa fa-angle-double-right"></i></a>'],
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
                 maxImageHeight: 120,
                 showRatings: true,
