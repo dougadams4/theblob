@@ -30,8 +30,7 @@
                     showBuyButton: true,
                     showRatings: false,
                     showPrice: true,
-                    newDivID: "home4TellContainer",
-                    wrapper: "<td rowspan='2' style='vertical-align: top;padding-top: 14px'></td>",
+                    wrapper: "<td rowspan='2' id='HOME4T' ></td>",
                     rawJS: {
                         preDisplay: function (tout) {
                             $('td[rowspan=2] img[src*=assets]').css('box-shadow', '2px 6px 9px #888');//Add drop-shadow to the main banner.
