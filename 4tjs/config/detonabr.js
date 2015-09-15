@@ -6,11 +6,11 @@
             GA_UA: "UA-3909265-2",
             platform: "4TellMa.js",
             addCartBtnAtts: "<input type='image' title='Comprar' value='Comprar' />",
-            addCartImage:"https://www.detonashop.com.br/0.jpg",
+            addCartImage: "https://www.detonashop.com.br/0.jpg",
             pricePrefix: "",
             salePricePrefix: "",
             includeBase: false,
-            siteEnable: false
+            siteEnable: true
         },
         PageSettings: {
             Home: [{
