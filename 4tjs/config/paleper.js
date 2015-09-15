@@ -2,20 +2,15 @@
     _4TellBoost.CONFIG = {
         SiteInfo: {
             baseURL: "www.CLIENTURL.com",
-            alias: "paleper",
+            alias: "CLIENTAL",
             GA_UA: "",
             platform: "4TellMa.js",
-            custom: true,
-            addCartBtnAtts: "input type='button' value='Add to Cart' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
-            addCartImage: "",
-            spacerImage: "/web/assets/images/spacer.gif",
-            emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
+            addCartBtnAtts: "<button type='button' title='Add to Cart' class='button btn-cart' ><span><span>Add to Cart</span></span></button>",
             pricePrefix: "Our Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
-        //Silent Mode; not actually rendering any touts, but still sending click/GA data.
         PageSettings: {
             Home: [{
                 enable: false
@@ -23,7 +18,7 @@
             ProductDetail: [{
                 enable: true,
                 resultType: 0,
-                numItems: 12,
+                numItems: 2,
                 caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
                 divSelect: "#main4TellContainer",
@@ -50,7 +45,7 @@
                 imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 120,
                 showRatings: true,
-                wrapper: "<div class='PD24T'></div>",
+                wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
                 inCart: false
             }],
@@ -70,7 +65,7 @@
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: true,
-                wrapper: "<div class='CAT4T'></div>",
+                wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
                 inCart: false
             }],
@@ -87,7 +82,7 @@
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
                 showRatings: true,
-                wrapper: "<div class='VC4T'></div>",
+                wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
                 inCart: true
             }]
