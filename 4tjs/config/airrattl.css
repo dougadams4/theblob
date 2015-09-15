@@ -92,7 +92,6 @@
 }
 .product4T .productBuy img,
 .product4T .productBuy input {
-  cursor: pointer;
   max-width: 100%;
   border: medium none;
 }
@@ -139,124 +138,11 @@ a.disabled {
 /* Here follows custom classes, so as to permit each page to have its own
 * custom CSS. */
 /* Tout1 on PD page. */
-.product4TPD1 {
-  width: 250px;
-}
-.product4TPD1 .productImage {
-  width: 50%;
-  float: left;
-}
-.product4TPD1 .productTitle {
-  height: 8.5em;
-  width: 50%;
-  float: right;
-}
-.product4TPD1 .productPrice {
-  clear: both;
-}
-/* Tout2 on PD page
-    Except on this site, it's 2nd home page. Just roll with it.
-*/
-.product4TCaptionPD2 {
-  margin: 0;
-  text-align: center;
-  color: #111111;
-  font-family: "LocustResistance", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 35px;
-  background: url(//www.airrattle.com/v/vspfiles/templates/airrattle/images/homepage/best-sellers-bg.png);
-}
-.HOM24T .product4TCaption {
-  display: block;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  color: #111111;
-  width: 100%;
-  background: #dddddd;
-  height: 32px;
-  line-height: 32px;
-  text-indent: 20px;
-  margin: 0;
-  margin-bottom: 4px;
-  border-top: 1px solid #ffffff;
-}
-.product4TPD2 {
-  padding: 0;
-  margin: 4px auto;
-  width: 300px;
-  height: 90px;
-  border-bottom: 1px dotted #dddddd;
-}
-.product4TPD2 + .product4TPD2 {
-  border-left: none;
-}
-.product4TPD2 .productImage {
-  padding: 0;
-  float: left;
-  height: 70px;
-  width: 100px;
-}
-.product4TPD2 .productTitle {
-  padding: 2px 4px;
-  width: 190px;
-  float: right;
-  font-size: 12px;
-  height: 4.2em;
-}
-.product4TPD2 .productTitle:hover {
-  height: 4.2em;
-}
-.product4TPD2 .productSalePrice {
-  width: 200px;
-  float: right;
-}
-.product4TPD2 .productPrice {
-  padding: 0;
-  width: 200px;
-  float: right;
-}
+/* Tout2 on PD page */
 /* Tout on the home page. */
-.product4TCaptionHome {
-  letter-spacing: 1px;
-  margin: 0;
-  padding: 0 30px;
-  line-height: 38px;
-  text-transform: uppercase;
-  color: white;
-  font-family: "LocustResistance", Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  background: url(//www.airrattle.com/v/vspfiles/templates/airrattle/images/homepage/green-pattern.png);
-}
-.product4THome {
-  width: 180px;
-}
-.product4THome .productTitle {
-  height: 4em;
-  min-height: 4em;
-}
-.product4THome .productTitle:hover {
-  height: auto;
-}
 /* Category pages */
 /* Search */
 /* View Cart */
-.product4TVC {
-  width: 210px;
-}
-.product4TVC .productImage {
-  height: 100px;
-  width: 50%;
-  float: left;
-}
-.product4TVC .productTitle {
-  height: 8.5em;
-  width: 50%;
-  float: right;
-}
-.product4TVC .productPrice {
-  clear: both;
-}
 /* Checkout */
 /* Quick Cart */
 /* Quick view */
