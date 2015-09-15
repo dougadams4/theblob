@@ -121,7 +121,7 @@ a.browse {
 a.right {
   background-position: 0 -30px;
   clear: right;
-  margin-right: 0px;
+  margin-right: 10px;
 }
 a.left {
   background-position: 0 0;
@@ -191,13 +191,14 @@ a.disabled {
 /* Search */
 /* View Cart */
 .VC4T {
-  float: left;
+  clear: both;
 }
 .KeepShopping {
   clear: right;
 }
 .product4TVC {
-  width: 140px;
+  padding: 4px;
+  width: 160px;
 }
 .product4TVC .productTitle {
   height: 4em;
@@ -208,5 +209,8 @@ a.disabled {
 }
 /* Checkout */
 /* Quick Cart */
+.product4TQC {
+  width: 140px;
+}
 /* Quick view */
 
