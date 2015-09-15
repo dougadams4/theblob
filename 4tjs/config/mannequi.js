@@ -1,13 +1,13 @@
 (function (_4TellBoost, $, undefined) {
     _4TellBoost.CONFIG = {
         SiteInfo: {
-            baseURL: "www.mannequinmadness.com",
-            alias: "mannequi",
-            GA_UA: "UA-48193400-1",
-            platform: "4TellBc.js",
-            addCartBtnAtts: "a>Add to Cart</a",
-            pricePrefix: "",
-            salePricePrefix: "",
+            baseURL: "www.CLIENTURL.com",
+            alias: "CLIENTAL",
+            GA_UA: "",
+            platform: "4TellDIY.js",
+            addCartBtnAtts: "<input type='submit' class='AddToCartButton' value=''/>",
+            pricePrefix: "Our Price: ",
+            salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
         },
@@ -18,16 +18,16 @@
             ProductDetail: [{
                 enable: true,
                 resultType: 0,
-                numItems: 12,
-                caption: "<h3>Customers also bought...</h3>",
+                numItems: 2,
+                caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
-                divSelect: ".ProductMain",
-                divPosition: "below",
+                divSelect: "#main4TellContainer",
+                divPosition: "append",
                 carousel: {
-                    numVis: 3,
+                    numVis: 4,
                     circular: true
                 },
-                showRatings: false,
+                showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
@@ -35,17 +35,16 @@
             }, {
                 enable: true,
                 resultType: 3,
-                numItems: 12,
-                caption: "<h3>Customers who viewed this product, also viewed...</h3>",
+                numItems: 4,
+                caption: "Similar Items",
                 productStyle: "product4T product4TPD2",
-                divSelect: "#SimilarProductsByCustomerViews",
-                divPosition: "replace",
-                carousel: {
-                    numVis: 4,
-                    circular: true
-                },
+                divSelect: "#second4TellContainer",
+                divPosition: "append",
+                setHeight: true,
+                setWidth: false,
+                imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 120,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
                 inCart: false
@@ -54,43 +53,38 @@
                 enable: false
             }],
             Category: [{
-                enable: false
+                enable: true,
+                resultType: 5,
+                numItems: 4,
+                caption: "More ideas...",
+                productStyle: "product4T product4TCat",
+                divSelect: "#main4TellContainer",
+                divPosition: "append",
+                setHeight: false,
+                setWidth: false,
+                imageSize: "&maxx=100&maxy=100",
+                maxImageHeight: 100,
+                showRatings: true,
+                wrapper: "<div class='PD14T'></div>",
+                rawJS: {},
+                inCart: false
             }],
             AddToCart: [{
                 enable: true,
                 resultType: 0,
-                numItems: 12,
-                caption: "<h3>You may also like...</h3>",
+                numItems: 4,
+                caption: "You may also like...",
                 productStyle: "product4T product4TVC",
-                divSelect: ".ProceedToCheckout",
-                divPosition: "below",
-                carousel: {
-                    numVis: 4,
-                    circular: true
-                },
+                divSelect: "#second4TellContainer",
+                divPosition: "append",
+                setHeight: true,
+                setWidth: false,
+                imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
-                showRatings: false,
-                wrapper: "<div class='VC4T'></div>",
-                rawJS: {},
-                inCart: true
-            }],
-            FourOhFour: [{
-                enable: true,
-                resultType: 1,
-                numItems: 12,
-                caption: "<h3>Some products you may like...</h3>",
-                productStyle: "product4T product4THome",
-                divSelect: ".BlockContent",
-                divPosition: "below",
-                carousel: {
-                    numVis: 4,
-                    circular: true
-                },
-                maxImageHeight: 120,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
-                inCart: false
+                inCart: true
             }]
         }
     }
