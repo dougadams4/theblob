@@ -77,6 +77,10 @@
   font-size: 13px;
   font-weight: normal;
 }
+.product4T .strikePrice {
+  text-decoration: line-through;
+  color: gray;
+}
 .product4T .productSalePrice {
   font-family: Arial, Helvetica, sans-serif;
   color: red;
@@ -152,13 +156,22 @@ a.disabled {
 }
 /* Tout2 on PD page */
 .product4TPD2 {
-  padding: 5px 8px;
+  margin-top: 10px;
+  padding: 8px;
   width: 160px;
 }
+.product4TPD2 .productImage {
+  height: 140px;
+}
 /* Tout on the home page. */
+.product4TCaptionHome {
+  font-size: 14px;
+  padding: 5px;
+}
 .HOME4T {
-  float: left;
-  width: 49%;
+  clear: both;
+  margin: 0 auto;
+  width: 1110px;
 }
 .product4THome {
   width: 170px;
