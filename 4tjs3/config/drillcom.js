@@ -5,12 +5,12 @@
             alias: "drillcom",
             GA_UA: "UA-1460116-1",
             platform: "4TellMv.js",
-            addCartBtnAtts: "form method='post' action='merchant.mvc?Screen=BASK'><input type='hidden' name='Action' value='ADPR'><input type='hidden' name='Quantity' value='1'><input type='image' src='//www.drillcomp.com/mm5/graphics/interface_images/add_to_cart_button.jpg'></form",
+            addCartBtnAtts: "input type='button' value='See Details'",
             //addCartImage: "//www.drillcomp.com/mm5/graphics/interface_images/add_to_cart_button.jpg",
             pricePrefix: "Price: ",
             salePricePrefix: "Sale Price: ",
             includeBase: false,
-            siteEnable: false
+            siteEnable: true
         },
         PageSettings: {
             Home: [{
