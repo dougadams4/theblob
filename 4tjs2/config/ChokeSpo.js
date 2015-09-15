@@ -29,6 +29,7 @@
                 //},
                 numRows: 2,
                 showRatings: false,
+                showBuyButton: false,
                 maxImageHeight: 150,
                 wrapper: "<div class='HOME4T'></div>",
                 inCart: false
@@ -39,13 +40,14 @@
                 numItems: 4,
                 caption: "customers also bought...",
                 productStyle: "product4T product4TPD2",
-                divSelect: "#ProductTabs",
+                divSelect: "#SimilarProductsByCustomerViews",
                 divPosition: "above",
                 //carousel: {
                 //    numVis: 4,
                 //    circular: true
                 //},
                 showRatings: false,
+                showBuyButton: false,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
                 rawJS: {},
@@ -57,14 +59,17 @@
                     numItems: 4,
                     caption: "CUSTOMERS WHO VIEWED THIS PRODUCT ALSO VIEWED",
                     productStyle: "product4T product4TPD2",
-                    divSelect: "#SimilarProductsByCustomerViews",
-                    divPosition: "replace",
+                    divSelect: "#mytabs",
+                    divPosition: "below",
+                    //divSelect: "#SimilarProductsByCustomerViews",
+                    //divPosition: "replace",
                     //carousel: {
                     //    numVis: 4,
                     //    circular: true
                     //},
                     maxImageHeight: 120,
                     showRatings: false,
+                    showBuyButton: false,
                     wrapper: "<div class='PD14T'></div>",
                     rawJS: {
                         preDisplay: function () {
@@ -72,8 +77,7 @@
                         }
                     },
                     inCart: false
-                }
-            ],
+                }],
             AddToCart: {
                 tout1: {
                     enable: true,
@@ -89,6 +93,7 @@
                     //},
                     maxImageHeight: 100,
                     showRatings: false,
+                    showBuyButton: false,
                     wrapper: "<div class='VC4T'></div>",
                     rawJS: {
                         preDisplay: function () {
