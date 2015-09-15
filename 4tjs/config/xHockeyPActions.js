@@ -6,7 +6,7 @@
         var ATCForm = $("<form></form");
         ATCForm.append($('<input type="hidden" name="QTY.' + itemdata.productID + '" value="1"></input>'));
         ATCForm.append($('<input type="hidden" name="ProductCode" value="' + itemdata.productID + '">'));
-        var buyBtn = $(_4TellBoost.SiteInfo.addCartBtnAtts);
+        var buyBtn = $("<" + _4TellBoost.SiteInfo.addCartBtnAtts + " />");
         if (_4TellBoost.SiteInfo.addCartImage) {
             var buyBtnImage = '';
             if (_4TellBoost.SiteInfo.includeBase)
