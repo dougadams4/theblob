@@ -1,18 +1,6 @@
 /*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
-#main4TellContainer {
-    margin: 0;
-    padding: 0;
-    display: block;
-}
-
-#second4TellContainer {
-    margin: 0;
-    padding: 0;
-    background: none;
-    display: block;
-}
 
 .FourTellContainer {
     display: block;
@@ -44,9 +32,6 @@
     font-weight: bold;
 }
 
-.product4TCaptionIE {
-    width: 100%;
-}
 
 .product4T {
     width: 150px;
@@ -65,8 +50,6 @@
 
     .product4T .productImage {
         padding: 10px 0;
-        float: none !important;
-        clear: both !important;
         height: 150px;
     }
 
@@ -79,8 +62,6 @@
     }
 
     .product4T .ratingImage {
-        float: none !important;
-        clear: both !important;
     }
 
     .product4T .ratingImageImg {
@@ -97,24 +78,14 @@
         width: 96%;
     }
 
-    .product4T .productTitleIE {
-    }
-
-
-    .product4T .productTitleText {
-    }
 
     .product4T .productPrice {
-        float: none !important;
-        clear: both !important;
         font-size: 13px;
         font-weight: normal;
         padding: 2px;
     }
 
     .product4T .productSalePrice {
-        float: none !important;
-        clear: both !important;
         color: red;
         font-size: 13px;
         font-weight: bold;
@@ -122,8 +93,6 @@
     }
 
     .product4T .productBuy {
-        float: none !important;
-        clear: both !important;
         cursor: pointer;
         margin: 0 0 10px;
         text-decoration: none;
@@ -143,8 +112,7 @@
         width: 20000em;
     }
 
-/* Quite necessary; customize to fit. */
-.items div {
+.items div.scrollGroup, .items div.product4T {
     float: left;
 }
 
