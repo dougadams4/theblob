@@ -16,35 +16,6 @@
         visibility: hidden;
     }
 }
-/* default state */
-.state-indicator {
-    color: transparent;
-    position: absolute;
-    top: -999em;
-    left: -999em;
-    z-index: 1;
-}
-
-/* small desktop */
-@media only screen and (max-width: 980px) {
-    .state-indicator {
-        z-index: 2;
-    }
-}
-
-/* tablet */
-@media only screen and (min-width: 768px) and (max-width: 980px) {
-    .state-indicator {
-        z-index: 3;
-    }
-}
-
-/* mobile phone */
-@media only screen and (max-width: 767px) {
-    .state-indicator {
-        z-index: 4;
-    }
-}
 
 .toutWrapper4T {
     border: 1px solid @grey;
@@ -71,7 +42,6 @@
     padding: 5px;
     margin: 0;
     width: 140px;
-    float: left;
     border: none;
     text-align: center;
     vertical-align: middle;
@@ -140,20 +110,12 @@
     }
 
     .productBuy {
-        margin: 4px 0 10px;
+        margin: 0 0 10px;
         text-decoration: none;
 
         img, input {
             max-width: 100%;
             border: medium none;
-        }
-    }
-}
-
-@media only screen and (max-width: 980px) {
-    .product4T {
-        & + & {
-            border: none;
         }
     }
 }
@@ -247,7 +209,7 @@ a.disabled {
 
 .product4TPD2 {
     margin-top: 10px;
-    padding: 6px;
+    padding: 8px;
     width: 160px;
 
     .productImage {
@@ -274,20 +236,6 @@ a.disabled {
     .productBuy {
     }
 }
-
-@media only screen and (max-width: 768px) {
-    .HOME24T {
-        .product4TPD2 {
-            & + & {
-                border: none;
-            }
-
-            float: none;
-            width: 80%;
-            margin: 0 auto;
-        }
-    }
-}
 /* Tout on the home page. */
 .product4TCaptionHome {
     font-size: 14px;
@@ -297,31 +245,11 @@ a.disabled {
 .HOME4T {
     clear: both;
     margin: 0 auto;
-    width: 1180px;
+    width: 1110px;
 }
-
-@media only screen and (max-width: 980px) {
-    .HOME4T {
-        clear: both;
-        width: auto;
-    }
-}
-/*#AutoItemWrapper1, #AutoItemWrapper3 {
-
-    &:after {
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden;
-    }
-
-    margin: 0 auto;
-    width: 1120px;
-}*/
 
 .product4THome {
-    width: 175px;
+    width: 170px;
 
     .productImage {
         height: 130px;
@@ -408,15 +336,8 @@ a.disabled {
 
 .VC4T {
     width: 1060px;
-    margin: 10px auto;
+    margin: 0 auto;
     clear: both;
-}
-
-@media only screen and (max-width: 980px) {
-    .VC4T {
-        clear: both;
-        width: auto;
-    }
 }
 
 .product4TVC {
