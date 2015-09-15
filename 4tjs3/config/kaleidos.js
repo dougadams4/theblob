@@ -9,7 +9,7 @@
             addCartImage: "",
             spacerImage: "/web/assets/images/spacer.gif",
             emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
-            pricePrefix: "",
+            pricePrefix: "Our Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
             siteEnable: true
@@ -24,28 +24,20 @@
                 numItems: 12,
                 caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
-                divSelect: ".relatedBlock",
-                divPosition: "replace",
+                divSelect: "tr:has(td.options-titles)",
+                divPosition: "below",
                 carousel: {
-                    items: 4,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
-                showRatings: false,
+                showRatings: true,
                 imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preDisplay: function (tout) {
-                        jQuery(".beta-col").insertAfter(".addl-images")
-
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }, {
-                enable: false,
+                enable: true,
                 resultType: 3,
                 numItems: 4,
                 caption: "Similar Items",
@@ -71,25 +63,17 @@
                 numItems: 12,
                 caption: "You may also like...",
                 productStyle: "product4T product4TVC",
-                divSelect: ".chk-buttons",
-                divPosition: "below",
+                divSelect: "table:has(img[src*=paypal])",
+                divPosition: "above",
                 carousel: {
-                    items: 3,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 100,
-                showRatings: false,
-                wrapper: "<div class='VC4T'></div>",
-                rawJS: {
-                    preDisplay: function (tout) {
-                        jQuery(tout.divSelect).next(".clear").hide();
-
-                    }
-                },
+                showRatings: true,
+                wrapper: "<table align='left' class='PD14T'><tr><td></td></tr></table>",
+                rawJS: {},
                 inCart: true
             }]
         }
