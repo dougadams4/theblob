@@ -7,7 +7,7 @@
             platform: "4TellBc.js",
             custom: true,
             addCartBtnAtts: "a>Choose Options</a",
-            emptyImage: "//cdn2.bigcommerce.com/server4600/34146/product_images/DefaultProductImageCustom.jpg",
+            emptyImage: "/templates/__custom/images/ProductDefault.gif",
             pricePrefix: "Our Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
@@ -33,7 +33,7 @@
                 inCart: false
             }, {
                 enable: true,
-                resultType: 4,
+                resultType: 1,
                 numItems: 12,
                 caption: "<h2>Recommended for you...</h2>",
                 productStyle: "product4T product4THome",
