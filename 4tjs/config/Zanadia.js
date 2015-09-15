@@ -9,6 +9,7 @@
             addCartImage: "assets/templates/default/images/btn-related-add-to-cart.gif",
             spacerImage: "/web/assets/images/spacer.gif",
             emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
+            priceClass: "price2",
             pricePrefix: "",
             salePricePrefix: "",
             includeBase: false,
@@ -22,8 +23,6 @@
                 caption: "Top Sellers",
                 captionStyle: "titles product4TCaption",
                 productStyle: "product4T product4THome",
-                divSelect: "#main4TellContainer",
-                divPosition: "replace",
                 imageSize: "&maxx=175&maxy=175",
                 rotateRecs: true,
                 inCart: false
@@ -38,8 +37,6 @@
                 },
                 caption: "Our Customers Also Bought:",
                 captionStyle: "titles product4TCaption",
-                divSelect: "#main4TellContainer",
-                divPosition: "replace",
                 productStyle: "product4T product4TPD1",
                 imageSize: "&maxx=120&maxy=120",
                 showRatings: false,
@@ -53,8 +50,6 @@
                 caption: "Customers Who Viewed This, Also Viewed:",
                 captionStyle: "titles product4TCaption",
                 productStyle: "product4T product4TPD2",
-                divSelect: "#second4TellContainer",
-                divPosition: "replace",
                 carousel: {
                     circular: true,
                     numVis: 4
@@ -62,7 +57,6 @@
                 imageSize: "&maxx=130&maxy=130",
                 maxImageHeight: 180,
                 showRatings: true,
-                wrapper: "<div class='PD24T toutWrapper4T'></div>",
                 inCart: false
             }],
             Category: [{
@@ -72,8 +66,6 @@
                 caption: "Top Sellers: ",
                 captionStyle: "titles product4TCaption",
                 productStyle: "product4T product4TCat",
-                divSelect: "#main4TellContainer",
-                divPosition: "replace",
                 carousel: {
                     numVis: 4,
                     circular: true
@@ -89,12 +81,9 @@
                 caption: "You May Also Like",
                 captionStyle: "titles product4TCaption",
                 productStyle: "product4T product4TSearch",
-                divSelect: "#main4TellContainer",
-                divPosition: "replace",
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 130,
                 showRatings: true,
-                wrapper: "<div class='SEARCH4T'></div>",
                 inCart: false
             }],
             AddToCart: [{
@@ -109,8 +98,6 @@
                 caption: "You May Also Like:",
                 captionStyle: "titles product4TCaption",
                 productStyle: "product4T product4TVC",
-                divSelect: "#main4TellContainer",
-                divPosition: "replace",
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 140,
                 showRatings: true,
