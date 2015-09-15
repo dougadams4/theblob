@@ -27,16 +27,14 @@
                 divSelect: "#fpp",
                 divPosition: "replace",
                 carousel: {
-                    items: 4,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
                 showRatings: true,
                 showBuyButton: false,
                 maxImageHeight: 150,
                 wrapper: "<div id='HOME4T'></div>",
-                rawJS: { preDisplay: function () { $('#newProducts').remove(); } },
+                rawJS: "$('#newProducts').remove();",
                 rotateRecs: true,
                 inCart: false
             }],
@@ -49,10 +47,8 @@
                 divSelect: ".colors_pricebox",
                 divPosition: "below",
                 carousel: {
-                    items: 3,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 3,
+                    circular: true
                 },
                 showRatings: true,
                 maxImageHeight: 150,
@@ -68,10 +64,8 @@
                      divSelect: "#v65-product-related",
                      divPosition: "replace",
                      carousel: {
-                         items: 4,
-                         navigation: true,
-                         navigationText: false,
-                         pagination: false
+                         numVis: 4,
+                         circular: true
                      },
                      maxImageHeight: 120,
                      showRatings: true,
@@ -88,10 +82,8 @@
                 divSelect: "form#MainForm",
                 divPosition: "above",
                 carousel: {
-                    items: 4,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
                 showRatings: true,
                 showBuyButton: false,
