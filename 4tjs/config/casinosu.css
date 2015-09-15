@@ -18,15 +18,14 @@
   background: none;
 }
 .product4TCaption {
-  font-family: 'Boogaloo', 'sans-serif';
-  text-transform: uppercase;
   padding: 0;
-  font-size: 17px;
   margin: 5px 0 0 5px;
   text-align: left;
+  font-family: 'Boogaloo', 'sans-serif';
+  font-weight: bold;
+  font-size: 22px;
 }
 .product4T {
-  font-family: 'Boogaloo', 'sans-serif';
   background-color: transparent;
   padding: 5px;
   margin: 0;
@@ -57,11 +56,12 @@
   padding: 2px;
 }
 .product4T .productTitle {
-  font-size: 15px;
   width: 100%;
   overflow: hidden;
-  height: 4em;
-  min-height: 4em;
+  font-weight: bold;
+  color: black:
+  height: 4.2em;
+  min-height: 4.2em;
 }
 .product4T .productTitle:hover {
   height: auto;
@@ -86,12 +86,10 @@
 .product4T .productBuy {
   margin: 5px auto;
   text-decoration: none;
-  max-width: 90%;
+  max-width: 80%;
 }
 .product4T .productBuy img,
-.product4T .productBuy input,
-.product4T .productBuy button {
-  /*font-size: 9px;*/
+.product4T .productBuy input {
   max-width: 100%;
   border: medium none;
 }
@@ -152,8 +150,6 @@ a.disabled {
 }
 .product4TPD1 .productTitle {
   width: 50%;
-  height: auto;
-  min-height: 0;
   float: right;
 }
 .product4TPD1 .ratingImage {
@@ -180,4 +176,3 @@ a.disabled {
 /* Checkout */
 /* Quick Cart */
 /* Quick view */
-
