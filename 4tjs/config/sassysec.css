@@ -39,7 +39,7 @@
 .product4T .productImage {
   padding: 10px 0;
   width: 100%;
-  height: 120px;
+  height: auto;
 }
 .product4T .productImage .productImageImg {
   max-width: 100%;
@@ -57,16 +57,12 @@
 .product4T .productTitle {
   width: 100%;
   overflow: hidden;
-  FONT: bold 11px Verdana;
+  font-weight: bold;
   height: 3.4em;
   min-height: 3.4em;
-  color: #e36fab;
 }
 .product4T .productTitle:hover {
   height: auto;
-}
-.product4T .productTitle:hover {
-  color: #000;
 }
 .product4T .productPrice {
   height: 1.2em;
@@ -135,38 +131,11 @@ a.disabled {
 /* Here follows custom classes, so as to permit each page to have its own
 * custom CSS. */
 /* Tout1 on PD page. */
-.PD14T {
-  width: 450px;
-  margin-right: 14px;
-  margin-top: 5px;
-  background: #eee;
-  border: 1px solid #ddd;
-}
-.product4TPD1 {
-  width: 120px;
-}
 /* Tout2 on PD page */
-.product4TPD2 {
-  width: 160px;
-}
-.product4TPD2 .productImage {
-  height: 140px;
-}
 /* Tout on the home page. */
-.product4THome {
-  width: 195px;
-  padding: 5px 10px;
-}
-.product4THome .productImage {
-  height: 170px;
-}
 /* Category pages */
 /* Search */
 /* View Cart */
-.product4TCaptionVC {
-  color: #7e7e7e;
-  font-size: 15px;
-}
 /* Checkout */
 /* Quick Cart */
 /* Quick view */
