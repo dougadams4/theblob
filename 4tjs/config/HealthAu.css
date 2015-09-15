@@ -52,14 +52,15 @@
         display: inline;
     }
 
-    .product4T .ratings {
+    .product4T .ratingImage {
     }
 
-        .product4T .ratings .rating-box {
-            float: none;
-            margin: 0 auto 4px;
-            padding: 0;
-        }
+    .product4T .ratingImageImg {
+        border: none;
+        vertical-align: middle;
+        display: inline;
+        padding: 2px;
+    }
 
     .product4T .productTitle {
         height: 2.6em;
@@ -386,12 +387,12 @@ a.disabled {
     .product4TVC .productImageImg {
     }
 
-    .product4TVC .productTitle { height: 5em;
+    .product4TVC .productTitle {
     }
 
         .product4TVC .productTitle:hover {
             min-height: 0;
-            height: 5em;
+            height: 2.6em;
         }
 
 
