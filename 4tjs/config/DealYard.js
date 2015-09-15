@@ -45,7 +45,7 @@
                 },
                 tout2: {
                     enable: true,
-                    resultType: "0,3",
+                    resultType: "3,0",
                     numItems: "2,2",
                     caption: "More ideas for you...",
                     productStyle: "product4T product4TPD2",
