@@ -26,7 +26,7 @@
                 caption: "customers also bought",
                 captionStyle: "product4TCaption product4TCaptionPD1",
                 productStyle: "product4T product4TPD1",
-                divSelect: "#reviews_tab_content",
+                divSelect: "#altviews",
                 divPosition: "below",
                 carousel: {
                     numVis: 4,
