@@ -21,7 +21,6 @@
   padding: 0;
   margin: 5px 0 0 5px;
   text-align: left;
-  color: #4f4f4f;
   font-weight: bold;
 }
 .product4T {
@@ -77,7 +76,7 @@
 }
 .product4T .strikePrice {
   color: #888;
-  font-size: 95%;
+  font-size: 70%;
   text-decoration: line-through;
 }
 .product4T .productSalePrice {
@@ -86,11 +85,9 @@
   height: 1.2em;
   font-size: 15px;
   font-weight: bold;
-  width: 40%;
   float: left;
 }
 .product4T .productBuy {
-  clear: both;
   margin: 0 0 10px;
   text-decoration: none;
 }
@@ -145,16 +142,6 @@ a.disabled {
 /* Here follows custom classes, so as to permit each page to have its own
 * custom CSS. */
 /* Tout1 on PD page. */
-.product4TCaptionPD1 {
-  font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
-  font-weight: normal;
-  font-size: 21px;
-  line-height: 34px;
-}
-.PD14T {
-  margin-top: 15px;
-  border-top: 1px solid #e3e3e3;
-}
 .product4TPD1 {
   width: 150px;
 }
