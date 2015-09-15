@@ -22,51 +22,20 @@
                 caption: "Recommended for you",
                 showCaption: false,
                 productStyle: "product4T product4THome",
-                divSelect: ".productBlockContainer",
-                divPosition: "above",
+                divSelect: ".data .data tr:has(tr table.alternative)",
+                divPosition: "replace",
                 carousel: {
-                    items: 3,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 3,
+                    circular: true
                 },
+                numRows: 2,
                 showRatings: false,
                 maxImageHeight: 150,
                 imageSize: "&maxx=120&maxy=120",
-                wrapper: "<div class='HOME4T'></div>",
+                wrapper: "<tr><td><div class='HOME4T'></div></td></tr>",
                 rawJS: {
                     preDisplay: function (tout) {
-                        $(tout.divSelect).hide();
-                        $(".header-specials").text(tout.caption);
-                    }
-                },
-                inCart: false
-            },
-            {
-                enable: true,
-                resultType: 1,
-                numItems: 12,
-                caption: "Recommended for you",
-                showCaption: false,
-                productStyle: "product4T product4THome",
-                divSelect: ".productBlockContainer",
-                divPosition: "below",
-                carousel: {
-                    items: 3,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
-                },
-                showRatings: false,
-                maxImageHeight: 150,
-                imageSize: "&maxx=120&maxy=120",
-                wrapper: "<div class='HOME4T'></div>",
-                rawJS: {
-                    preDisplay: function (tout) {
-                        $(tout.divSelect).hide();
-                        //$(".header-specials").text(tout.caption);
+                        $(".titles").text(tout.caption);
                     }
                 },
                 inCart: false
@@ -77,19 +46,16 @@
                 numItems: 12,
                 caption: "Our customers also bought...",
                 productStyle: "product4T product4TPD1",
-                divSelect: "#rTabs",
-                divPosition: "above",
+                divSelect: "tr:has(tr table.alternative .price-info)",
+                divPosition: "below",
                 carousel: {
-                    items: 4,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
                 showRatings: false,
                 maxImageHeight: 150,
                 imageSize: "&maxx=120&maxy=120",
-                wrapper: "<div class='PD14T'></div>",
+                wrapper: "<tr><td colspan='2'><div class='PD14T'></div></td></tr>",
                 rawJS: {},
                 inCart: false
             }, {
@@ -98,19 +64,16 @@
                 numItems: 12,
                 caption: "Our customers also viewed",
                 productStyle: "product4T product4TPD1",
-                divSelect: "#rTabs",
-                divPosition: "below",
+                divSelect: "#REL4T",
+                divPosition: "replace",
                 carousel: {
-                    items: 4,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    numVis: 4,
+                    circular: true
                 },
                 imageSize: "&maxx=120&maxy=120",
                 maxImageHeight: 160,
                 showRatings: false,
-                wrapper: "<div class='PD14T'></div>",
+                wrapper: "<tr><td colspan='2'><div class='PD14T'></div></td></tr>",
                 rawJS: {},
                 inCart: false
             }],
@@ -140,19 +103,16 @@
                 numItems: 12,
                 caption: "You may also like...",
                 productStyle: "product4T product4TVC",
-                divSelect: ".third-party-payment",
+                divSelect: "table:has(img[src*=paypal])",
                 divPosition: "above",
                 carousel: {
-                    items: 3,
-                    scrollPerPage: true,
-                    navigation: true,
-                    navigationText: false,
-                    pagination: false
+                    circular: true,
+                    numVis: 3
                 },
                 imageSize: "&maxx=100&maxy=100",
                 maxImageHeight: 160,
                 showRatings: false,
-                wrapper: "<div class='VC4T'></div>",
+                wrapper: "<table align='left' width='70%'><tr><td><div class='PD14T'></div></td></tr></table>",
                 rawJS: {
                 },
                 inCart: true
