@@ -220,12 +220,8 @@
 /* Category pages */
 /* Search */
 /* View Cart */
-#VC4T {
-  clear: both;
-}
 #VC4T .product4TCaption {
-  max-width: 40%;
-  line-height: .8em;
+  max-width: 50%;
 }
 /* Checkout */
 /* Quick Cart */
