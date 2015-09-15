@@ -122,7 +122,7 @@
                 },
                 maxImageHeight: 150,
                 showRatings: true,
-                wrapper: "<td width='450'><div class='VC4T'></div></td>",
+                wrapper: "<td width='450px'><div class='VC4T' style='width: 450px;'></div></td>",
                 rawJS: {
                     preInit: function (tout) {
                         tout.enable = tout.enable && window.outerWidth > 700;
