@@ -1,0 +1,236 @@
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+#second4TellContainer {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0;
+  background: none;
+  display: block;
+  float: left;
+  border: 1px solid #DDD;
+}
+#second4TellContainer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.FourTellContainer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.FourTellContainer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.toutWrapper4T {
+  border: 1px solid #dddddd;
+  background: none;
+}
+.product4TCaption {
+  color: #211302;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 0;
+  margin: 3px 0 0 3px;
+  text-align: left;
+}
+.product4T {
+  background-color: #FFFFFF;
+  margin: 10px 10px 0 0;
+  padding: 0;
+  width: 175px;
+  float: left;
+  clear: none;
+  text-align: center;
+  vertical-align: middle;
+}
+.product4T .productImage {
+  padding: 10px 0;
+  width: 100%;
+  height: 130px;
+}
+.product4T .productImage .productImageImg {
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  vertical-align: middle;
+  display: inline;
+}
+.product4T .ratingImageImg {
+  border: none;
+  vertical-align: middle;
+  display: inline;
+  padding: 2px;
+}
+.product4T .productTitle {
+  font-size: 12px;
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+.product4T .productPrice {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 15px;
+  font-size: 13px;
+  font-weight: normal;
+}
+.product4T .productSalePrice {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #902018;
+  height: 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.product4T .strikePrice {
+  text-decoration: line-through;
+  color: grey;
+}
+.product4T .productBuy {
+  cursor: pointer;
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+.product4T .productBuy .productBuy img {
+  max-width: 100%;
+}
+/* For scrollables. */
+.scrollable {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.scrollable .items {
+  /* this cannot be too large;
+         * must fit ev-ery-thing */
+  width: 20000em;
+  position: absolute;
+  clear: both;
+}
+.items div.scrollGroup,
+.items div.product4T {
+  float: left;
+}
+/* For the buttons. */
+a.browse {
+  background: url(../images/hori_large.png) no-repeat;
+  display: block;
+  width: 15px;
+  height: 18px;
+  float: left;
+  margin: 100px 0 0;
+  cursor: pointer;
+  font-size: 1px;
+}
+a.right {
+  background-position: 0 -30px;
+  clear: right;
+  margin-right: 10px;
+}
+a.left {
+  background-position: 0 0;
+  margin-left: 10px;
+}
+a.disabled {
+  visibility: hidden !important;
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+#ProductDetailItemWrapper1 {
+  margin: 0 10px;
+}
+.product4TPD1 {
+  width: 120px;
+  padding: 10px;
+  margin: 3px;
+}
+.product4TPD1 + .product4TPD1 {
+  border-left: 1px dotted #dddddd;
+}
+/* Tout2 on PD page */
+.product4TPD2 {
+  margin: 1px;
+  width: 160px;
+  padding: 3px;
+}
+.product4TPD2 + .product4TPD2 {
+  border-left: 1px dotted #dddddd;
+}
+/* Tout on the home page. */
+.product4THome {
+  width: 180px;
+  padding: 0 23px;
+}
+.product4THome + .product4THome {
+  border-left: 1px solid #dddddd;
+}
+/* Category pages */
+.product4TCat {
+  width: 160px;
+  margin: 3px;
+}
+.product4TCat + .product4TCat {
+  border-left: 1px dotted #dddddd;
+}
+/* Search */
+.SEARCH4T {
+  padding-left: 10px;
+  border: 1px solid #777;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.product4TSearch {
+  width: 150px;
+  padding: 0 8px;
+}
+.product4TSearch + .product4TSearch {
+  border-left: 1px dotted #dddddd;
+}
+/* View Cart */
+.product4TCaptionVC {
+  /*padding: 10px;
+    margin: 0;
+    text-align: left;
+    color: black;*/
+  clear: both;
+}
+#VC4T a.browse {
+  margin: 40% 0;
+}
+.product4TVC {
+  margin: 0;
+  width: 160px;
+  padding: 5px 3px;
+}
+/* Checkout */
+.product4TCaptionCheck {
+  /* padding: 10px;
+    margin: 0;
+    text-align: left;
+    color: black;*/
+}
+.product4TCheck .productSalePrice {
+  color: #902018;
+}
+/* Quick Cart */
+/* Quick view */
+.product4TQV {
+  margin: 4px 0;
+  padding: 0;
+  width: 120px;
+}
+.product4TQV .productTitle {
+  height: 15px;
+  width: 120px;
+}
+
