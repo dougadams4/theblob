@@ -64,11 +64,31 @@
                     enable: false
                 }
             },
-            Category: {
-                tout1: {
-                    enable: false
-                }
-            },
+            Category: [{
+                enable: true,
+                resultType: 5,
+                numItems: 12,
+                caption: "Related Top Sellers",
+                captionStyle: "titles product4TCaption",
+                productStyle: "product4T product4TCat",
+                divSelect: "tr:has(td.page_headers)",
+                divPosition: "below",
+                imageSize: "&maxx=100&maxy=100",
+                carousel: {
+                    numVis: 4,
+                    circular: true
+                },
+                maxImageHeight: 100,
+                showRatings: false,
+                showBuyButton: false,
+                wrapper: "<tr><td><div class='PD14T'></div></td></tr>",
+                rawJS: {
+                    preInit: function (tout) {
+                        tout.enable = tout.enable && "2550" == _4TellBoost.Service.catId;
+                    }
+                },
+                inCart: false
+            }],
             AddToCart: {
                 tout1: {
                     enable: true,
