@@ -38,7 +38,6 @@ jQuery.noConflict();
                         $("h2.home-recommended").hide();
                     },
                     perProduct: function (itemdata) {
-                        itemdata.rating = itemdata.rating > -1 ? itemdata.rating : "0";
                         if (itemdata.topPrice) {
                             itemdata.price = "From " + itemdata.price;
                         } else if (itemdata.price) {
@@ -49,7 +48,7 @@ jQuery.noConflict();
                         } else if (itemdata.salePrice) {
                             itemdata.salePrice = "Sale Price: " + itemdata.salePrice;
                         }
-                        itemdata.title = itemdata.brand + "<br/>" + itemdata.title;
+                        itemdata.title = itemdata.brand + "\n" + itemdata.title;
                     }
                 },
                 inCart: false
@@ -70,7 +69,6 @@ jQuery.noConflict();
                         tout.columns.custom = { brand: "a2n", topSale: "tsp", topPrice: "tpr" };
                     },
                     perProduct: function (itemdata) {
-                        itemdata.rating = itemdata.rating > -1 ? itemdata.rating : "0";
                         if (itemdata.topPrice) {
                             itemdata.price = "From " + itemdata.price;
                         } else if (itemdata.price) {
@@ -81,7 +79,7 @@ jQuery.noConflict();
                         } else if (itemdata.salePrice) {
                             itemdata.salePrice = "Sale Price: " + itemdata.salePrice;
                         }
-                        itemdata.title = itemdata.brand + "<br/>" + itemdata.title;
+                        itemdata.title = itemdata.brand + "\n" + itemdata.title;
                     }
                 },
                 inCart: false
@@ -106,7 +104,6 @@ jQuery.noConflict();
                            tout.columns.custom = { brand: "a2n", topSale: "tsp", topPrice: "tpr" };
                        },
                        perProduct: function (itemdata) {
-                           itemdata.rating = itemdata.rating > -1 ? itemdata.rating : "0";
                            if (itemdata.topPrice) {
                                itemdata.price = "From " + itemdata.price;
                            } else if (itemdata.price) {
@@ -117,7 +114,7 @@ jQuery.noConflict();
                            } else if (itemdata.salePrice) {
                                itemdata.salePrice = "Sale Price: " + itemdata.salePrice;
                            }
-                           itemdata.title = itemdata.brand + "<br/>" + itemdata.title;
+                           itemdata.title = itemdata.brand + "\n" + itemdata.title;
                        }
                    },
                    inCart: false
@@ -148,7 +145,6 @@ jQuery.noConflict();
                         tout.columns.custom = { brand: "a2n", topSale: "tsp", topPrice: "tpr" };
                     },
                     perProduct: function (itemdata) {
-                        itemdata.rating = itemdata.rating > -1 ? itemdata.rating : "0";
                         if (itemdata.topPrice) {
                             itemdata.price = "From " + itemdata.price;
                         } else if (itemdata.price) {
@@ -159,7 +155,7 @@ jQuery.noConflict();
                         } else if (itemdata.salePrice) {
                             itemdata.salePrice = "Sale Price: " + itemdata.salePrice;
                         }
-                        itemdata.title = itemdata.brand + "<br/>" + itemdata.title;
+                        itemdata.title = itemdata.brand + "\n" + itemdata.title;
                     }
                 },
                 inCart: true
