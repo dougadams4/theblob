@@ -20,7 +20,8 @@
     _4TellBoost.ImgError = function (source) {
         if (_4TellBoost.SiteInfo.hideIfNoImage) {
             var foo = $(source).closest("div.product4T");
-            var newDiv = foo.parents("#" + _4TellBoost.FirstTout.newDivID + ", #" + _4TellBoost.SecondTout.newDivID).children(":hidden:first");
+            var containerDiv = $(source).parents(".FourTellContainer");
+            var newDiv = containerDiv.find("div.product4T:hidden:first");
             if (newDiv) {
                 if (foo.is(":visible"))
                     newDiv.css("display", "");
