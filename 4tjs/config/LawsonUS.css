@@ -1,0 +1,274 @@
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+.FourTellContainer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.FourTellContainer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.toutWrapper4T {
+  border: 1px solid #dddddd;
+  background: none;
+}
+.product4TCaption {
+  background-color: #ffc425;
+  font-size: 12px;
+  margin: 0;
+  padding: 5px 10px;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.product4TCaption:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.product4T {
+  background-color: #FFF;
+  padding: 5px;
+  margin: 0;
+  width: 120px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.product4T .productImage {
+  width: 100%;
+  height: 130px;
+  border: 1px solid #e5e7e7;
+  padding: 0;
+  z-index: 5;
+}
+.product4T .productImage .productImageImg {
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  vertical-align: middle;
+  display: inline;
+}
+.product4T .ratingImage .ratingImageImg {
+  border: none;
+  vertical-align: middle;
+  display: inline;
+  padding: 2px;
+}
+.product4T .productTitle {
+  color: #000;
+  font-size: 0.9em;
+  overflow: hidden;
+  font-weight: bold;
+  text-align: left;
+}
+.product4T .productTitle:hover {
+  text-decoration: underline;
+  /*height: auto;
+            color: #666;*/
+}
+.product4T .productPrice {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 15px;
+  font-size: 13px;
+  font-weight: normal;
+}
+.product4T .productSalePrice {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  height: 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.product4T .productBuy {
+  text-align: right;
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+.product4T .productBuy img,
+.product4T .productBuy input {
+  background-color: #ffc425;
+  font: bold 11px/13px Verdana, Geneva, sans-serif;
+  color: #000;
+  cursor: pointer;
+  padding: 4px 5px;
+  max-width: 100%;
+  border: medium none;
+}
+/* For scrollables. */
+.scrollable {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.scrollable .items {
+  /* this cannot be too large;
+         * must fit ev-ery-thing */
+  width: 20000em;
+  position: absolute;
+  clear: both;
+}
+.scrollable .items .scrollGroup,
+.scrollable .items .product4T {
+  float: left;
+}
+/* For the buttons. */
+a.browse {
+  background: url(../images/hori_large.png) no-repeat;
+  display: block;
+  width: 15px;
+  height: 18px;
+  float: left;
+  margin: 100px 0 0;
+  cursor: pointer;
+  font-size: 1px;
+}
+a.right {
+  background-position: 0 -30px;
+  clear: right;
+  margin-right: 10px;
+}
+a.left {
+  background-position: 0 0;
+  margin-left: 10px;
+}
+a.disabled {
+  visibility: hidden !important;
+}
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.product4TCaptionPD1 {
+  background-color: #ffc425;
+  font-size: 12px;
+  /*border-bottom: 1px solid @grey;*/
+}
+.PD14T {
+  border: 1px solid #dddddd;
+}
+.product4TPD1 {
+  width: 240px;
+  background-color: transparent;
+  border-top: 1px solid #dddddd;
+}
+.product4TPD1:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.product4TPD1 .productImage {
+  float: left;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e5e7e7;
+  padding: 0;
+  z-index: 5;
+}
+.product4TPD1 .productImage .productImageImg {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.product4TPD1 .productTitle {
+  text-align: left;
+  line-height: 1.3em;
+  color: #000;
+  font-size: 0.9em;
+  width: 80%;
+  float: right;
+}
+.product4TPD1 .productBuy {
+  clear: right;
+}
+/* Tout2 on PD page */
+.product4TPD2 {
+  float: left;
+  width: 23%;
+  padding: 5px 1%;
+}
+.product4TPD2 .productImage {
+  width: 130px;
+  height: 130px;
+  border: 1px solid #e5e7e7;
+  white-space: nowrap;
+  text-align: center;
+  margin: 1em auto;
+  padding: 0;
+  z-index: 5;
+}
+.product4TPD2 .productImage div {
+  display: inline-block !important;
+  height: 100%;
+  vertical-align: middle;
+}
+.product4TPD2 .productImage .productImageImg {
+  vertical-align: middle;
+  margin: auto;
+}
+.product4TPD2 .productTitle {
+  line-height: 1.3em;
+}
+.product4TPD2 .productBuy {
+  margin: 5px;
+}
+/* Tout on the home page. */
+/* Category pages */
+/* Search */
+/* View Cart */
+.product4TVC {
+  float: left;
+  width: 23%;
+  padding: 5px 1%;
+  background-color: transparent;
+}
+.product4TVC:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.product4TVC .productImage {
+  height: 100px;
+  margin: 1em auto;
+  padding: 0;
+  z-index: 5;
+}
+.product4TVC .productImage div {
+  display: inline-block !important;
+  height: 100%;
+  vertical-align: middle;
+}
+.product4TVC .productImage .productImageImg {
+  vertical-align: middle;
+  margin: auto;
+}
+.product4TVC a.home {
+  text-decoration: none;
+}
+.product4TVC a.home .productTitle {
+  height: 6.4em;
+}
+.product4TVC .productBuy {
+  /*text-align: center;*/
+}
+/* Checkout */
+/* Quick Cart */
+/* Quick view */
+
