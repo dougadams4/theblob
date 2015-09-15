@@ -5,17 +5,19 @@
             alias: "Incontin",
             GA_UA: "UA-30838989-1",
             platform: "4TellVs.js",
-            addCartBtnAtts: "img class='vCSS_input_addtocart' alt='Add to Cart'",
+            addCartBtnAtts: "img class='vCSS_input_addtocart' alt='Add to Cart', 'addCartImage'",
             addCartImage: "/v/vspfiles/templates/WDS/images/buttons/btn_addtocart_small.gif",
             spacerImage: "/v/vspfiles/templates/WDS/images/clear1x1.gif",
             emptyImage: "/v/vspfiles/templates/WDS/images/nophoto.gif",
-                        pricePrefix: "<span style='color: #000', 'font-size: 10px'>Price: </span>",
+            priceClass: "price2",
+            pricePrefix: "<span style='color: #000', 'font-size: 10px'>Price: </span>",
             salePricePrefix: "Sale Price: ",
             includeBase: false,
             siteEnable: true
         },
         PageSettings: {
-            ProductDetail: [{
+            ProductDetail: {
+                tout1: {
                     enable: true,
                     resultType: 0,
                     numItems: 12,
@@ -31,7 +33,8 @@
                     maxImageHeight: 130,
                     wrapper: "<table align='right' style= 'width: 525px; border: none;'><tr><td style='border: 1px solid #DDD;'></td></tr></table>",
                     inCart: false
-                }, {
+                },
+                tout2: {
                     enable: true,
                     resultType: 3,
                     numItems: 8,
@@ -47,8 +50,10 @@
                     showRatings: false,
                     wrapper: "<table align='center' style='width:750px; border: none;'><tr><td style='border: 1px solid #DDD;'></td></tr></table>",
                     inCart: false
-                }],
-            AddToCart: [{
+                }
+            },
+            AddToCart: {
+                tout1: {
                     enable: true,
                     resultType: 0,
                     numItems: 10,
@@ -64,7 +69,8 @@
                     showRatings: false,
                     wrapper: "<td style='border: 1px solid #DDD;' width='290' colspan='5'></td>",
                     inCart: true
-            }],
+                }
+            },
             Home: {
                 tout1: {
                     enable: false
