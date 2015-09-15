@@ -230,7 +230,7 @@ a.disabled {
 }
 @media only screen and (max-width: 480px) {
   .product4THome {
-    width: 110px;
+    width: 130px;
   }
   .product4THome .productPrice {
     height: 2.5em;
@@ -251,18 +251,7 @@ a.disabled {
 }
 @media only screen and (max-width: 980px) {
   .product4TAdmin {
-    width: 155px;
-  }
-  .product4TAdmin .productSalePrice {
-    height: 2.5em;
-  }
-  .product4TAdmin .productPrice {
-    height: 2.5em;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .product4TAdmin {
-    width: 110px;
+    width: 160px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -283,7 +272,6 @@ a.disabled {
 /* Wish */
 @media only screen and (max-width: 768px) {
   .product4TWish {
-    width: 130px;
     float: left;
   }
 }
