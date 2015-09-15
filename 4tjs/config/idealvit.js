@@ -3,7 +3,7 @@
         SiteInfo: {
             baseURL: "www.idealvitamins.com",
             alias: "idealvit",
-            GA_UA: "UA-52083466-1",
+            GA_UA: "UA-23863448-2",
             platform: "4Tell3d.js",
             addCartBtnAtts: "input type='button' value='View Details' class='btn' onmouseout=this.className='btn' onmouseover=this.className='btn_over'",
             addCartImage: "",
