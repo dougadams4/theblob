@@ -51,17 +51,12 @@
   display: inline;
   padding: 2px;
 }
-.product4T a {
-  text-decoration: none;
-}
 .product4T .productTitle {
   width: 100%;
   overflow: hidden;
-  color: #0066b3;
   font-weight: bold;
-  font-size: 12px;
-  height: 4.5em;
-  min-height: 4.5em;
+  height: 5.9em;
+  min-height: 5.9em;
 }
 .product4T .productTitle:hover {
   height: auto;
@@ -69,9 +64,8 @@
 .product4T .productPrice {
   font-family: Arial, Helvetica, sans-serif;
   height: 1.2em;
+  font-size: 13px;
   font-weight: normal;
-  font-size: 12px;
-  color: #00a6de;
 }
 .product4T .strikePrice {
   text-decoration: line-through;
@@ -81,7 +75,7 @@
   font-family: Arial, Helvetica, sans-serif;
   color: red;
   height: 1.2em;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
 }
 .product4T .productBuy {
@@ -160,14 +154,6 @@
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
 }
-.FourTellContainer .owl-carousel .owl-item {
-  float: left;
-}
-.FourTellContainer .owl-carousel .owl-item .product4T {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
 .FourTellContainer .owl-controls {
   z-index: 11;
   position: absolute;
@@ -205,16 +191,9 @@
   background: #DDD;
   padding: 5px;
 }
-.PD14T {
-  float: left;
+.product4TPD1 .PD14T {
+  float: right;
   width: 100%;
-}
-.product4TPD1 .productTitle {
-  height: 3.6em;
-  min-height: 3.6em;
-}
-.product4TPD1 .productTitle:hover {
-  height: auto;
 }
 /* Tout2 on PD page */
 .product4TPD2 {
