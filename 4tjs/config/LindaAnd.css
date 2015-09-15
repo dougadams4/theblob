@@ -270,10 +270,6 @@ a.disabled {
     padding-left: 5px;
 }
 
-table.PD14T + .PD14T {
-    display: none;
-}
-
 .product4THome {
     width: 150px;
     padding: 5px 8px;
