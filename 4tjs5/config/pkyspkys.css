@@ -18,13 +18,10 @@
   background: none;
 }
 .product4TCaption {
+  padding: 0;
+  margin: 5px 0 0 5px;
   text-align: left;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  color: #ad0413;
-  border-bottom: 1px solid #ad0413;
-  text-transform: uppercase;
 }
 .product4T {
   background-color: transparent;
@@ -190,12 +187,6 @@
 /* Here follows custom classes, so as to permit each page to have its own
 * custom CSS. */
 /* Tout1 on PD page. */
-.PD14T {
-  background: url(//shop.pkys.com/assets/templates/v40001/images/mod_bg.png) repeat-y;
-}
-.product4TPD1 {
-  padding: 5px 0;
-}
 .product4TPD1 + .product4TPD1 {
   border-top: 1px dotted #dddddd;
   border-left: none;
@@ -204,8 +195,6 @@
   height: auto;
 }
 .product4TPD1 .productTitle {
-  width: 90%;
-  margin: 0 auto;
   height: auto;
   min-height: 0;
 }
