@@ -22,7 +22,6 @@
   margin: 5px 0 0 5px;
   text-align: left;
   font-weight: bold;
-  font-size: 14px;
 }
 .product4T {
   background-color: transparent;
@@ -58,7 +57,6 @@
   min-height: 3.4em;
   width: 100%;
   overflow: hidden;
-  font-size: 14px;
   font-weight: bold;
 }
 .product4T a.home .productTitle:hover {
@@ -145,8 +143,9 @@ a.disabled {
   padding: 4px;
   margin: 0;
   text-align: left;
-  font: normal 24px/1.35 Arial, Helvetica, sans-serif;
-  border-bottom: 1px solid #cddaae;
+  font-weight: normal;
+  font-size: 15px;
+  background: #cddaae;
   color: #94654d;
 }
 /* Tout2 on PD page */
