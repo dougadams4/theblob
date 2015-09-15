@@ -25,8 +25,11 @@
                 divSelect: ".v65-productDisplay",
                 divPosition: "replace",
                 carousel: {
-                    numVis: 4,
-                    circular: true
+                    items: 4,
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 showRatings: true,
                 maxImageHeight: 150,
@@ -43,8 +46,12 @@
                 divSelect: ".colors_pricebox",
                 divPosition: "below",
                 carousel: {
-                    numVis: 3,
-                    circular: true
+                    items: 3,
+                    itemsCustom: [[0,3]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 showRatings: true,
                 maxImageHeight: 150,
@@ -60,8 +67,11 @@
                 divSelect: ".colors_lines_light",
                 divPosition: "replace",
                 carousel: {
-                    numVis: 4,
-                    circular: true
+                    items: 4,
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 maxImageHeight: 120,
                 showRatings: true,
@@ -103,8 +113,12 @@
                 divSelect: "table#v65-cart-checkout-parent td:first",
                 divPosition: "replace",
                 carousel: {
-                    numVis: 2,
-                    circular: true
+                    items: 2,
+                    itemsCustom: [[0,2]],
+                    scrollPerPage: true,
+                    navigation: true,
+                    navigationText: false,
+                    pagination: false
                 },
                 maxImageHeight: 100,
                 showRatings: true,
