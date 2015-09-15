@@ -5,8 +5,10 @@
             alias: "casinosu",
             GA_UA: "UA-25701555-2",
             platform: "4TellBc.js",
-            addCartBtnAtts: "button type='submit' class='large button'>More Info</button",
-            custom: true,
+            addCartBtnAtts: "button type='submit' class='large button'><i class='icon-shopping-cart'></i> Add to Cart</button",
+            addCartImage: "",
+            spacerImage: "/web/assets/images/spacer.gif",
+            emptyImage: "thumbnail.asp?file=/assets/images/default.jpg",
             pricePrefix: "Your Price: ",
             salePricePrefix: "On Sale: ",
             includeBase: false,
@@ -20,7 +22,7 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "Customers also bought",
+                caption: "Customers also bought...",
                 productStyle: "product4T product4TPD1",
                 divSelect: "#ProductDetails",
                 divPosition: "below",
@@ -28,23 +30,16 @@
                     numVis: 4,
                     circular: true
                 },
-                showRatings: false,
-                showPrice: false,
+                showRatings: true,
                 maxImageHeight: 150,
                 wrapper: "<div class='PD14T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.outerWidth < 1000) {
-                            tout.enable = false;
-                        }
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }, {
                 enable: true,
                 resultType: 3,
                 numItems: 12,
-                caption: "Customers also viewed",
+                caption: "Customers also viewed...",
                 productStyle: "product4T product4TPD2",
                 divSelect: "#DescriptionTab",
                 divPosition: "below",
@@ -53,16 +48,9 @@
                     circular: true
                 },
                 maxImageHeight: 120,
-                showPrice: false,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='PD24T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.outerWidth < 1000) {
-                            tout.enable = false;
-                        }
-                    }
-                },
+                rawJS: {},
                 inCart: false
             }],
             Search: [{
@@ -89,7 +77,7 @@
                 enable: true,
                 resultType: 0,
                 numItems: 12,
-                caption: "You may also like",
+                caption: "You may also like...",
                 productStyle: "product4T product4TVC",
                 divSelect: ".ProceedToCheckout ",
                 divPosition: "below",
@@ -98,16 +86,9 @@
                     circular: true
                 },
                 maxImageHeight: 100,
-                showPrice: false,
-                showRatings: false,
+                showRatings: true,
                 wrapper: "<div class='VC4T'></div>",
-                rawJS: {
-                    preInit: function (tout) {
-                        if (window.outerWidth < 1000) {
-                            tout.enable = false;
-                        }
-                    }
-                },
+                rawJS: {},
                 inCart: true
             }]
         }
