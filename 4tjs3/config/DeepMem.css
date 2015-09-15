@@ -22,7 +22,7 @@
   padding: 0;
   margin: 5px 0 0 5px;
   text-align: left;
-  color: #151515;
+  color: #ff02cc;
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: bold;
@@ -228,7 +228,7 @@
 /* View Cart */
 .VC4T {
   float: left;
-  width: 100%;
+  width: 70%;
 }
 .product4TVC {
   width: 210px;
