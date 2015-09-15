@@ -1,10 +1,10 @@
-﻿/*************************************************************/
+/*************************************************************/
 /*          4-Tell STYLES							         */
 /*************************************************************/
 .FourTellContainer {
   display: block;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 .FourTellContainer:after {
   content: ".";
@@ -22,10 +22,10 @@
   margin-bottom: 5px;
   text-align: left;
   /* font-weight: bold; */
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
-  color: #00A39C;
-  font-family: 'Droid Serif', serif;
+  background-color: #eeeeee;
+  color: #B57A98;
 }
 .product4T {
   background-color: #FFF;
@@ -59,25 +59,26 @@
 }
 .product4T .productTitle {
   width: 100%;
-  color: #6b6b6b;
   overflow: hidden;
+  font-weight: bold;
+  height: 3.6em;
 }
-.expandOnHover(3.6em) .product4T .productTitle:hover {
-  color: #00a39c;
+.product4T .productTitle:hover {
+  min-height: 3.6em;
+  height: auto;
 }
 .product4T .productPrice {
-  color: #00A39C;
-  font-size: 16px;
-  font-family: 'Droid Serif', serif;
-  height: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 15px;
+  font-size: 13px;
   font-weight: normal;
 }
 .product4T .productSalePrice {
+  font-family: Arial, Helvetica, sans-serif;
   color: red;
-  font-size: 16px;
-  font-family: 'Droid Serif', serif;
-  height: 1.2em;
-  font-weight: normal;
+  height: 15px;
+  font-size: 13px;
+  font-weight: bold;
 }
 .product4T .productBuy {
   margin: 0 0 10px;
@@ -89,113 +90,48 @@
   border: medium none;
 }
 /* For scrollables. */
-/* 	Core Owl Carousel CSS File
- *	v1.3.3
- */
-/* clearfix */
-.owl-carousel .owl-wrapper:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-/* display none until init */
-.owl-carousel {
-  display: none;
+.scrollable {
+  float: left;
   position: relative;
-  width: 100%;
-  -ms-touch-action: pan-y;
-}
-.owl-carousel .owl-wrapper {
-  display: none;
-  position: relative;
-  -webkit-transform: translate3d(0px, 0px, 0px);
-}
-.owl-carousel .owl-wrapper-outer {
   overflow: hidden;
-  position: relative;
-  width: 100%;
 }
-.owl-carousel .owl-wrapper-outer.autoHeight {
-  -webkit-transition: height 500ms ease-in-out;
-  -moz-transition: height 500ms ease-in-out;
-  -ms-transition: height 500ms ease-in-out;
-  -o-transition: height 500ms ease-in-out;
-  transition: height 500ms ease-in-out;
-}
-.owl-carousel .owl-item {
-  float: left;
-}
-.owl-controls .owl-page,
-.owl-controls .owl-buttons div {
-  cursor: pointer;
-}
-.owl-controls {
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-/* mouse grab icon */
-.grabbing {
-  cursor: url(grabbing.png) 8 8, move;
-}
-/* fix */
-.owl-carousel .owl-wrapper,
-.owl-carousel .owl-item {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-}
-.FourTellContainer .owl-carousel .owl-item {
-  float: left;
-}
-.FourTellContainer .owl-carousel .owl-item .product4T {
-  width: 80%;
-  margin: 0 auto;
-}
-.FourTellContainer .owl-controls {
-  z-index: 11;
+.scrollable .items {
+  /* this cannot be too large;
+         * must fit ev-ery-thing */
+  width: 20000em;
   position: absolute;
-  left: 0;
-  /*top: 40%;*/
-  top: 0;
-  height: auto;
-  width: 100%;
+  clear: both;
 }
-.FourTellContainer .owl-controls .owl-buttons div {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAwCAMAAAD5JNAAAAAAqFBMVEX///+wsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLG4mILSAAAAN3RSTlMAAQIDCAkLEhMaIiorLTg9QENHTlZcX2JkZn2Bg4uhpaetuL/Fx87Y3N7h6Onq7PL0+fr7/P3+pwOaKAAAAMhJREFUeF7d0EeywkAMRdE2tsGRnKOJDmTa9Nv/zj71B2ppwAa4szORqp6iGr21YjXHp4uVGy9z1ES/vQGs/UEBa7e1Ohuy4/WzG0COZgeAeQIID6uncNDJHsb6UzLPDfm/6VELq3R3F1bh4qrxVrZgtH9pxetuSwva4xda9xrC5bYrrF/7UcD8hr4uQusawH2XCkMfp8Iw+TzhhnlknYAZeFZDYWAifJhFzLes7zlkc161XHa/GPj8/6b9ITlfxq6iLqdx89sef8r8Ldm5n+0eAAAAAElFTkSuQmCC') /*../images/hori_large.png*/ no-repeat;
+.scrollable .items .scrollGroup,
+.scrollable .items .product4T {
+  float: left;
+}
+/* For the buttons. */
+a.browse {
+  background: url(../images/hori_large.png) no-repeat;
+  display: block;
   width: 15px;
   height: 18px;
-}
-.FourTellContainer .owl-controls .owl-next {
-  background-position: 0 -30px !important;
-  position: absolute;
-  right: 0px;
-  top: 100px;
-  float: right;
-}
-.FourTellContainer .owl-controls .owl-prev {
-  background-position: 0 0;
-  position: absolute;
-  left: 0px;
-  top: 100px;
   float: left;
+  margin: 100px 0px;
+  cursor: pointer;
+  font-size: 1px;
+}
+a.right {
+  background-position: 0 -30px;
+  clear: right;
+  margin-right: 0px;
+}
+a.left {
+  background-position: 0 0;
+  margin-left: 10px;
+}
+a.disabled {
+  visibility: hidden !important;
 }
 /* Here follows custom classes, so as to permit each page to have its own
 * custom CSS. */
 /* Tout1 on PD page. */
-.PD14T {
-  clear: both;
-  width: 100%;
-}
 /* Tout2 on PD page */
 .PD24T {
   background: #fff;
@@ -215,10 +151,6 @@
 /* Category pages */
 /* Search */
 /* View Cart */
-.VC4T {
-  float: left;
-  width: 70%;
-}
 /* Checkout */
 /* Quick Cart */
 /* Quick view */
