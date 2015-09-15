@@ -31,13 +31,13 @@
                 },
                 showRatings: true,
                 maxImageHeight: 160,
-                wrapper: "<table width='600' align='center'><tr><td style= 'border: 1px solid #DFE0E0;'></td></tr></table>",
+                wrapper: "<table align='center'><tr><td></td></tr></table>",
                 inCart: false
             },
                  {
                      enable: true,
-                     resultType: 3,
-                     numItems: 4,
+                     resultType: 4,
+                     numItems: 3,
                      caption: "Customers also viewed...",
                      captionStyle: 'product4TCaption product4TCaptionPD1',
                      productStyle: "product4T product4TPD2",
