@@ -1,0 +1,454 @@
+﻿/*************************************************************/
+/*          4-Tell STYLES							         */
+/*************************************************************/
+@grey: #DDD;
+
+.FourTellContainer {
+    display: block;
+    margin: 0;
+    padding: 0;
+    .clearfix;
+}
+
+.clearfix() {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+.expandOnHover(@height) {
+    height: @height;
+    min-height: @height;
+
+    &:hover {
+        height: auto;
+    }
+}
+
+.toutWrapper4T() {
+    border: 1px solid @grey;
+    background: none;
+}
+
+.state-indicator {
+    color: transparent;
+    position: absolute;
+    top: -999em;
+    left: -999em;
+    /* default state */
+    z-index: 1;
+
+    @media only screen and (max-width: 1024px) {
+        /* small desktop */
+        z-index: 2;
+    }
+
+    @media only screen and (max-width: 767px) {
+        /* mobile phone */
+        z-index: 3;
+    }
+}
+
+.product4TCaption {
+    padding: 0; 
+    margin: 5px 0 0 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.product4T {
+    background-color: transparent;
+    padding: 42px 0 5px 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'gotham-medium';
+
+    .productImage {
+        height: 250px;
+        padding-bottom: 10px;
+        width: 100%;
+
+        &:before, img {
+            display: inline-block !important;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .productImageImg {
+            max-width: 250px;
+            max-height: 250px;
+            border: none;
+            vertical-align: middle;
+            display: inline;
+        }
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+            border: none;
+            vertical-align: middle;
+            display: inline;
+            padding: 2px;
+        }
+    }
+
+    .productTitle {
+        width: 100%;
+        color: #484848;
+        overflow: hidden;
+        font-weight: normal;
+        font-size: 12px;
+        .expandOnHover(2.7em);
+
+        &:hover {
+            color: #eb0086;
+        }
+    }
+
+    .productPrice {
+        font-family: 'gotham-bold';
+        height: 1.2em;
+        font-size: 14px;
+        font-weight: normal;
+        width: 99%;
+        padding: 0 6px;
+    }
+
+    .strikePrice {
+        text-decoration: line-through;
+        color: #5e5f5f;
+        font-family: 'gotham-book';
+        font-size: 11px;
+        width: 45%;
+        text-align: right;
+        float: left;
+        padding-top: 2px;
+    }
+
+    .productSalePrice {
+        font-family: 'gotham-bold';
+        color: #eb0086;
+        height: 1.2em;
+        font-size: 14px;
+        font-weight: normal;
+        text-align: left;
+        float: left;
+    }
+
+    .productBuy {
+        margin: 2px 0 0;
+        text-decoration: none;
+
+        img, input, button {
+            margin: 5px auto;
+            padding: 2px 15px;
+            max-width: 100%;
+            background-color: transparent;
+            color: #838383;
+            border: 3px solid #ebebeb;
+            text-transform: uppercase;
+            font-family: 'gotham-book';
+            font-weight: 400;
+            font-size: 11px;
+            font-style: normal;
+
+            &:hover {
+                background: #eb0086;
+                border: 3px solid #eb0086;
+                color: #fff;
+            }
+        }
+    }
+}
+/* For scrollables. */
+@import (inline) "../STDPAK/owl.carousel.css";
+
+.FourTellContainer {
+    .owl-controls {
+        left: 0;
+        z-index: 11;
+        position: inherit;
+        top: 0;
+        height: auto;
+
+        .owl-prev {
+            position: absolute;
+            left: -2px;
+            top: -230px;
+        }
+
+        .owl-next {
+            position: absolute;
+            right: 3px;
+            top: -230px;
+        }
+    }
+}
+
+/* Here follows custom classes, so as to permit each page to have its own
+* custom CSS. */
+/* Tout1 on PD page. */
+.product4TCaptionPD1 {
+}
+
+.PD14T {
+}
+
+.product4TPD1 {
+
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Tout2 on PD page */
+.product4TCaptionPD2 {
+}
+
+.product4TPD2 {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Tout on the home page. */
+.product4TCaptionHome {
+}
+
+.product4THome {
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Category pages */
+.product4TCaptionCat {
+}
+
+.product4TCat {
+
+
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Search */
+.product4TCaptionSearch {
+}
+
+.product4TSearch {
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* View Cart */
+.product4TCaptionVC {
+}
+
+.product4TVC {
+
+    .productImage {
+
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Checkout */
+.product4TCaptionCheck {
+}
+
+.product4TCheck {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick Cart */
+.product4TCaptionQC {
+}
+
+.product4TQC {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+/* Quick view */
+.product4TCaptionQV {
+}
+
+.product4TQV {
+
+    .productImage {
+        .productImageImg {
+        }
+    }
+
+    .productTitle {
+    }
+
+    .ratingImage {
+        .ratingImageImg {
+        }
+    }
+
+    .productSalePrice {
+    }
+
+    .productPrice {
+    }
+
+    .productBuy {
+    }
+}
+
