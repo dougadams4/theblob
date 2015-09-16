@@ -20,8 +20,8 @@
             Home: {
                 tout1: {
                     enable: true,
-                    resultType: 4,
-                    numItems: 10,
+                    resultType: "4,4",
+                    numItems: "5,5",
                     caption: "Top Sellers",
                     productStyle: "product4T product4THome",
                     carousel: {
@@ -100,7 +100,6 @@
                     productStyle: "product4T product4TSearch",
                     divSelect: "#main4TellContainer",
                     divPosition: "append",
-                    newDivID: "main4TellContainer",
                     showBuyButton: true,
                     maxImageHeight: 150,
                     showRatings: true,
@@ -110,10 +109,8 @@
                             if (tout.enable && results && results.length) {
                                 var resultCell = results.parent();
                                 resultCell.css('vertical-align', 'top');
-                                var newCell = $("<td width='130px' valign='top'><table><tr><td style='border: 1px solid #DFE0E0;'><div id='" + tout.newDivID + "'></div></td></tr></table></td>");
+                                var newCell = $("<td width='130px' valign='top'><table><tr><td style='border: 1px solid #DFE0E0;'><div id='main4TellContainer'></div></td></tr></table></td>");
                                 newCell.insertAfter(resultCell);
-                                tout.divSelect = '#' + tout.newDivID;
-                                tout.divPosition = 'append';
                             }
                         }
                     },
